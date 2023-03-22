@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Roboto } from 'next/font/google'
 import Navbar from '@/components/navigations/navbar'
 import Footer from '@/components/navigations/footer'
+import Hero from '@/components/home/hero'
 import { getWSSchema, getWPSchema, getLBSchema } from '@/components/schema';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
@@ -81,7 +82,7 @@ export default function HomePage() {
 
       <main className={roboto.className}>
         <Navbar />
-        BODY
+      <Hero />
         <Footer />
       </main>
     </>

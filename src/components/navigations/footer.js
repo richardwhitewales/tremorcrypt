@@ -21,7 +21,7 @@ export default function Footer() {
                             </div>
                             <div className="col-sm-6 text-center">
                                 <div className="my-2 d-flex">
-                                    <input type="email" class="form-control border_none rounded m-2" id="emailAddr" placeholder="name@example.com" />
+                                    <input type="email" className="form-control border_none rounded m-2" id="emailAddr" placeholder="name@example.com" />
 
                                     <Link href="#" className="btn btn-lg m-2 border_none rounded btn_secondary">
                                         SEND

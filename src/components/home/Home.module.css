@@ -1,0 +1,22 @@
+.hero {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.hero>div>h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.hero>div>div>img {
+    width: 850px;
+}
+
+@media (max-width: 767.98px) {
+    .hero>div>div>img {
+        width: 700px;
+    }
+}

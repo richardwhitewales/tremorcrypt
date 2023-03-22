@@ -71,39 +71,37 @@ export default function Navbar() {
                                     <div className="col-sm-6">
                                         <ul className="list-unstyled">
                                             <li>
-                                                <li>
-                                                    <Link className={`${styles.dropdown_item} border rounded shadow-sm position-relative`} href="/investments/2">
-                                                        <Cloud color="#12b772" /> Basic
-                                                        <div>
-                                                            <ul className="list-unstyled text-muted">
-                                                                <li className="mx-4 mr-0"><small>- 2 months maturity duration</small></li>
-                                                                <li className="mx-4 mr-0"><small>- 40% ROI</small></li>
-                                                                <li className="mx-4 mr-0"><small>- Bonus of 0.2% + $150</small></li>
-                                                                <li className="mx-4 mr-0"><small>- Daily trading</small></li>
-                                                                <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
-                                                                <li className="mx-4 mr-0 fw-bold"><small>- Deposit $8,000</small></li>
-                                                            </ul>
-                                                        </div>
+                                                <Link className={`${styles.dropdown_item} border rounded shadow-sm position-relative`} href="/investments/2">
+                                                    <Cloud color="#12b772" /> Basic
+                                                    <div>
+                                                        <ul className="list-unstyled text-muted">
+                                                            <li className="mx-4 mr-0"><small>- 2 months maturity duration</small></li>
+                                                            <li className="mx-4 mr-0"><small>- 40% ROI</small></li>
+                                                            <li className="mx-4 mr-0"><small>- Bonus of 0.2% + $150</small></li>
+                                                            <li className="mx-4 mr-0"><small>- Daily trading</small></li>
+                                                            <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
+                                                            <li className="mx-4 mr-0 fw-bold"><small>- Deposit $8,000</small></li>
+                                                        </ul>
+                                                    </div>
 
-                                                        <small className="alert alert-danger p-1 rounded-1 position-absolute top-0 end-0">Most Purchased</small>
-                                                    </Link>
-                                                </li>
+                                                    <small className="alert alert-danger p-1 rounded-1 position-absolute top-0 end-0">Most Purchased</small>
+                                                </Link>
+                                            </li>
 
-                                                <li>
-                                                    <Link className={styles.dropdown_item} href="/investments/3">
-                                                        <MagicStar color="#12b772" /> Advanced
-                                                        <div>
-                                                            <ul className="list-unstyled text-muted">
-                                                                <li className="mx-4 mr-0"><small>- 4 months maturity duration</small></li>
-                                                                <li className="mx-4 mr-0"><small>- 60% ROI</small></li>
-                                                                <li className="mx-4 mr-0"><small>- Bonus of 0.35% + $250</small></li>
-                                                                <li className="mx-4 mr-0"><small>- Daily trading</small></li>
-                                                                <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
-                                                                <li className="mx-4 mr-0 fw-bold"><small>- Deposit $20,000</small></li>
-                                                            </ul>
-                                                        </div>
-                                                    </Link>
-                                                </li>
+                                            <li>
+                                                <Link className={styles.dropdown_item} href="/investments/3">
+                                                    <MagicStar color="#12b772" /> Advanced
+                                                    <div>
+                                                        <ul className="list-unstyled text-muted">
+                                                            <li className="mx-4 mr-0"><small>- 4 months maturity duration</small></li>
+                                                            <li className="mx-4 mr-0"><small>- 60% ROI</small></li>
+                                                            <li className="mx-4 mr-0"><small>- Bonus of 0.35% + $250</small></li>
+                                                            <li className="mx-4 mr-0"><small>- Daily trading</small></li>
+                                                            <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
+                                                            <li className="mx-4 mr-0 fw-bold"><small>- Deposit $20,000</small></li>
+                                                        </ul>
+                                                    </div>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </div>

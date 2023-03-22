@@ -7,7 +7,7 @@ export default function Navbar() {
     const router = useRouter();
 
     return (
-        <nav className="navbar navbar-expand-md navbar-light fixed-top bg_white">
+        <nav className="navbar navbar-expand-md navbar-light bg_white">
             <div className="container">
                 <Link className="navbar-brand" href="/">
                     <img

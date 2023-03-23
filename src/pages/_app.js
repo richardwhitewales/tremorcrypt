@@ -1,5 +1,8 @@
 import '@/styles/globals.css'
 import { useEffect } from "react";
+import { FireAuthProvider } from '@/firebase/fire_auth_context'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function App({ Component, pageProps }) {
@@ -7,5 +10,10 @@ export default function App({ Component, pageProps }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
-  return <Component {...pageProps} />
+  return (
+    <FireAuthProvider>
+      <Component {...pageProps} />
+      <ToastContainer position="top-left" autoClose={3000} />
+    </FireAuthProvider>
+  )
 }

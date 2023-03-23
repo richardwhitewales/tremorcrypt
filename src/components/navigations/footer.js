@@ -4,7 +4,7 @@ import { Call, DirectInbox, Location } from 'iconsax-react'
 export default function Footer() {
     return (
         <footer>
-            <div className="container-fluid p-md-5 bg_primary white">
+            <div className="container-fluid p-md-5 bg_grey white">
                 <div className="row justify-content-center">
                     <div className="col-sm-10">
                         <div className="row justify-content-center">

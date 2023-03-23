@@ -71,7 +71,7 @@ body {
 }
 
 .border_primary {
-    border: 1px solid #16F196;
+    border: 1px solid #16F196 !important;
 }
 
 .bg_primary_25 {

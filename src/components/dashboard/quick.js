@@ -54,10 +54,16 @@ export default function DashboardQuick() {
                                     </p>
 
                                     <div className="d-flex justify-content-around mb-3">
-                                        <button type="button" className={`btn btn-lg btn-light bg-white ${styles.qiuck_btn}`}>
+                                        <button
+                                            type="button"
+                                            className={`btn btn-lg btn-light bg-white ${styles.qiuck_btn}`}
+                                            data-bs-toggle="modal" data-bs-target="#depositModal">
                                             <span>Deposit</span>
                                         </button>
-                                        <button type="button" className={`btn btn-lg btn_primary black ${styles.qiuck_btn}`}>
+                                        <button
+                                            type="button"
+                                            className={`btn btn-lg btn_primary black ${styles.qiuck_btn}`}
+                                            data-bs-toggle="modal" data-bs-target="#withdrawModal">
                                             <span>Withdraw</span>
                                         </button>
                                     </div>

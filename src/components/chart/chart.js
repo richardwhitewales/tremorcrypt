@@ -35,7 +35,7 @@ export default function Chart() {
                         theme: "light",
                         style: "2",
                         locale: "en",
-                        toolbar_bg: "#f1f3f6",
+                        toolbar_bg: "#ffffff",
                         enable_publishing: false,
                         hide_top_toolbar: true,
                         hide_legend: true,

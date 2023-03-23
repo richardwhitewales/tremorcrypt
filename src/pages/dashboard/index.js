@@ -7,7 +7,7 @@ const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
 export default function DashboardPage() {
     // page default data
-    const pageName = "Harpy Cryto - Dashboard";
+    const pageName = "Harpy Crypto - Dashboard";
     const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
     const baseURL = "https://harpycryto.com/dashboard";
 
@@ -61,7 +61,7 @@ export default function DashboardPage() {
                 <meta name="keywords" content="Harpy Crypto, Harpycrypto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-                <meta name="author" content="Harpy Cryto" />
+                <meta name="author" content="Harpy Crypto" />
                 <title>{pageName}</title>
 
                 <meta property="og:title" content={pageName} />

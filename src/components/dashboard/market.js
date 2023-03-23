@@ -37,9 +37,7 @@ export default function DashboardMarket() {
             .then(json => setXRP(json))
     }, []);
 
-    if (!btc || !eth || !ltc || !xrp) {
-        return <Loader />
-    }
+    if (!btc || !eth || !ltc || !xrp) return <Loader />
 
     return (
         <div className="container">
@@ -48,10 +46,11 @@ export default function DashboardMarket() {
                     <div className={`my-3 p-2 ${styles.card}`}>
                         <div className="row">
                             <div className="col-12">
-                                <h4>Top Markets</h4>
+                                <h5>Top Markets</h5>
+                                <hr />
                             </div>
                             <div className="col-12">
-                                <div className="col-12 table-responsive">
+                                <div className="table-responsive">
                                     <table className="table text-white table-borderless">
                                         <thead>
                                             <tr>

@@ -112,7 +112,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="bg_black primary p-3 text-center">© Copyright {new Date().getFullYear()}, Harpy Cryto Investments | All Rights Reserved.</div>
+            <div className="bg_black primary p-3 text-center">© Copyright {new Date().getFullYear()}, Harpy Crypto Investments | All Rights Reserved.</div>
         </footer>
     )
 }

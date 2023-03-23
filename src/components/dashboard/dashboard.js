@@ -1,8 +1,8 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
-import Link from 'next/link'
 import DashboardNavbar from '@/components/dashboard/navbar'
 import DashboardTransaction from '@/components/dashboard/transaction'
 import DashboardMarket from '@/components/dashboard/market'
+import DashboardQuick from '@/components/dashboard/quick'
 
 export default function Dashboard() {
     return (
@@ -10,6 +10,7 @@ export default function Dashboard() {
             <DashboardNavbar />
             <div className={styles.divider} />
             <DashboardTransaction />
+            <DashboardQuick />
             <DashboardMarket />
         </div>
     )

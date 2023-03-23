@@ -3,6 +3,7 @@ import DashboardNavbar from '@/components/dashboard/navbar'
 import DashboardTransaction from '@/components/dashboard/transaction'
 import DashboardMarket from '@/components/dashboard/market'
 import DashboardQuick from '@/components/dashboard/quick'
+import DashboardGraph from '@/components/dashboard/graph'
 
 export default function Dashboard() {
     return (
@@ -12,6 +13,7 @@ export default function Dashboard() {
             <DashboardTransaction />
             <DashboardQuick />
             <DashboardMarket />
+            <DashboardGraph/>
         </div>
     )
 }

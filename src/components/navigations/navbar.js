@@ -36,7 +36,7 @@ export default function Navbar() {
                                     <div className="col-sm-6">
                                         <ul className="list-unstyled">
                                             <li>
-                                                <Link className={styles.dropdown_item} href="/investments/1">
+                                                <Link className={styles.dropdown_item} href="/auth/signup">
                                                     <Tree color="#12b772" /> Starter
                                                     <div>
                                                         <ul className="list-unstyled text-muted">
@@ -51,7 +51,7 @@ export default function Navbar() {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link className={styles.dropdown_item} href="/investments/3">
+                                                <Link className={styles.dropdown_item} href="/auth/signup">
                                                     <Coffee color="#12b772" /> Standard
                                                     <div>
                                                         <ul className="list-unstyled text-muted">
@@ -71,7 +71,7 @@ export default function Navbar() {
                                     <div className="col-sm-6">
                                         <ul className="list-unstyled">
                                             <li>
-                                                <Link className={`${styles.dropdown_item} border rounded shadow-sm position-relative`} href="/investments/2">
+                                                <Link className={`${styles.dropdown_item} border rounded shadow-sm position-relative`} href="/auth/signup">
                                                     <Cloud color="#12b772" /> Basic
                                                     <div>
                                                         <ul className="list-unstyled text-muted">
@@ -89,7 +89,7 @@ export default function Navbar() {
                                             </li>
 
                                             <li>
-                                                <Link className={styles.dropdown_item} href="/investments/3">
+                                                <Link className={styles.dropdown_item} href="/auth/signup">
                                                     <MagicStar color="#12b772" /> Advanced
                                                     <div>
                                                         <ul className="list-unstyled text-muted">
@@ -133,7 +133,7 @@ export default function Navbar() {
                     </ul>
 
                     <div className="d-flex">
-                        <Link className="btn btn-sm btn_secondary mx-2" href="#">
+                        <Link className="btn btn-sm btn_secondary mx-2" href="/auth/signin">
                             Account Dashboard <ArrowRight2 size={20} />
                         </Link>
                     </div>

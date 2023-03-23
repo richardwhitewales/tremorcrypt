@@ -98,6 +98,10 @@ body {
     background-color: black !important;
 }
 
+.bg_black_15 {
+    background-color: #00000025 !important;
+}
+
 .bg_secondary {
     background-color: #12B772 !important;
 }
@@ -105,4 +109,9 @@ body {
 .border_none {
     border: none !important;
     border-radius: 0 !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: grey !important;
 }

@@ -78,7 +78,15 @@
     transform: translate(-50%, -50%);
 }
 
-.profit_circle>h1 {
+.qiuck_btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.profit_circle>h1,
+.qiuck_btn>span {
     position: absolute;
     top: 50%;
     left: 50%;

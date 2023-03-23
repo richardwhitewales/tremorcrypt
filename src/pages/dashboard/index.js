@@ -76,6 +76,21 @@ export default function DashboardPage() {
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(wSSchema) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(wPSchema) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lBSchema) }} />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                                var Tawk_API=Tawk_API||{ }, Tawk_LoadStart=new Date();
+                                (function(){
+                                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                                s1.async=true;
+                                s1.src='https://embed.tawk.to/641c78eb31ebfa0fe7f449e5/1gs7jgn9k';
+                                s1.charset='UTF-8';
+                                s1.setAttribute('crossorigin','*');
+                                s0.parentNode.insertBefore(s1,s0);
+                                })();
+                            `,
+                    }}
+                />
             </Head>
 
             <main className={roboto.className}>

@@ -1,6 +1,4 @@
-import Link from 'next/link'
 import { Crimson_Pro } from 'next/font/google'
-import { ArrowRight2 } from 'iconsax-react'
 
 const crimson = Crimson_Pro({ subsets: ['latin'] })
 
@@ -38,7 +36,7 @@ export default function Info5() {
                             app made it easy for me to get started. The user-friendly interface
                             and helpful tools, such as investment targets, have given me confidence
                             in my decisions. Plus, the customer support team has been responsive
-                            and helpful whenever I've had questions.
+                            and helpful whenever I&apos;ve had questions.
                         </p>
                     </div>
                 </div>
@@ -50,10 +48,10 @@ export default function Info5() {
 
                         <hr />
                         <p>
-                            I've been using this app for a while now and have found it to be an excellent
+                            I&apos;ve been using this app for a while now and have found it to be an excellent
                             investment tool. The market research and plan tailoring features have helped
                             me to make informed decisions and achieve my financial goals. I appreciate
-                            the app's commitment to security and transparency, and I feel confident in
+                            the app&apos;s commitment to security and transparency, and I feel confident in
                             recommending it to others.
                         </p>
                     </div>

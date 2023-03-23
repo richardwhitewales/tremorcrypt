@@ -14,8 +14,8 @@ export default function Dashboard() {
             <div className={styles.divider} />
             <DashboardTransaction />
             <DashboardQuick />
-            {/* <DashboardMarket /> */}
-            {/* <DashboardGraph/> */}
+            <DashboardMarket />
+            <DashboardGraph/>
 
             <WithdrawModal user={{}} />
             <DepositModal user={{}} />

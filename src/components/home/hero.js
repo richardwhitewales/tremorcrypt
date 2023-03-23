@@ -18,7 +18,7 @@ export default function Hero() {
                                 <p className="display-6 text-muted">
                                     with the leading investment company for attractive Bitcoin returns.
                                 </p>
-                                <Link href="/contact" className="btn mt-4 mb-5 btn_secondary">
+                                <Link href="/auth/signup" className="btn mt-4 mb-5 btn_secondary">
                                     Start investing now!
                                 </Link>
                             </div>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function DashboardNavbar() {
     return (
-        <nav className="navbar navbar-expand-md fixed-top p-2">
+        <nav className="navbar navbar-expand-md bg_black fixed-top p-2">
             <Link className="navbar-brand" href="/">
                 <img src="/logo_2.png" width={80} alt="logo" />
             </Link>

@@ -1,13 +1,11 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
-import { HambergerMenu, UserOctagon } from 'iconsax-react'
-import Link from 'next/link'
 
 export default function DashboardTransaction() {
     return (
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className={`my-3 p-2 ${styles.transaction}`}>
+                    <div className={`my-3 p-2 ${styles.card}`}>
                         <div className="d-flex py-3 justify-content-around">
                             <div className="text-center">
                                 <small className="primary">Total Balance</small>

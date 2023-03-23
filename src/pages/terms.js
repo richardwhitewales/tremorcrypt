@@ -134,7 +134,7 @@ export default function TermsPage() {
 
                             <p>
                                 <h5>Disclaimer of Warranties</h5>
-                                The app is provided "as is" without any warranties or representations, express or implied.
+                                The app is provided &quot;as is&quot; without any warranties or representations, express or implied.
                                 We do not guarantee the accuracy, completeness, or timeliness of any information provided by the app.
                             </p>
 

@@ -42,6 +42,10 @@ body {
     color: #16F196 !important;
 }
 
+.grey {
+    color: #efefef;
+}
+
 .primary_25 {
     color: #16F19640 !important;
 }
@@ -56,6 +60,18 @@ body {
 
 .bg_primary {
     background-color: #16F196 !important;
+}
+
+.bg_grey {
+    background-color: #efefef;
+}
+
+.bg_primary_15 {
+    background-color: #16f19626 !important;
+}
+
+.border_primary {
+    border: 1px solid #16F196;
 }
 
 .bg_primary_25 {

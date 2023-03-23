@@ -40,7 +40,7 @@ export default function Navbar() {
                                                     <Tree color="#12b772" /> Starter
                                                     <div>
                                                         <ul className="list-unstyled text-muted">
-                                                            <li className="mx-4 mr-0"><small>- 1 months maturity duration</small></li>
+                                                            <li className="mx-4 mr-0"><small>- 1 month maturity duration</small></li>
                                                             <li className="mx-4 mr-0"><small>- 25% ROI</small></li>
                                                             <li className="mx-4 mr-0"><small>- Bonus of 0.1% + $100</small></li>
                                                             <li className="mx-4 mr-0"><small>- Daily trading</small></li>

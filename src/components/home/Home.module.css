@@ -20,3 +20,21 @@
         width: 700px;
     }
 }
+
+.bg {
+    width: 100vw;
+    background: url("/bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .img {
+        width: 80%;
+    }
+}

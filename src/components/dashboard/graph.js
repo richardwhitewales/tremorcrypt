@@ -5,7 +5,7 @@ export default function DashboardGraph() {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-12">
+                <div className="col-12 mb-5">
                     <div className={`my-3 p-2 ${styles.card} bg_white`}>
                         <div className="row">
                             <div className="col-12">

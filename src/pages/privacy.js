@@ -11,7 +11,7 @@ export default function PrivacyPage() {
     // page default data
     const pageName = "Harpy Crypto - Privacy Policy";
     const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
-    const baseURL = "https://harpycryto.com/privacy";
+    const baseURL = "https://harpycrypto.com/privacy";
 
     // web site schema
     const wSSchema = getWSSchema(baseURL);
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             addressCountry: "USA"
         },
         "+1-415-209-5796",
-        "info@harpycryto.com",
+        "info@harpycrypto.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",
@@ -185,7 +185,7 @@ export default function PrivacyPage() {
                             <p>
                                 <h5>Contact Us</h5>
                                 If you have any questions or concerns about this Privacy Policy or our privacy practices,
-                                please contact us at info@harpycryto.com
+                                please contact us at info@harpycrypto.com
                             </p>
                         </div>
                     </div>

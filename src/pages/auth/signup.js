@@ -6,7 +6,7 @@ export default function SignupPage() {
     // page default data
     const pageName = "Harpy Crypto - Signup";
     const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
-    const baseURL = "https://harpycryto.com/auth/signup";
+    const baseURL = "https://harpycrypto.com/auth/signup";
 
     // web site schema
     const wSSchema = getWSSchema(baseURL);
@@ -37,7 +37,7 @@ export default function SignupPage() {
             addressCountry: "USA"
         },
         "+1-415-209-5796",
-        "info@harpycryto.com",
+        "info@harpycrypto.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",

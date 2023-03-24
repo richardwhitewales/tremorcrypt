@@ -75,7 +75,7 @@ export default function Footer() {
                                     <Location /> George St, Chicago  60618, USA
                                 </li>
                                 <li>
-                                    <DirectInbox /> info@harpycryto.com
+                                    <DirectInbox /> info@harpycrypto.com
                                 </li>
                                 <li>
                                     <Call /> +1-415-209-5796

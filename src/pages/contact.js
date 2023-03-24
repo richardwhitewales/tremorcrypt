@@ -12,7 +12,7 @@ export default function ContactPage() {
     // page default data
     const pageName = "Harpy Crypto - Contact Us";
     const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
-    const baseURL = "https://harpycryto.com/contact";
+    const baseURL = "https://harpycrypto.com/contact";
 
     // web site schema
     const wSSchema = getWSSchema(baseURL);
@@ -43,7 +43,7 @@ export default function ContactPage() {
             addressCountry: "USA"
         },
         "+1-415-209-5796",
-        "info@harpycryto.com",
+        "info@harpycrypto.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
                                             <div className="d-flex flex-column mx-2">
                                                 <h5>EMAIL:</h5>
-                                                <p>info@harpycryto.com</p>
+                                                <p>info@harpycrypto.com</p>
                                             </div>
                                         </div>
                                     </div>

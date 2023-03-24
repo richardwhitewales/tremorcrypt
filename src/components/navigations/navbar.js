@@ -2,9 +2,11 @@ import Link from 'next/link'
 import { useRouter } from "next/router";
 import { ArrowRight2, Cloud, Coffee, MagicStar, Tree } from 'iconsax-react';
 import styles from '@/components/navigations/Navigations.module.css'
+import { useAuth } from '@/firebase/fire_auth_context';
 
 export default function Navbar() {
     const router = useRouter();
+    const { loading, authUser } = useAuth();
 
     return (
         <nav className="navbar navbar-expand-md navbar-light bg_white">
@@ -133,9 +135,14 @@ export default function Navbar() {
                     </ul>
 
                     <div className="d-flex">
-                        <Link className="btn btn-sm btn_secondary mx-2" href="/auth/signin">
-                            Account Dashboard <ArrowRight2 size={20} />
-                        </Link>
+                        {!loading && authUser
+                            ? <Link className="btn btn-sm btn_secondary mx-2" href="/dashboard">
+                                Account Dashboard <ArrowRight2 size={20} />
+                            </Link>
+                            : <Link className="btn btn-sm btn_secondary mx-2" href="/auth/signin">
+                                Account Dashboard <ArrowRight2 size={20} />
+                            </Link>
+                        }
                     </div>
                 </div>
             </div>

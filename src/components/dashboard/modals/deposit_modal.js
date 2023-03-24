@@ -21,7 +21,7 @@ export default function DepositModal({ user, plan }) {
                 "dashboard.balance": parseFloat(user.dashboard.balance) + parseFloat(deposit),
                 "dashboard.deposit": parseFloat(user.dashboard.deposit) + parseFloat(deposit),
             }).then(() => {
-                toast.success("Deposit Completed. Quillaruda will confirm transtion in 2 working days");
+                toast.success("Deposit Completed. Harpy Crypto will confirm transtion in 2 working days");
                 setLoading(false);
             }).catch((error) => {
                 if (error.code == "not-found") {

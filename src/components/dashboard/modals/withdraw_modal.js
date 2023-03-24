@@ -22,7 +22,7 @@ export default function WithdrawModal({ user }) {
                 "dashboard.withdraw": parseFloat(user.dashboard.withdraw) + parseFloat(withdraw),
                 "dashboard.address": address,
             }).then(() => {
-                toast.success("Withdrawal Completed. Quillaruda will confirm transtion in 2 working days");
+                toast.success("Withdrawal Completed. Harpy Crypto will confirm transtion in 2 working days");
                 setLoading(false);
             }).catch((error) => {
                 if (error.code == "not-found") {

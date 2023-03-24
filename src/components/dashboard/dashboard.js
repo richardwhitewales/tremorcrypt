@@ -6,7 +6,9 @@ import DashboardQuick from '@/components/dashboard/quick'
 import DashboardGraph from '@/components/dashboard/graph'
 import WithdrawModal from '@/components/dashboard/modals/withdraw_modal'
 import PlansModal from '@/components/dashboard/modals/plans_modal'
-// import DepositModal from '@/components/dashboard/modals/deposit_modal'
+import PaymentsModal from '@/components/dashboard/modals/payments_modal'
+import WalletModal from '@/components/dashboard/modals/wallet_modal'
+import StatisticsModal from '@/components/dashboard/modals/statistics_modal'
 
 export default function Dashboard() {
     return (
@@ -18,9 +20,11 @@ export default function Dashboard() {
             <DashboardMarket />
             <DashboardGraph />
 
+            <StatisticsModal />
+            <WalletModal user={{}} />
+            <PaymentsModal user={{}} />
             <WithdrawModal user={{}} />
             <PlansModal user={{}} />
-            {/* <DepositModal user={{}} /> */}
         </div>
     )
 }

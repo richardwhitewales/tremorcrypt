@@ -13,12 +13,11 @@ export default function PlansModal({ user }) {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="plansModalLabel">Investment plans</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => { setPlan(null) }}></button>
                         </div>
                         <div className="modal-body">
                             <div className="row">
                                 <div className="col-md-3">
-                                    {/* <div className="my-2 p-2 bg_white shadow rounded text-center text-muted"> */}
                                     <div className={`my-2 p-2 bg_white shadow rounded text-center text-muted ${plan == 1 && "border_primary position-relative"}`}>
                                         <h4 className="secondary">Starter</h4>
                                         <h5>1 Month</h5>
@@ -40,8 +39,8 @@ export default function PlansModal({ user }) {
                                 </div>
 
                                 <div className="col-md-3">
-                                    <div className={`my-2 p-2 bg_white shadow rounded text-center text-muted ${!plan || plan == 2 && "border_primary position-relative"}`}>
-                                        <h4 className="secondary">Basic</h4>
+                                    <div className={`my-2 p-2 bg_white shadow rounded text-center text-muted ${!plan || plan != 2 ? "border border-danger position-relative" : plan == 2 ? "border_primary" : ""}`}>
+                                        <h4 className={!plan || plan != 2 ? "text-danger" : "secondary"}>Basic</h4>
                                         <h5>2 Month</h5>
                                         <h3 className="black my-3 fw-bold">$8,000</h3>
 
@@ -58,7 +57,7 @@ export default function PlansModal({ user }) {
                                             Select
                                         </button>
 
-                                        {!plan || plan == 2 && <small className="alert alert-success p-1 rounded-1 position-absolute top-0 end-0">Client Choice</small>}
+                                        {!plan || plan != 2 ? <small className="alert alert-danger p-1 rounded-1 position-absolute top-0 end-0">Client Choice</small> : ""}
                                     </div>
                                 </div>
 

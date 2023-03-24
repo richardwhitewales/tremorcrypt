@@ -8,6 +8,7 @@ import { doc, updateDoc } from 'firebase/firestore';
 export default function DepositModal({ user, plan }) {
     const [loading, setLoading] = useState(false);
     const [deposit, setDeposit] = useState("");
+    const [reciept, setReciept] = useState(null);
     const { authUser } = useAuth();
 
     const onDeposit = async event => {
@@ -37,13 +38,17 @@ export default function DepositModal({ user, plan }) {
         }
     };
 
+    const onClearModal = () => {
+        setLoading(false); setDeposit(""); setReciept(null);
+    };
+
     return (
         <div className="modal fade" id="depositModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="depositModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="depositModalLabel">Deposit</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={onClearModal}></button>
                     </div>
                     <div className="modal-body">
                         <div className="row">

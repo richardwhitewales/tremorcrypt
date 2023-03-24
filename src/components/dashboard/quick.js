@@ -57,7 +57,7 @@ export default function DashboardQuick() {
                                         <button
                                             type="button"
                                             className={`btn btn-lg btn-light bg-white ${styles.qiuck_btn}`}
-                                            data-bs-toggle="modal" data-bs-target="#depositModal">
+                                            data-bs-toggle="modal" data-bs-target="#plansModal">
                                             <span>Deposit</span>
                                         </button>
                                         <button

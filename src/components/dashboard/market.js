@@ -65,32 +65,32 @@ export default function DashboardMarket() {
                                         <tbody>
                                             <tr>
                                                 <th scope="row"><Bitcoin variant="Bold" size={44} className="primary" /></th>
-                                                <td>{toCurrency(btc.high)}</td>
-                                                <td>{toCurrency(btc.low)}</td>
+                                                <td className="text-success">{toCurrency(btc.high)}</td>
+                                                <td className="text-danger">{toCurrency(btc.low)}</td>
                                                 <td>{toCurrency(btc.last)}</td>
                                                 <td>{toCurrency(btc.bid)}</td>
                                                 <td>% {btc.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><Ethereum variant="Bold" size={44} className="primary" /></th>
-                                                <td>{toCurrency(eth.high)}</td>
-                                                <td>{toCurrency(eth.low)}</td>
+                                                <td className="text-success">{toCurrency(eth.high)}</td>
+                                                <td className="text-danger">{toCurrency(eth.low)}</td>
                                                 <td>{toCurrency(eth.last)}</td>
                                                 <td>{toCurrency(eth.bid)}</td>
                                                 <td>% {eth.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><Litecoin variant="Bold" size={44} className="primary" /></th>
-                                                <td>{toCurrency(ltc.high)}</td>
-                                                <td>{toCurrency(ltc.low)}</td>
+                                                <td className="text-success">{toCurrency(ltc.high)}</td>
+                                                <td className="text-danger">{toCurrency(ltc.low)}</td>
                                                 <td>{toCurrency(ltc.last)}</td>
                                                 <td>{toCurrency(ltc.bid)}</td>
                                                 <td>% {ltc.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><Xrp variant="Bold" size={44} className="primary" /></th>
-                                                <td>{toCurrency(xrp.high)}</td>
-                                                <td>{toCurrency(xrp.low)}</td>
+                                                <td className="text-success">{toCurrency(xrp.high)}</td>
+                                                <td className="text-danger">{toCurrency(xrp.low)}</td>
                                                 <td>{toCurrency(xrp.last)}</td>
                                                 <td>{toCurrency(xrp.bid)}</td>
                                                 <td>% {xrp.volume_percent.toFixed(2)}</td>

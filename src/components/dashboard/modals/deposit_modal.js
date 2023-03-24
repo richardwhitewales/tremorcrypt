@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import Loader from '@/components/loader/loader';
 import { doc, updateDoc } from 'firebase/firestore';
 
-export default function DepositModal({ user }) {
+export default function DepositModal({ user, plan }) {
     const [loading, setLoading] = useState(false);
     const [deposit, setDeposit] = useState("");
     const { authUser } = useAuth();

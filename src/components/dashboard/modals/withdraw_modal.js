@@ -16,27 +16,23 @@ export default function WithdrawModal({ user }) {
         setLoading(true);
 
         const docRef = doc(db, "users", authUser.email);
-        if (user.dashboard.wallet.card.cvv.length || user.dashboard.wallet.billingAddress.zipCode) {
-            await updateDoc(docRef, {
-                "dashboard.balance": parseFloat(user.dashboard.balance) - parseFloat(withdraw),
-                "dashboard.withdraw": parseFloat(user.dashboard.withdraw) + parseFloat(withdraw),
-                "dashboard.address": address,
-            }).then(() => {
-                toast.success("Withdrawal Completed. Harpy Crypto will confirm transtion in 2 working days");
-                setLoading(false);
-            }).catch((error) => {
-                if (error.code == "not-found") {
-                    toast.error("User not found");
-                    setLoading(false);
-                } else {
-                    toast.error(`Something is wrong: ${error.message}`);
-                    setLoading(false);
-                }
-            });
-        } else {
-            toast.error("Address Card Info & Billing Address First for security reasons!");
+        await updateDoc(docRef, {
+            "dashboard.total": parseInt(user.dashboard.total) + parseInt(withdraw),
+            "dashboard.balance": parseInt(user.dashboard.balance) - parseInt(withdraw),
+            "dashboard.withdraw": parseInt(withdraw),
+            "dashboard.address": address,
+        }).then(() => {
+            toast.success("Withdrawal Completed. Harpy Crypto will confirm transtion in 2 working days");
             setLoading(false);
-        }
+        }).catch((error) => {
+            if (error.code == "not-found") {
+                toast.error("User not found");
+                setLoading(false);
+            } else {
+                toast.error(`Something is wrong: ${error.message}`);
+                setLoading(false);
+            }
+        });
     };
 
     const onClearModal = () => {

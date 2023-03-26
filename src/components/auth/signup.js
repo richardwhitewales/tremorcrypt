@@ -43,12 +43,14 @@ export default function Signup() {
                         joinedOn: serverTimestamp(),
                         password: password,
                         dashboard: {
+                            total: 0,
                             balance: 0,
-                            deposit: 0,
-                            withdraw: 0,
-                            address: "",
                             profit: 0,
-                            investmentPlan: "",
+                            investmentPlan: 0,
+                            withdraw: 0,
+                            deposit: 0,
+                            reciept: "",
+                            address: "",
                             wallet: {
                                 card: {
                                     holder: "",

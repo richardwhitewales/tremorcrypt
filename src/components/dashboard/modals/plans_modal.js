@@ -125,7 +125,7 @@ export default function PlansModal({ user }) {
                 </div>
             </div>
 
-            <DepositModal user={{}} plan={plan} />
+            <DepositModal user={user} plan={plan} />
         </>
     )
 }

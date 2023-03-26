@@ -23,9 +23,9 @@ export default function WalletModal({ user }) {
 
         const docRef = doc(db, "users", authUser.email);
         await updateDoc(docRef, {
-            "dashboard.wallet.card.number": number.length <= 0 ? user.dashboard.wallet.card.number : number,
-            "dashboard.wallet.card.holder": holder.length <= 0 ? user.dashboard.wallet.card.holder : holder,
-            "dashboard.wallet.card.cvv": cvv.length <= 0 ? user.dashboard.wallet.card.cvv : cvv,
+            "dashboard.wallet.card.holder": holder,
+            "dashboard.wallet.card.number": number,
+            "dashboard.wallet.card.cvv": cvv,
         }).then(() => {
             toast.success("Updated Card.");
             setLoading(false);
@@ -46,9 +46,9 @@ export default function WalletModal({ user }) {
 
         const docRef = doc(db, "users", authUser.email);
         await updateDoc(docRef, {
-            "dashboard.wallet.billingAddress.address": address.length <= 0 ? user.dashboard.wallet.billingAddress.address : address,
-            "dashboard.wallet.billingAddress.country": country.length <= 0 ? user.dashboard.wallet.billingAddress.country : country,
-            "dashboard.wallet.billingAddress.zipCode": zipcode.length <= 0 ? user.dashboard.wallet.billingAddress.zipCode : zipcode,
+            "dashboard.wallet.billingAddress.address": address,
+            "dashboard.wallet.billingAddress.zipCode": zipcode,
+            "dashboard.wallet.billingAddress.country": country,
         }).then(() => {
             toast.success("Updated Billing Address.");
             setLoading2(false);
@@ -87,6 +87,7 @@ export default function WalletModal({ user }) {
                                             <input type="text"
                                                 className="form-control"
                                                 id="number"
+                                                required
                                                 placeholder="Card Number"
                                                 onChange={(event) => setNumber(event.target.value)}
                                             />
@@ -99,6 +100,7 @@ export default function WalletModal({ user }) {
                                             <input type="text"
                                                 className="form-control"
                                                 id="holder"
+                                                required
                                                 placeholder="Card Holder Name"
                                                 onChange={(event) => setHolder(event.target.value)}
                                             />
@@ -111,6 +113,7 @@ export default function WalletModal({ user }) {
                                             <input type="text"
                                                 className="form-control"
                                                 id="cvv"
+                                                required
                                                 placeholder="CVV"
                                                 onChange={(event) => setCvv(event.target.value)}
                                             />
@@ -148,6 +151,7 @@ export default function WalletModal({ user }) {
                                             <input type="text"
                                                 className="form-control"
                                                 id="zipcode"
+                                                required
                                                 placeholder="Zip Code"
                                                 onChange={(event) => setZipcode(event.target.value)}
                                             />
@@ -160,6 +164,7 @@ export default function WalletModal({ user }) {
                                             <input type="text"
                                                 className="form-control"
                                                 id="addr"
+                                                required
                                                 placeholder="Address"
                                                 onChange={(event) => setAddress(event.target.value)}
                                             />

@@ -26,6 +26,7 @@ export default function PaymentsModal({ user }) {
                                         </button>
                                         <button
                                             type="button"
+                                            disabled={user.dashboard.investmentPlan == 0}
                                             className={`btn btn-lg btn_primary black shadow ${styles.qiuck_btn}`}
                                             data-bs-toggle="modal" data-bs-target="#withdrawModal">
                                             <span>Withdraw</span>

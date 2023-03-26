@@ -1,5 +1,5 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
-import { HambergerMenu, UserOctagon } from 'iconsax-react'
+import { HambergerMenu, Logout, UserOctagon } from 'iconsax-react'
 import Link from 'next/link'
 import { useAuth } from '@/firebase/fire_auth_context';
 
@@ -34,13 +34,10 @@ export default function DashboardNavbar() {
                             Statistics
                         </Link>
                     </li>
-                    <li>
-                        <Link href="#" role="button" onClick={logOut}>Logout</Link>
-                    </li>
                 </ul>
                 <div>
-                    <Link href="#" role="button" data-bs-toggle="modal" data-bs-target="#profileModal">
-                        <UserOctagon size={32} /> Profile
+                    <Link href="#" role="button" onClick={logOut}>
+                        <Logout size={32} /> Logout
                     </Link>
                 </div>
             </div>

@@ -44,13 +44,13 @@ export default function Dashboard() {
         <div className={styles.bg}>
             <DashboardNavbar />
             <div className={styles.divider} />
-            <DashboardTransaction />
-            <DashboardQuick />
+            <DashboardTransaction user={user} />
+            <DashboardQuick user={user} />
             <DashboardMarket />
             <DashboardGraph />
 
             <StatisticsModal />
-            <WalletModal user={user} />
+            <WalletModal />
             <PaymentsModal user={user} />
             <WithdrawModal user={user} />
             <PlansModal user={user} />

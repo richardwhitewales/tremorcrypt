@@ -1,6 +1,22 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
+import toCurrency from '@/components/utils/toCurrency'
 
-export default function DashboardTransaction() {
+export default function DashboardTransaction({ user }) {
+    const getInvestmentPercentage = () => {
+        const plan = user.dashboard.investmentPlan;
+        const profit = user.dashboard.profit;
+        let percentage = "0%";
+
+        if (plan != 0) {
+            if (plan == 1) percentage = `${(profit / 5000) * 100}%`;
+            if (plan == 2) percentage = `${(profit / 8000) * 100}%`;
+            if (plan == 3) percentage = `${(profit / 12000) * 100}%`;
+            if (plan == 4) percentage = `${(profit / 20000) * 100}%`;
+        }
+
+        return percentage;
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -9,27 +25,27 @@ export default function DashboardTransaction() {
                         <div className="d-flex py-3 justify-content-around">
                             <div className="text-center">
                                 <small className="primary">Total Balance</small>
-                                <h4>$2,237.89</h4>
+                                <h4>{toCurrency(user.dashboard.balance)}</h4>
                             </div>
                             <div className="text-center">
-                                <small className="text-info">Total Profit</small>
-                                <h4>$789.09</h4>
+                                <small className="text-info">Total Withdraw</small>
+                                <h4>{toCurrency(user.dashboard.withdraw)}</h4>
                             </div>
                         </div>
                         <hr />
                         <div className="d-flex py-3 justify-content-around">
                             <div className="text-center">
                                 <small className="primary">Total Deposit</small>
-                                <h4>$8,098.67</h4>
+                                <h4>{toCurrency(user.dashboard.deposit)}</h4>
                             </div>
                             <div className="text-center">
                                 <small className="text-warning">Transactions</small>
-                                <h4>$67,782.92</h4>
+                                <h4>{toCurrency(user.dashboard.total)}</h4>
                             </div>
                         </div>
 
                         <div className={styles.profit_circle}>
-                            <h1>100%</h1>
+                            <h1 style={{ fontSize: "26px" }}>{getInvestmentPercentage()}</h1>
                         </div>
                     </div>
                 </div>

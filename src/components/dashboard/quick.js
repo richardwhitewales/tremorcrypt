@@ -6,7 +6,7 @@ import { db } from '@/firebase/fire_config';
 import Loader from '@/components/loader/loader';
 import { doc, updateDoc } from 'firebase/firestore';
 
-export default function DashboardQuick() {
+export default function DashboardQuick({user}) {
     const [loading, setLoading] = useState(false);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -62,6 +62,7 @@ export default function DashboardQuick() {
                                         </button>
                                         <button
                                             type="button"
+                                            disabled={user.dashboard.investmentPlan == 0}
                                             className={`btn btn-lg btn_primary black ${styles.qiuck_btn}`}
                                             data-bs-toggle="modal" data-bs-target="#withdrawModal">
                                             <span>Withdraw</span>

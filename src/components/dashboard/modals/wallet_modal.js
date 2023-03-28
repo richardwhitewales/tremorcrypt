@@ -52,6 +52,7 @@ export default function WalletModal({ user }) {
         }).then(() => {
             toast.success("Updated Billing Address.");
             setLoading2(false);
+            onClearModal();
         }).catch((error) => {
             if (error.code == "not-found") {
                 toast.error("User not found");

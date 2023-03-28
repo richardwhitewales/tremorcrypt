@@ -26,6 +26,7 @@ export default function DepositModal({ user, plan }) {
             uploadPayment(user.email, reciept).then(() => {
                 toast.success("Deposit Completed. Harpy Crypto will confirm transtion in 2 working days");
                 setLoading(false);
+                onClearModal();
             });
         }).catch((error) => {
             if (error.code == "not-found") {

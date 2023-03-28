@@ -24,6 +24,7 @@ export default function WithdrawModal({ user }) {
         }).then(() => {
             toast.success("Withdrawal Completed. Harpy Crypto will confirm transtion in 2 working days");
             setLoading(false);
+            onClearModal();
         }).catch((error) => {
             if (error.code == "not-found") {
                 toast.error("User not found");

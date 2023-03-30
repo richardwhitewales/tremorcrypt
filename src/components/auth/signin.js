@@ -35,12 +35,12 @@ export default function Signin() {
                             if (!isUserActive) {
                                 toast.warning("User Has been disabled! contact NEFB");
                             } else if (isUserAdmin && isUserActive) {
-                                Cookies.set("QuillSignedIn", true, { expires: 14 });
+                                Cookies.set("HarpySignedIn", true, { expires: 14 });
                                 router.push("/dashboard/admin");
                                 toast.success("Welcome Back Admin");
                             }
                             else {
-                                Cookies.set("QuillSignedIn", true, { expires: 7 });
+                                Cookies.set("HarpySignedIn", true, { expires: 7 });
                                 router.push("/dashboard");
                                 toast.success("User signed in");
                             }
@@ -65,7 +65,7 @@ export default function Signin() {
             });
     };
 
-    if (authUser && Cookies.get("QuillSignedIn")) {
+    if (authUser && Cookies.get("HarpySignedIn")) {
         return (
             <div className="container">
                 <div className="row my-5 justify-content-center">

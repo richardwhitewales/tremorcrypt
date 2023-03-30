@@ -95,7 +95,7 @@ export default function Signup() {
         if (formIndex > 0) setFormIndex(formIndex - 1);
     }
 
-    if (authUser && Cookies.get("QuillSignedIn")) {
+    if (authUser && Cookies.get("HarpySignedIn")) {
         return (
             <div className="container">
                 <div className="row my-5 justify-content-center">

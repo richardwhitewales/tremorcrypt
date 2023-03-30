@@ -36,7 +36,7 @@ export default function useFireAuth() {
 
   const logOut = async () => {
     await signOut(auth).then(clear);
-    Cookies.remove("QuillSignedIn");
+    Cookies.remove("HarpySignedIn");
     toast.success("User logged out.");
   }
 

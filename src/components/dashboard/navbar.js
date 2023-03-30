@@ -1,5 +1,5 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
-import { HambergerMenu, Logout, UserOctagon } from 'iconsax-react'
+import { HambergerMenu, Logout } from 'iconsax-react'
 import Link from 'next/link'
 import { useAuth } from '@/firebase/fire_auth_context';
 

@@ -33,7 +33,7 @@ export default function Signin() {
                             const isUserActive = docSnapshot.data().isActive;
 
                             if (!isUserActive) {
-                                toast.warning("User Has been disabled! contact NEFB");
+                                toast.warning("User Has been disabled! contact Harpy Crypto");
                             } else if (isUserAdmin && isUserActive) {
                                 Cookies.set("HarpySignedIn", true, { expires: 14 });
                                 router.push("/dashboard/admin");

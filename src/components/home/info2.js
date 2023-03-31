@@ -65,7 +65,7 @@ export default function Info2() {
                             <div className="mt-5">
                                 <p>
                                     Providing you with the most seamless process you can imagine for exchanging your
-                                    crypto or tokens on Harpy Crypto.
+                                    crypto or tokens on Harpy Cryto.
                                 </p>
 
                                 <p>

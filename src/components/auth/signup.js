@@ -118,7 +118,7 @@ export default function Signup() {
                     <header className="mb-auto">
                         <h4 className="float-md-start mb-0">
                             <Link className="text-decoration-none primary" href="/" as="/">
-                                Harpy Crypto
+                                Harpy Cryto
                             </Link>
                         </h4>
                     </header>

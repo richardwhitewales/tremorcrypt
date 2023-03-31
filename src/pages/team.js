@@ -9,8 +9,8 @@ const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
 export default function TeamPage() {
     // page default data
-    const pageName = "Harpy Crypto - Our Team";
-    const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
+    const pageName = "Harpy Cryto - Our Team";
+    const pageDesc = "Harpy Cryto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Cryto today and reap the rewards.";
     const baseURL = "https://harpycryto.com/team";
 
     // web site schema
@@ -60,10 +60,10 @@ export default function TeamPage() {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content={pageDesc} />
-                <meta name="keywords" content="Harpy Crypto, harpycryto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
+                <meta name="keywords" content="Harpy Cryto, harpycryto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-                <meta name="author" content="Harpy Crypto" />
+                <meta name="author" content="Harpy Cryto" />
                 <title>{pageName}</title>
 
                 <meta property="og:title" content={pageName} />
@@ -98,7 +98,7 @@ export default function TeamPage() {
 
                                         <hr />
                                         <p>
-                                            Responsible for overseeing all investment activities at Harpy Crypto,
+                                            Responsible for overseeing all investment activities at Harpy Cryto,
                                             including market analysis, investment strategy, and portfolio management.
                                         </p>
                                     </div>
@@ -140,7 +140,7 @@ export default function TeamPage() {
 
                                         <hr />
                                         <p>
-                                            Provides support to Harpy Crypto customers, addressing inquiries and concerns related
+                                            Provides support to Harpy Cryto customers, addressing inquiries and concerns related
                                             to their investments and accounts. Assists in maintaining positive customer relationships
                                             and promoting customer satisfaction.
                                         </p>
@@ -155,7 +155,7 @@ export default function TeamPage() {
 
                                         <hr />
                                         <p>
-                                            Ensures that Harpy Crypto is operating in compliance with all legal and regulatory
+                                            Ensures that Harpy Cryto is operating in compliance with all legal and regulatory
                                             requirements related to investment management and cryptocurrency. Develops and implements
                                             compliance policies and procedures.
                                         </p>
@@ -171,7 +171,7 @@ export default function TeamPage() {
                                         <hr />
                                         <p>
                                             Oversees the development and execution of marketing campaigns and initiatives to promote
-                                            Harpy Crypto and its investment services. Works closely with the investment and customer
+                                            Harpy Cryto and its investment services. Works closely with the investment and customer
                                             support teams to ensure consistency in messaging and branding.
                                         </p>
                                     </div>

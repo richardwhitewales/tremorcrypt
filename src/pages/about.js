@@ -9,8 +9,8 @@ const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
 export default function AboutPage() {
     // page default data
-    const pageName = "Harpy Crypto - About Us";
-    const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
+    const pageName = "Harpy Cryto - About Us";
+    const pageDesc = "Harpy Cryto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Cryto today and reap the rewards.";
     const baseURL = "https://harpycryto.com/about";
 
     // web site schema
@@ -60,10 +60,10 @@ export default function AboutPage() {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content={pageDesc} />
-                <meta name="keywords" content="Harpy Crypto, harpycryto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
+                <meta name="keywords" content="Harpy Cryto, harpycryto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-                <meta name="author" content="Harpy Crypto" />
+                <meta name="author" content="Harpy Cryto" />
                 <title>{pageName}</title>
 
                 <meta property="og:title" content={pageName} />
@@ -90,13 +90,13 @@ export default function AboutPage() {
                             </h1>
 
                             <p>
-                                Welcome to Harpy Crypto, a leading investment company specializing in cryptocurrency investments.
+                                Welcome to Harpy Cryto, a leading investment company specializing in cryptocurrency investments.
                                 Our team of experienced investment professionals has a proven track record of delivering strong
                                 returns to our clients through our tailored investment plans.
                             </p>
 
                             <p>
-                                At Harpy Crypto, we believe in the power of cryptocurrency and its potential to revolutionize the
+                                At Harpy Cryto, we believe in the power of cryptocurrency and its potential to revolutionize the
                                 financial industry. That is why we offer a range of investment options for our clients, including
                                 Bitcoin investments, with attractive returns and the flexibility to choose the investment plan that
                                 best fits their needs.
@@ -116,7 +116,7 @@ export default function AboutPage() {
                             </p>
 
                             <p>
-                                At Harpy Crypto, we prioritize security and confidentiality, implementing the latest encryption
+                                At Harpy Cryto, we prioritize security and confidentiality, implementing the latest encryption
                                 and security measures to ensure that our client are personal and financial information is protected
                                 at all times.
                             </p>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                             <p>
                                 We invite you to explore our website and learn more about our investment services and approach.
                                 Contact us today to begin your journey towards a profitable cryptocurrency investment portfolio
-                                with Harpy Crypto.
+                                with Harpy Cryto.
                             </p>
                         </div>
                     </div>

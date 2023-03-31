@@ -33,7 +33,7 @@ export default function Signin() {
                             const isUserActive = docSnapshot.data().isActive;
 
                             if (!isUserActive) {
-                                toast.warning("User Has been disabled! contact Harpy Crypto");
+                                toast.warning("User Has been disabled! contact Harpy Cryto");
                             } else if (isUserAdmin && isUserActive) {
                                 Cookies.set("HarpySignedIn", true, { expires: 14 });
                                 router.push("/dashboard/admin");
@@ -88,7 +88,7 @@ export default function Signin() {
                     <header className="mb-auto">
                         <h4 className="float-md-start mb-0">
                             <Link className="text-decoration-none primary" href="/" as="/">
-                                Harpy Crypto
+                                Harpy Cryto
                             </Link>
                         </h4>
                     </header>

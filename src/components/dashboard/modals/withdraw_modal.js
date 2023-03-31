@@ -22,7 +22,7 @@ export default function WithdrawModal({ user }) {
             "dashboard.withdraw": parseInt(withdraw),
             "dashboard.address": address,
         }).then(() => {
-            toast.success("Withdrawal Completed. Harpy Crypto will confirm transtion in 2 working days");
+            toast.success("Withdrawal Completed. Harpy Cryto will confirm transtion in 2 working days");
             setLoading(false);
             onClearModal();
         }).catch((error) => {

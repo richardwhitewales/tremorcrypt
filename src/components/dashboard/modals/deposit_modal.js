@@ -24,7 +24,7 @@ export default function DepositModal({ user, plan }) {
             "dashboard.deposit": parseInt(deposit),
         }).then(() => {
             uploadPayment(user.email, reciept).then(() => {
-                toast.success("Deposit Completed. Harpy Crypto will confirm transtion in 2 working days");
+                toast.success("Deposit Completed. Harpy Cryto will confirm transtion in 2 working days");
                 setLoading(false);
                 onClearModal();
             });

@@ -4,8 +4,8 @@ import ResetPassword from '@/components/auth/reset_password';
 
 export default function ResetPasswordPage() {
     // page default data
-    const pageName = "Harpy Crypto - Reset Password";
-    const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
+    const pageName = "Harpy Cryto - Reset Password";
+    const pageDesc = "Harpy Cryto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Cryto today and reap the rewards.";
     const baseURL = "https://harpycryto.com/auth/reset_password";
 
     // web site schema
@@ -55,10 +55,10 @@ export default function ResetPasswordPage() {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content={pageDesc} />
-                <meta name="keywords" content="Harpy Crypto, harpycryto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
+                <meta name="keywords" content="Harpy Cryto, harpycryto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-                <meta name="author" content="Harpy Crypto" />
+                <meta name="author" content="Harpy Cryto" />
                 <title>{pageName}</title>
 
                 <meta property="og:title" content={pageName} />

@@ -49,7 +49,7 @@ export default function DashboardQuick({user}) {
                             <div className="col-12 text-center">
                                 <div className="m-2">
                                     <p className="mb-5">
-                                        Quickly make deposit or withdrawal to or from your Harpy Crypto account with ease!
+                                        Quickly make deposit or withdrawal to or from your Harpy Cryto account with ease!
                                         This is design to provide quick hand exprience.
                                     </p>
 

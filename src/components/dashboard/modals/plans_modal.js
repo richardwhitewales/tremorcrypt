@@ -104,7 +104,7 @@ export default function PlansModal({ user }) {
                                 </div>
 
                                 <div className="col-12 mt-3 text-center">
-                                    <Link className="p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@harpycrypto.com">
+                                    <Link className="p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@harpycryto.com">
                                         Contact us for custom investment plan. <ArrowRight2 color="#12b772" size={20} />
                                     </Link>
                                 </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useAuth } from '@/firebase/fire_auth_context';
 import { db } from '@/firebase/fire_config';
 import { toast } from "react-toastify";
@@ -7,6 +7,7 @@ import { doc, updateDoc } from 'firebase/firestore';
 
 export default function WithdrawModal({ user }) {
     const [loading, setLoading] = useState(false);
+    const inputRefs = [useRef(null), useRef(null)];
     const [withdraw, setWithdraw] = useState("");
     const [address, setAddress] = useState("");
     const { authUser } = useAuth();
@@ -38,6 +39,7 @@ export default function WithdrawModal({ user }) {
 
     const onClearModal = () => {
         setLoading(false); setWithdraw(""); setAddress("");
+        inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
     return (
@@ -65,6 +67,7 @@ export default function WithdrawModal({ user }) {
                                                 id="address"
                                                 placeholder="BTC Address"
                                                 onChange={(event) => setAddress(event.target.value)}
+                                                ref={inputRefs[0]}
                                             />
                                             <label htmlFor="address">BTC Address</label>
                                         </div>
@@ -78,6 +81,7 @@ export default function WithdrawModal({ user }) {
                                                 id="withdraw"
                                                 placeholder="Amount in $"
                                                 onChange={(event) => setWithdraw(event.target.value)}
+                                                ref={inputRefs[1]}
                                             />
                                             <label htmlFor="withdraw">Amount in $</label>
                                         </div>

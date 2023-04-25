@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useAuth } from '@/firebase/fire_auth_context';
 import { db } from '@/firebase/fire_config';
 import { toast } from "react-toastify";
@@ -9,6 +9,7 @@ import countryOption from '@/components/utils/country';
 export default function WalletModal({ user }) {
     const [loading, setLoading] = useState(false);
     const [loading2, setLoading2] = useState(false);
+    const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
     const [address, setAddress] = useState("");
     const [country, setCountry] = useState("");
     const [zipcode, setZipcode] = useState("");
@@ -69,6 +70,7 @@ export default function WalletModal({ user }) {
         setAddress(""); setCountry("");
         setZipcode(""); setNumber("");
         setHolder(""); setCvv("");
+        inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
     return (
@@ -91,6 +93,7 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="Card Number"
                                                 onChange={(event) => setNumber(event.target.value)}
+                                                ref={inputRefs[0]}
                                             />
                                             <label htmlFor="number">Card Number</label>
                                         </div>
@@ -104,6 +107,7 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="Card Holder Name"
                                                 onChange={(event) => setHolder(event.target.value)}
+                                                ref={inputRefs[1]}
                                             />
                                             <label htmlFor="holder">Card Holder Name</label>
                                         </div>
@@ -117,6 +121,7 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="CVV"
                                                 onChange={(event) => setCvv(event.target.value)}
+                                                ref={inputRefs[2]}
                                             />
                                             <label htmlFor="cvv">CVV</label>
                                         </div>
@@ -139,6 +144,7 @@ export default function WalletModal({ user }) {
                                                 id="country"
                                                 required
                                                 onChange={(event) => setCountry(event.target.value)}
+                                                ref={inputRefs[3]}
                                             >
                                                 <option selected>AFGHANISTAN</option>
                                                 {countryOption.map((countryOption) => (countryOption))}
@@ -155,6 +161,7 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="Zip Code"
                                                 onChange={(event) => setZipcode(event.target.value)}
+                                                ref={inputRefs[4]}
                                             />
                                             <label htmlFor="zipcode">Zip Code</label>
                                         </div>
@@ -168,6 +175,7 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="Address"
                                                 onChange={(event) => setAddress(event.target.value)}
+                                                ref={inputRefs[5]}
                                             />
                                             <label htmlFor="addr">Address</label>
                                         </div>

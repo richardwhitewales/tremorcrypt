@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useAuth } from '@/firebase/fire_auth_context';
 import { db } from '@/firebase/fire_config';
 import { toast } from "react-toastify";
@@ -8,6 +8,7 @@ import uploadPayment from '@/components/dashboard/upload_payment.js';
 
 export default function DepositModal({ user, plan }) {
     const [loading, setLoading] = useState(false);
+    const inputRefs = [useRef(null), useRef(null)];
     const [deposit, setDeposit] = useState("");
     const [reciept, setReciept] = useState(null);
     const { authUser } = useAuth();
@@ -41,6 +42,7 @@ export default function DepositModal({ user, plan }) {
 
     const onClearModal = () => {
         setLoading(false); setDeposit(""); setReciept(null);
+        inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
     return (
@@ -88,6 +90,7 @@ export default function DepositModal({ user, plan }) {
                                                 id="deposit"
                                                 placeholder="Amount in $"
                                                 onChange={(event) => setDeposit(event.target.value)}
+                                                ref={inputRefs[0]}
                                             />
                                             <label htmlFor="deposit">Amount in $</label>
                                         </div>
@@ -101,6 +104,7 @@ export default function DepositModal({ user, plan }) {
                                                 id="deposit"
                                                 placeholder="Proof (screenshot or reciept)"
                                                 onChange={(event) => setReciept(event.target.files[0])}
+                                                ref={inputRefs[1]}
                                             />
                                             <label htmlFor="deposit">Proof (screenshot or reciept)</label>
                                         </div>

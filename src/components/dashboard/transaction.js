@@ -8,10 +8,10 @@ export default function DashboardTransaction({ user }) {
         let percentage = "0%";
 
         if (plan != 0) {
-            if (plan == 1) percentage = `${(profit / 5000) * 100}%`;
-            if (plan == 2) percentage = `${(profit / 8000) * 100}%`;
-            if (plan == 3) percentage = `${(profit / 12000) * 100}%`;
-            if (plan == 4) percentage = `${(profit / 20000) * 100}%`;
+            if (plan == 1) percentage = `${((profit / 5000) * 100).toFixed(1)}%`;
+            if (plan == 2) percentage = `${((profit / 8000) * 100).toFixed(1)}%`;
+            if (plan == 3) percentage = `${((profit / 12000) * 100).toFixed(1)}%`;
+            if (plan == 4) percentage = `${((profit / 20000) * 100).toFixed(1)}%`;
         }
 
         return percentage;

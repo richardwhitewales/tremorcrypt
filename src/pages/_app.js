@@ -4,6 +4,7 @@ import { FireAuthProvider } from '@/firebase/fire_auth_context'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -11,9 +12,12 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <FireAuthProvider>
-      <Component {...pageProps} />
-      <ToastContainer position="top-left" autoClose={3000} />
-    </FireAuthProvider>
+    <>
+      <FireAuthProvider>
+        <Component {...pageProps} />
+        <ToastContainer position="top-left" autoClose={3000} />
+      </FireAuthProvider>
+      <Analytics />
+    </>
   )
 }

@@ -15,6 +15,7 @@ import Loader from '@/components/loader/loader';
 import { db } from '@/firebase/fire_config';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
+import { toast } from "react-toastify";
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);

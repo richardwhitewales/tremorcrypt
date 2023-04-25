@@ -48,7 +48,7 @@ export default function DepositModal({ user, plan }) {
             <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="depositModalLabel">Deposit {typeof plan}</h5>
+                        <h5 className="modal-title" id="depositModalLabel">Deposit</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={onClearModal}></button>
                     </div>
                     <div className="modal-body">

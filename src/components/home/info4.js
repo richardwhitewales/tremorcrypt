@@ -61,9 +61,9 @@ export default function Info4() {
                         <hr />
                         <ul className="text-start">
                             <li className="my-2"><small><b>50%</b> ROI</small></li>
-                            <li className="my-2"><small>- Bonus of 0.25% + $200</small></li>
-                            <li className="my-2"><small>- Daily trading</small></li>
-                            <li className="my-2"><small>- Daily profit update & access</small></li>
+                            <li className="my-2"><small>Bonus of 0.25% + $200</small></li>
+                            <li className="my-2"><small>Daily trading</small></li>
+                            <li className="my-2"><small>Daily profit update & access</small></li>
                             <li className="my-2"><small>24/7 support</small></li>
                         </ul>
 
@@ -80,9 +80,9 @@ export default function Info4() {
                         <hr />
                         <ul className="text-start">
                             <li className="my-2"><small><b>60%</b> ROI</small></li>
-                            <li className="my-2"><small>- Bonus of 0.35% + $250</small></li>
-                            <li className="my-2"><small>- Daily trading</small></li>
-                            <li className="my-2"><small>- Daily profit update & access</small></li>
+                            <li className="my-2"><small>Bonus of 0.35% + $250</small></li>
+                            <li className="my-2"><small>Daily trading</small></li>
+                            <li className="my-2"><small>Daily profit update & access</small></li>
                             <li className="my-2"><small>24/7 support</small></li>
                         </ul>
 

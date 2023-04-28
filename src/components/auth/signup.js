@@ -9,14 +9,18 @@ import { doc, setDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { useRouter } from 'next/router';
 import { Back, Information } from 'iconsax-react';
 import Cookies from 'js-cookie';
+import { countryOption } from '@/components/utils/country';
 
 export default function Signup() {
     const [formIndex, setFormIndex] = useState(0);
     const [loading, setLoading] = useState(false);
+    const [username, setUsername] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [zipCode, setZipCode] = useState("");
+    const [country, setCountry] = useState("AFGHANISTAN");
     const [phoneNumber, setPhoneNumber] = useState("");
-    const [gender, setGender] = useState("male");
+    const [accountType, setAccountType] = useState("STARTER");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { authUser, signUp } = useAuth();
@@ -26,7 +30,7 @@ export default function Signup() {
         event.preventDefault();
 
         if (formIndex < 2) setFormIndex(formIndex + 1);
-        if (formIndex == 2) {
+        if (formIndex === 2) {
             setLoading(true);
 
             await signUp(email, password)
@@ -35,34 +39,30 @@ export default function Signup() {
                     const userDoc = {
                         firstName: firstName,
                         lastName: lastName,
+                        username: username,
+                        zipCode: zipCode,
+                        country: country,
                         phoneNumber: phoneNumber,
-                        gender: gender,
                         email: email.toLowerCase(),
-                        isAdmin: false,
-                        isActive: true,
-                        joinedOn: serverTimestamp(),
                         password: password,
+                        referral: "",
+                        disable: false,
+                        accountStatus: "INACTIVE",
+                        joinedOn: serverTimestamp(),
                         dashboard: {
-                            total: 0,
-                            balance: 0,
-                            profit: 0,
-                            investmentPlan: 0,
-                            withdraw: 0,
-                            deposit: 0,
-                            reciept: "",
-                            address: "",
-                            wallet: {
-                                card: {
-                                    holder: "",
-                                    number: "",
-                                    cvv: ""
-                                },
-                                billingAddress: {
-                                    address: "",
-                                    zipCode: "",
-                                    country: ""
-                                }
+                            balance: "0",
+                            status: true,
+                            accountType: accountType,
+                            withdraw: {
+                                balance: "0",
+                                receiverWallet: "",
                             },
+                            deposit: {
+                                balance: "0",
+                                profit: "0",
+                                sendersWallet: "",
+                                hasdID: ""
+                            }
                         }
                     };
 
@@ -129,7 +129,7 @@ export default function Signup() {
                         <p className="text-muted">Input your details below to complete.</p>
 
                         <form className="col-md-4 mt-4" onSubmit={onSignup}>
-                            {formIndex == 0 && (
+                            {formIndex === 0 && (
                                 <>
                                     <div className="form-floating mb-3">
                                         <input
@@ -137,65 +137,104 @@ export default function Signup() {
                                             required
                                             className="form-control"
                                             id="firstName"
-                                            placeholder="Jon"
+                                            placeholder="First Name"
                                             onChange={(event) => setFirstName(event.target.value)}
                                         />
                                         <label htmlFor="firstName">First Name</label>
+                                    </div>
+                                    <div className="form-floating mb-3">
+                                        <input
+                                            type="text"
+                                            required
+                                            className="form-control"
+                                            id="lastName"
+                                            placeholder="Last Name"
+                                            onChange={(event) => setLastName(event.target.value)}
+                                        />
+                                        <label htmlFor="lastName">Last Name</label>
                                     </div>
                                     <div className="form-floating">
                                         <input
                                             type="text"
                                             required
                                             className="form-control"
-                                            id="lastName"
-                                            placeholder="Doe"
-                                            onChange={(event) => setLastName(event.target.value)}
+                                            id="username"
+                                            placeholder="Username"
+                                            onChange={(event) => setUsername(event.target.value)}
                                         />
-                                        <label htmlFor="lastName">Last Name</label>
+                                        <label htmlFor="username">Username</label>
                                     </div>
                                 </>
                             )}
 
-                            {formIndex == 1 && (
+                            {formIndex === 1 && (
                                 <>
                                     <div className="form-floating mb-3">
                                         <input
                                             type="text"
                                             required
                                             className="form-control"
+                                            id="zipCode"
+                                            placeholder="zip Code"
+                                            onChange={(event) => setZipCode(event.target.value)}
+                                        />
+                                        <label htmlFor="zipCode">zip Code</label>
+                                    </div>
+                                    <div className="form-floating mb-3">
+                                        <select
+                                            className="form-select"
+                                            id="country"
+                                            required
+                                            onChange={(event) => setCountry(event.target.value)}
+                                        >
+                                            <option selected>AFGHANISTAN</option>
+                                            {countryOption.map((countryOption) => (countryOption))}
+                                        </select>
+                                        <label htmlFor="country">Country</label>
+                                    </div>
+
+                                    <div className="form-floating">
+                                        <input
+                                            type="text"
+                                            required
+                                            className="form-control"
                                             id="phoneNumber"
-                                            placeholder="Jon"
+                                            placeholder="Phone Number"
                                             onChange={(event) => setPhoneNumber(event.target.value)}
                                         />
                                         <label htmlFor="phoneNumber">Phone Number</label>
                                     </div>
-                                    <div className="form-floating">
-                                        <select
-                                            className="form-select"
-                                            required
-                                            id="gender"
-                                            onChange={(event) => setGender(event.target.value)}
-                                        >
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                        </select>
-                                        <label htmlFor="gender">Gender</label>
-                                    </div>
                                 </>
                             )}
 
-                            {formIndex == 2 && (
+                            {formIndex === 2 && (
                                 <>
+                                    <div className="form-floating mb-3">
+                                        <select
+                                            className="form-select"
+                                            id="accountType"
+                                            required
+                                            onChange={(event) => setAccountType(event.target.value)}
+                                        >
+                                            <option selected>STARTER</option>
+                                            <option value="BASIC">BASIC</option>
+                                            <option value="STANDARD">STANDARD</option>
+                                            <option value="CORE">CORE</option>
+                                            <option value="ADVANCED">ADVANCED</option>
+                                            <option value="PREMIUM">PREMIUM</option>
+                                        </select>
+                                        <label htmlFor="accountType">Account Type</label>
+                                    </div>
                                     <div className="form-floating mb-3">
                                         <input
                                             type="email"
                                             required
                                             className="form-control"
                                             id="emailAddr"
-                                            placeholder="name@example.com"
+                                            placeholder="Email Address"
                                             onChange={(event) => setEmail(event.target.value)}
                                         />
-                                        <label htmlFor="emailAddr">Email address</label>
+                                        <label htmlFor="emailAddr">Email Address</label>
                                     </div>
                                     <div className="form-floating">
                                         <input
@@ -223,8 +262,8 @@ export default function Signup() {
 
                                 <button type="submit" className={`w-100 btn btn-lg ${styles.auth_btn}`}>
                                     {formIndex != 2 && !loading && "Next"}
-                                    {formIndex == 2 && loading && <Loader />}
-                                    {formIndex == 2 && !loading && "Signup"}
+                                    {formIndex === 2 && loading && <Loader />}
+                                    {formIndex === 2 && !loading && "Signup"}
                                 </button>
                             </div>
 

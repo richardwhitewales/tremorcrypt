@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Call, DirectInbox, Location } from 'iconsax-react'
+import { Call, DirectInbox, Instagram, Location } from 'iconsax-react'
 
 export default function Footer() {
     return (
@@ -79,6 +79,9 @@ export default function Footer() {
                                 </li>
                                 <li>
                                     <Call /> +1-415-209-5796
+                                </li>
+                                <li>
+                                    <Instagram /> <Link href="https://www.instagram.com/harpycryto/" className="text-decoration-none black" target="_blank">harpycryto</Link>
                                 </li>
                             </ul>
                         </div>

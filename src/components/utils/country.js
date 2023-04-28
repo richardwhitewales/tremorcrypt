@@ -1,4 +1,4 @@
-const countryOption = [
+export const countryOption = [
     <option key="0" value="ALBANIA">ALBANIA</option>,
     <option key="1" value="ALGERIA">ALGERIA</option>,
     <option key="2" value="ANDORRA">ANDORRA</option>,

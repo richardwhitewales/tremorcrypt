@@ -1,7 +1,7 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
 import { useState, useEffect } from 'react';
 import Loader from '@/components/loader/loader';
-import toCurrency from '@/components/utils/toCurrency'
+import { toCurrency } from '@/components/utils/toCurrency'
 import { Bitcoin, Ethereum, Litecoin, Xrp } from 'iconsax-react'
 
 export default function DashboardMarket() {
@@ -23,18 +23,10 @@ export default function DashboardMarket() {
     };
 
     useEffect(() => {
-        fetch(urlBtc, options)
-            .then(res => res.json())
-            .then(json => setBTC(json))
-        fetch(urlEth, options)
-            .then(res => res.json())
-            .then(json => setETH(json))
-        fetch(urlLtc, options)
-            .then(res => res.json())
-            .then(json => setLTC(json))
-        fetch(urlXrp, options)
-            .then(res => res.json())
-            .then(json => setXRP(json))
+        fetch(urlBtc, options).then(res => res.json()).then(json => setBTC(json))
+        fetch(urlEth, options).then(res => res.json()).then(json => setETH(json))
+        fetch(urlLtc, options).then(res => res.json()).then(json => setLTC(json))
+        fetch(urlXrp, options).then(res => res.json()).then(json => setXRP(json))
     }, []);
 
     if (!btc || !eth || !ltc || !xrp) return <Loader />

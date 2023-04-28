@@ -1,6 +1,6 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
 
-export default function PaymentsModal({ user }) {
+export default function PaymentsModal() {
     return (
         <div className="modal fade" id="paymentsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="paymentsModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered">
@@ -20,14 +20,13 @@ export default function PaymentsModal({ user }) {
                                     <div className="d-flex justify-content-around mb-3">
                                         <button
                                             type="button"
-                                            className={`btn btn-lg btn-light bg-white shadow ${styles.qiuck_btn}`}
+                                            className={`btn btn-lg btn_primary black ${styles.qiuck_btn}`}
                                             data-bs-toggle="modal" data-bs-target="#plansModal">
                                             <span>Deposit</span>
                                         </button>
                                         <button
                                             type="button"
-                                            disabled={user.dashboard.investmentPlan == 0}
-                                            className={`btn btn-lg btn_primary black shadow ${styles.qiuck_btn}`}
+                                            className={`btn btn-lg btn-dark ${styles.qiuck_btn}`}
                                             data-bs-toggle="modal" data-bs-target="#withdrawModal">
                                             <span>Withdraw</span>
                                         </button>

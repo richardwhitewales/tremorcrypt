@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useAuth } from '@/firebase/fire_auth_context';
 import { db } from '@/firebase/fire_config';
 import { toast } from "react-toastify";
@@ -6,11 +6,10 @@ import Loader from '@/components/loader/loader';
 import { doc, updateDoc } from 'firebase/firestore';
 import countryOption from '@/components/utils/country';
 
-export default function WalletModal({ user }) {
+export default function WalletModal() {
     const [loading, setLoading] = useState(false);
     const [loading2, setLoading2] = useState(false);
-    const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
-    const [address, setAddress] = useState("");
+    const [accountType, setAccountType] = useState("");
     const [country, setCountry] = useState("");
     const [zipcode, setZipcode] = useState("");
     const [number, setNumber] = useState("");
@@ -24,14 +23,14 @@ export default function WalletModal({ user }) {
 
         const docRef = doc(db, "users", authUser.email);
         await updateDoc(docRef, {
-            "dashboard.wallet.card.holder": holder,
-            "dashboard.wallet.card.number": number,
-            "dashboard.wallet.card.cvv": cvv,
+            "dashboard.card.holder": holder,
+            "dashboard.card.number": number,
+            "dashboard.card.cvv": cvv,
         }).then(() => {
             toast.success("Updated Card.");
             setLoading(false);
         }).catch((error) => {
-            if (error.code == "not-found") {
+            if (error.code === "not-found") {
                 toast.error("User not found");
                 setLoading(false);
             } else {
@@ -47,15 +46,15 @@ export default function WalletModal({ user }) {
 
         const docRef = doc(db, "users", authUser.email);
         await updateDoc(docRef, {
-            "dashboard.wallet.billingAddress.address": address,
-            "dashboard.wallet.billingAddress.zipCode": zipcode,
-            "dashboard.wallet.billingAddress.country": country,
+            "country": country,
+            "zipCode": zipcode,
+            "accountType": accountType,
         }).then(() => {
             toast.success("Updated Billing Address.");
             setLoading2(false);
             onClearModal();
         }).catch((error) => {
-            if (error.code == "not-found") {
+            if (error.code === "not-found") {
                 toast.error("User not found");
                 setLoading2(false);
             } else {
@@ -67,10 +66,9 @@ export default function WalletModal({ user }) {
 
     const onClearModal = () => {
         setLoading(false); setLoading2(false);
-        setAddress(""); setCountry("");
+        setAccountType(""); setCountry("");
         setZipcode(""); setNumber("");
         setHolder(""); setCvv("");
-        inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
     return (
@@ -93,7 +91,6 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="Card Number"
                                                 onChange={(event) => setNumber(event.target.value)}
-                                                ref={inputRefs[0]}
                                             />
                                             <label htmlFor="number">Card Number</label>
                                         </div>
@@ -107,7 +104,6 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="Card Holder Name"
                                                 onChange={(event) => setHolder(event.target.value)}
-                                                ref={inputRefs[1]}
                                             />
                                             <label htmlFor="holder">Card Holder Name</label>
                                         </div>
@@ -121,7 +117,6 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="CVV"
                                                 onChange={(event) => setCvv(event.target.value)}
-                                                ref={inputRefs[2]}
                                             />
                                             <label htmlFor="cvv">CVV</label>
                                         </div>
@@ -144,7 +139,6 @@ export default function WalletModal({ user }) {
                                                 id="country"
                                                 required
                                                 onChange={(event) => setCountry(event.target.value)}
-                                                ref={inputRefs[3]}
                                             >
                                                 <option selected>AFGHANISTAN</option>
                                                 {countryOption.map((countryOption) => (countryOption))}
@@ -161,7 +155,6 @@ export default function WalletModal({ user }) {
                                                 required
                                                 placeholder="Zip Code"
                                                 onChange={(event) => setZipcode(event.target.value)}
-                                                ref={inputRefs[4]}
                                             />
                                             <label htmlFor="zipcode">Zip Code</label>
                                         </div>
@@ -169,15 +162,20 @@ export default function WalletModal({ user }) {
 
                                     <div className="col-12 mt-3">
                                         <div className="form-floating mx-2">
-                                            <input type="text"
-                                                className="form-control"
-                                                id="addr"
+                                            <select
+                                                className="form-select"
+                                                id="accountType"
                                                 required
-                                                placeholder="Address"
-                                                onChange={(event) => setAddress(event.target.value)}
-                                                ref={inputRefs[5]}
-                                            />
-                                            <label htmlFor="addr">Address</label>
+                                                onChange={(event) => setAccountType(event.target.value)}
+                                            >
+                                                <option selected>STARTER</option>
+                                                <option value="BASIC">BASIC</option>
+                                                <option value="STANDARD">STANDARD</option>
+                                                <option value="CORE">CORE</option>
+                                                <option value="ADVANCED">ADVANCED</option>
+                                                <option value="PREMIUM">PREMIUM</option>
+                                            </select>
+                                            <label htmlFor="accountType">Account Type</label>
                                         </div>
                                     </div>
 

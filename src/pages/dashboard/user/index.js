@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import { Roboto } from 'next/font/google'
 import { getWSSchema, getWPSchema, getLBSchema } from '@/components/schema';
-import Dashboard from '@/components/dashboard/dashboard'
+import Dashboard from '@/components/dashboard/user/dashboard'
+import WhatsApp from '@/components/whatsApp'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
@@ -9,7 +10,7 @@ export default function DashboardPage() {
     // page default data
     const pageName = "Harpy Cryto - Dashboard";
     const pageDesc = "Harpy Cryto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Cryto today and reap the rewards.";
-    const baseURL = "https://harpycryto.com/dashboard";
+    const baseURL = "https://harpycryto.com/dashboard/user";
 
     // web site schema
     const wSSchema = getWSSchema(baseURL);
@@ -93,8 +94,11 @@ export default function DashboardPage() {
                 />
             </Head>
 
-            <main className={roboto.className}>
+            <main className={`position-relative ${roboto.className}`}>
                 <Dashboard />
+                <div className="position-fixed bottom-0 start-0">
+                    <WhatsApp />
+                </div>
             </main>
         </>
     )

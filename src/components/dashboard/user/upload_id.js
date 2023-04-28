@@ -1,14 +1,5 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
-import DashboardNavbar from '@/components/dashboard/navbar'
-import DashboardTransaction from '@/components/dashboard/transaction'
-import DashboardMarket from '@/components/dashboard/market'
-import DashboardQuick from '@/components/dashboard/quick'
-import DashboardGraph from '@/components/dashboard/graph'
-import WithdrawModal from '@/components/dashboard/modals/withdraw_modal'
-import PlansModal from '@/components/dashboard/modals/plans_modal'
-import PaymentsModal from '@/components/dashboard/modals/payments_modal'
-import WalletModal from '@/components/dashboard/modals/wallet_modal'
-import StatisticsModal from '@/components/dashboard/modals/statistics_modal'
+import DashboardNavbar from '@/components/dashboard/user/navbar'
 import { useAuth } from '@/firebase/fire_auth_context';
 import NeedAuth from '@/components/restrictions/need_auth';
 import Loader from '@/components/loader/loader';
@@ -16,8 +7,9 @@ import { db } from '@/firebase/fire_config';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { toast } from "react-toastify";
+import UploadIDCard from '@/components/dashboard/user/upload_id_card'
 
-export default function Dashboard() {
+export default function UploadID() {
     const [user, setUser] = useState(null);
     const { authUser } = useAuth();
 
@@ -39,22 +31,13 @@ export default function Dashboard() {
 
     if (!authUser) return <NeedAuth fullHeight={true} />
 
-    if (!user) return <Loader fullHeight={true} />
+    if (!user) return <Loader fullHeight={true} bg="bg_black" />
 
     return (
         <div className={styles.bg}>
             <DashboardNavbar />
             <div className={styles.divider} />
-            <DashboardTransaction user={user} />
-            <DashboardQuick user={user} />
-            <DashboardMarket />
-            <DashboardGraph />
-
-            <StatisticsModal />
-            <WalletModal />
-            <PaymentsModal user={user} />
-            <WithdrawModal user={user} />
-            <PlansModal user={user} />
+            <UploadIDCard user={user} />
         </div>
     )
 }

@@ -35,9 +35,14 @@ export default function useFireAuth() {
   const signUp = async (email, password) => await createUserWithEmailAndPassword(auth, email, password);
 
   const logOut = async () => {
-    await signOut(auth).then(clear);
-    Cookies.remove("HarpySignedIn");
-    toast.success("User logged out.");
+    try {
+      window.location.href = "/";
+      await signOut(auth).then(clear);
+      Cookies.remove("HarpySignedIn");
+      toast.success("User logged out.");
+    } catch (error) {
+      toast.error(`Error loggouting out: ${error}`);
+    }
   }
 
   useEffect(() => {

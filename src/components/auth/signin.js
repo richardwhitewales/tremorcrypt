@@ -29,20 +29,26 @@ export default function Signin() {
                 getDoc(profileRef)
                     .then((docSnapshot) => {
                         if (docSnapshot.exists()) {
-                            const isUserAdmin = docSnapshot.data().isAdmin;
-                            const isUserActive = docSnapshot.data().isActive;
+                            const user = docSnapshot.data();
+                            const isUserDisable = user.disable;
+                            const isAdmin = data.user.email === "info@harpycryto.com" || data.user.email === "richardwhitewales@gmail.com";
 
-                            if (!isUserActive) {
-                                toast.warning("User Has been disabled! contact Harpy Cryto");
-                            } else if (isUserAdmin && isUserActive) {
+                            if (isUserDisable) {
+                                toast.warning("User Has been disabled! contact Harpy");
+                            } else if (isAdmin) {
                                 Cookies.set("HarpySignedIn", true, { expires: 14 });
                                 router.push("/dashboard/admin");
                                 toast.success("Welcome Back Admin");
                             }
                             else {
                                 Cookies.set("HarpySignedIn", true, { expires: 7 });
-                                router.push("/dashboard");
-                                toast.success("User signed in");
+                                if (user.frontID && user.backID) {
+                                    router.push('/dashboard/user');
+                                    toast.success("User signed in");
+                                } else {
+                                    router.push('/dashboard/user/upload_id');
+                                    toast.warning("Upload ID!");
+                                }
                             }
                         } else {
                             toast.error("User not found");

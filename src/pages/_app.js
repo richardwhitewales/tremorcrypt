@@ -2,9 +2,13 @@ import '@/styles/globals.css'
 import { useEffect } from "react";
 import { FireAuthProvider } from '@/firebase/fire_auth_context'
 import { ToastContainer } from 'react-toastify';
+import { Analytics } from '@vercel/analytics/react';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Analytics } from '@vercel/analytics/react';
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {

@@ -6,7 +6,7 @@ export default function StatisticsModal() {
             <div className="modal-dialog modal-sm modal-dialog-centered">
                 <div className="modal-content">
                     <div className="alert alert-info bg_primary_15 black text-center">
-                        <Chart size="32" color="#12b772" /> Coming Soon!
+                        <Chart size="32" color="#02273b" /> Coming Soon!
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import Hero from '@/components/home/hero'
 import Info1 from '@/components/home/info1'
 import Info2 from '@/components/home/info2'
 import Info3 from '@/components/home/info3'
+import BuyCrypto from '@/components/home/buy_crypto';
 import Info4 from '@/components/home/info4'
 import Info5 from '@/components/home/info5'
 
@@ -91,6 +92,7 @@ export default function HomePage() {
         <Info1 />
         <Info2 />
         <Info3 />
+        <BuyCrypto />
         <Info4 />
         <Info5 />
         <Footer />

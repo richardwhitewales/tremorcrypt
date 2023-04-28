@@ -26,7 +26,7 @@ export default function DashboardQuick({user}) {
             toast.success("Profile Updated.");
             setLoading(false);
         }).catch((error) => {
-            if (error.code == "not-found") {
+            if (error.code === "not-found") {
                 toast.error("User not found");
                 setLoading(false);
             } else {
@@ -49,7 +49,7 @@ export default function DashboardQuick({user}) {
                             <div className="col-12 text-center">
                                 <div className="m-2">
                                     <p className="mb-5">
-                                        Quickly make deposit or withdrawal to or from your Harpy Cryto account with ease!
+                                        Quickly make deposit or withdrawal to or from your Harpy account with ease!
                                         This is design to provide quick hand exprience.
                                     </p>
 
@@ -62,7 +62,6 @@ export default function DashboardQuick({user}) {
                                         </button>
                                         <button
                                             type="button"
-                                            disabled={user.dashboard.investmentPlan == 0}
                                             className={`btn btn-lg btn_primary black ${styles.qiuck_btn}`}
                                             data-bs-toggle="modal" data-bs-target="#withdrawModal">
                                             <span>Withdraw</span>

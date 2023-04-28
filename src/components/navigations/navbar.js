@@ -1,12 +1,35 @@
 import Link from 'next/link'
 import { useRouter } from "next/router";
-import { ArrowRight2, Cloud, Coffee, MagicStar, Tree } from 'iconsax-react';
+import { ArrowRight2, Cloud, Coffee, Logout, MagicStar, Tree } from 'iconsax-react';
 import styles from '@/components/navigations/Navigations.module.css'
 import { useAuth } from '@/firebase/fire_auth_context';
 
 export default function Navbar() {
     const router = useRouter();
-    const { loading, authUser } = useAuth();
+    const { loading, authUser, logOut } = useAuth();
+
+    const dashboard = () => {
+        if (!loading && authUser) {
+            return <>
+                {authUser.email === "info@harpycryto.com" || authUser.email === "richardwhitewales@gmail.com" ?
+                    <Link className="btn btn-sm btn_secondary mx-2" href="/dashboard/admin">
+                        Account Dashboard <ArrowRight2 size={20} />
+                    </Link>
+                    :
+                    <Link className="btn btn-sm btn_secondary mx-2" href="/dashboard/user">
+                        Account Dashboard <ArrowRight2 size={20} />
+                    </Link>
+                }
+                <button className="btn btn-sm mx-2" role="button" onClick={logOut}>
+                    Sign Out <Logout size={20} />
+                </button>
+            </>
+        } else {
+            return <Link className="btn btn-sm btn_secondary mx-2" href="/auth/signin">
+                Account Dashboard <ArrowRight2 size={20} />
+            </Link>
+        }
+    }
 
     return (
         <nav className="navbar navbar-expand-md navbar-light bg_white">
@@ -40,31 +63,27 @@ export default function Navbar() {
                                             <li>
                                                 <Link className={styles.dropdown_item} href="/auth/signup">
                                                     <Tree color="#12b772" /> Starter
-                                                    <div>
-                                                        <ul className="list-unstyled text-muted">
-                                                            <li className="mx-4 mr-0"><small>- 1 month maturity duration</small></li>
-                                                            <li className="mx-4 mr-0"><small>- 25% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Bonus of 0.1% + $100</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily trading</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
-                                                            <li className="mx-4 mr-0 fw-bold"><small>- Deposit $5,000</small></li>
-                                                        </ul>
-                                                    </div>
+                                                    <ul className="list-unstyled text-muted">
+                                                        <li className="mx-4 mr-0"><small>✓ Monthly for 1 weekly</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ 10% ROI</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Minimum $500.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Maximum $2,999.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
+                                                        <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
+                                                    </ul>
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link className={styles.dropdown_item} href="/auth/signup">
                                                     <Coffee color="#12b772" /> Standard
-                                                    <div>
-                                                        <ul className="list-unstyled text-muted">
-                                                            <li className="mx-4 mr-0"><small>- 3 months maturity duration</small></li>
-                                                            <li className="mx-4 mr-0"><small>- 50% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Bonus of 0.25% + $200</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily trading</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
-                                                            <li className="mx-4 mr-0 fw-bold"><small>- Deposit $12,000</small></li>
-                                                        </ul>
-                                                    </div>
+                                                    <ul className="list-unstyled text-muted">
+                                                        <li className="mx-4 mr-0"><small>✓ Monthly for 1 month</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ 20% ROI</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Minimum $9,000.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Maximum $15,999.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
+                                                        <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
+                                                    </ul>
                                                 </Link>
                                             </li>
                                         </ul>
@@ -73,36 +92,30 @@ export default function Navbar() {
                                     <div className="col-sm-6">
                                         <ul className="list-unstyled">
                                             <li>
-                                                <Link className={`${styles.dropdown_item} border rounded shadow-sm position-relative`} href="/auth/signup">
+                                                <Link className={styles.dropdown_item} href="/auth/signup">
                                                     <Cloud color="#12b772" /> Basic
-                                                    <div>
-                                                        <ul className="list-unstyled text-muted">
-                                                            <li className="mx-4 mr-0"><small>- 2 months maturity duration</small></li>
-                                                            <li className="mx-4 mr-0"><small>- 40% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Bonus of 0.2% + $150</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily trading</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
-                                                            <li className="mx-4 mr-0 fw-bold"><small>- Deposit $8,000</small></li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <small className="alert alert-danger p-1 rounded-1 position-absolute top-0 end-0">Most Purchased</small>
+                                                    <ul className="list-unstyled text-muted">
+                                                        <li className="mx-4 mr-0"><small>✓ Monthly for 1 month</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ 15% ROI</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Minimum $3,000.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Maximum $8,999.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
+                                                        <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
+                                                    </ul>
                                                 </Link>
                                             </li>
 
                                             <li>
                                                 <Link className={styles.dropdown_item} href="/auth/signup">
-                                                    <MagicStar color="#12b772" /> Advanced
-                                                    <div>
-                                                        <ul className="list-unstyled text-muted">
-                                                            <li className="mx-4 mr-0"><small>- 4 months maturity duration</small></li>
-                                                            <li className="mx-4 mr-0"><small>- 60% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Bonus of 0.35% + $250</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily trading</small></li>
-                                                            <li className="mx-4 mr-0"><small>- Daily profit update & access</small></li>
-                                                            <li className="mx-4 mr-0 fw-bold"><small>- Deposit $20,000</small></li>
-                                                        </ul>
-                                                    </div>
+                                                    <ul className="list-unstyled text-muted">
+                                                        <MagicStar color="#12b772" /> Core
+                                                        <li className="mx-4 mr-0"><small>✓ Monthly for 1 month</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ 24.99% ROI</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Minimum $16,000.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Maximum $24,999.00</small></li>
+                                                        <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
+                                                        <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
+                                                    </ul>
                                                 </Link>
                                             </li>
                                         </ul>
@@ -110,7 +123,7 @@ export default function Navbar() {
 
                                     <div className="col-12">
                                         <Link className=" p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@harpycryto.com">
-                                            Contact us for custom investment plan. <ArrowRight2 color="#12b772" size={20} />
+                                            View more investments plans. <ArrowRight2 color="#12b772" size={20} />
                                         </Link>
                                     </div>
                                 </div>
@@ -135,17 +148,10 @@ export default function Navbar() {
                     </ul>
 
                     <div className="d-flex">
-                        {!loading && authUser
-                            ? <Link className="btn btn-sm btn_secondary mx-2" href="/dashboard">
-                                Account Dashboard <ArrowRight2 size={20} />
-                            </Link>
-                            : <Link className="btn btn-sm btn_secondary mx-2" href="/auth/signin">
-                                Account Dashboard <ArrowRight2 size={20} />
-                            </Link>
-                        }
+                        {dashboard()}
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav >
     )
 }

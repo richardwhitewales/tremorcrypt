@@ -87,7 +87,7 @@ export default function UserUpdateModal({ user }) {
         inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
-    if (!user) return <div className="modal fade" id="userUpdateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="userUpdateModalLabel" aria-hidden="true">
+    if (!user) return <div className="modal fade" id="userUpdateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="userUpdateModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
                 <div className="modal-body">

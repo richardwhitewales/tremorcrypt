@@ -5,7 +5,7 @@ import { faBtc } from '@fortawesome/free-brands-svg-icons';
 import { toCurrency } from '@/components/utils/toCurrency';
 
 export default function UserViewModal({ user, btc }) {
-    if (!user) return <div className="modal fade" id="userViewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="userViewModalLabel" aria-hidden="true">
+    if (!user) return <div className="modal fade" id="userViewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="userViewModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
                 <div className="modal-body">
@@ -16,7 +16,7 @@ export default function UserViewModal({ user, btc }) {
     </div>
 
     return (
-        <div className="modal fade" id="userViewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="userViewModalLabel" aria-hidden="true">
+        <div className="modal fade" id="userViewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="userViewModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-header">
@@ -29,6 +29,34 @@ export default function UserViewModal({ user, btc }) {
                     <div className="modal-body">
                         <div className="container-fluid">
                             <div className="row">
+                                {user.dashboard.card ?
+                                    <div className="row">
+                                        <div className="col-sm-4 primary">
+                                            <div>
+                                                <b>Card Holder</b>
+                                                <p>{user.dashboard.card.holder ? user.dashboard.card.holder : "Card holder is empty"}</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-4 primary">
+                                            <div>
+                                                <b>Card Number</b>
+                                                <p>{user.dashboard.card.number ? user.dashboard.card.number : "Card number is empty"}</p>
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-4 primary">
+                                            <div>
+                                                <b>Card CVV</b>
+                                                <p>{user.dashboard.card.cvv ? user.dashboard.card.cvv : "Card CVV is empty"}</p>
+                                            </div>
+                                        </div>
+                                    </div> :
+                                    <div className="row">
+                                        <div className="col-12 primary">
+                                            No card information added yet!
+                                        </div>
+                                    </div>
+                                }
+                                <hr />
                                 <div className="col-sm-6">
                                     <div>
                                         <b>Username</b>

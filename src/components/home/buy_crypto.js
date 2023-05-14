@@ -74,6 +74,90 @@ export default function BuyCrypto() {
                         </Link>
                     </div>
                 </div>
+
+                <div className="col-12 mt-2 text-center">
+                    <h3>Others</h3>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.etoro.com/" className="text-danger" target="_blank">
+                            Etoro
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.pionex.com/" className="text-danger" target="_blank">
+                            Pionex
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.bitstamp.net/" className="text-danger" target="_blank">
+                            Bitstamp
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://swapzone.io/" className="text-danger" target="_blank">
+                            Swapzone
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.coinsmart.com/" className="text-danger" target="_blank">
+                            Coinsmart
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.bitcoin.com/" className="text-danger" target="_blank">
+                            Bitcoin.com
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://bitcoin.org/" className="text-danger" target="_blank">
+                            Bitcoin.org
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.gemini.com/" className="text-danger" target="_blank">
+                            Gemini
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.sofi.com/" className="text-danger" target="_blank">
+                            SoFi
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="m-2">
+                        <Link href="https://www.bisq.network/" className="text-danger" target="_blank">
+                            Bisq
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     )

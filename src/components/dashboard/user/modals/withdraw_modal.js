@@ -69,7 +69,7 @@ export default function WithdrawModal({ user }) {
                             <div className="col-12">
                                 <form onSubmit={onWithdraw}>
                                     <div className="alert alert-light border_primary shadow">
-                                        Enter the <b>Address</b>, <b>Amount</b>, <b>Bank Account Name</b> and <b>Bank Account Number</b> you would like to withdraw to below
+                                        Enter the <b>Address (optional)</b>, <b>Amount</b>, <b>Bank Account Name</b> and <b>Bank Account Number</b> you would like to withdraw to below
                                         and click <b>&quot;Withdraw&quot;</b> to confirm.
                                     </div>
 
@@ -77,9 +77,8 @@ export default function WithdrawModal({ user }) {
                                         <div className="form-floating mx-2">
                                             <input type="text"
                                                 className="form-control"
-                                                required
                                                 id="address"
-                                                placeholder="BTC Address"
+                                                placeholder="BTC Address (optional)"
                                                 onChange={(event) => setReceiverWallet(event.target.value)}
                                                 ref={inputRefs[0]}
                                             />

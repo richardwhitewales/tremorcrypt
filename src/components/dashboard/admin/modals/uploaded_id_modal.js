@@ -14,8 +14,12 @@ export default function UploadedIDModal() {
 
             usersSnapshot.forEach((doc) => {
                 const data = doc.data();
-                innerUsers.push(data)
+                innerUsers.push(data);
             });
+
+            // Sort the innerUsers array alphabetically by username
+            innerUsers.sort((a, b) => a.username.localeCompare(b.username));
+
             setUsers(innerUsers);
         };
         getUsersData();

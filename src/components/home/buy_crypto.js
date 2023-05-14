@@ -42,6 +42,38 @@ export default function BuyCrypto() {
                         </Link>
                     </div>
                 </div>
+
+                <div className="col-md-3">
+                    <div className="m-2 bg_white shadow rounded">
+                        <Link href="https://www.coinbase.com/" target="_blank">
+                            <img src="/coinbase.png" alt="image" width="100%" height={150} style={{ objectFit: "cover" }} className="rounded" />
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-3">
+                    <div className="m-2 bg_white shadow rounded">
+                        <Link href="https://blockfi.com/" target="_blank">
+                            <img src="/blockfi.png" alt="image" width="100%" height={150} style={{ objectFit: "cover" }} className="rounded" />
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-3">
+                    <div className="m-2 bg_white shadow rounded">
+                        <Link href="https://zengo.com/" target="_blank">
+                            <img src="/zengo.png" alt="image" width="100%" height={150} style={{ objectFit: "cover" }} className="rounded" />
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="col-md-3">
+                    <div className="m-2 bg_white shadow rounded">
+                        <Link href="https://uphold.com/" target="_blank">
+                            <img src="/uphold.png" alt="image" width="100%" height={150} style={{ objectFit: "cover" }} className="rounded" />
+                        </Link>
+                    </div>
+                </div>
             </div>
         </div>
     )

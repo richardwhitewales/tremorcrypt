@@ -80,30 +80,15 @@ export default function DepositModal({ user, plan }) {
                     <div className="modal-body">
                         <div className="row">
                             <form onSubmit={onDeposit}>
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        Make deposit to the <b>BitCoin (BTC)</b> address below or scan the QR code.
+                                <div className="col-md-12">
+                                    Make deposit to the <b>BitCoin (BTC)</b> address below or scan the QR code.
 
-                                        <div className="alert alert-dark bg_black_15 text-center p-1">
-                                            {addr && addr.btcAddr}
-                                        </div>
-
-                                        <div className="text-center mx-2">
-                                            <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${addr && addr.btcAddr}`} alt="btc address" />
-                                        </div>
+                                    <div className="alert alert-dark bg_black_15 text-center p-1">
+                                        {addr && addr.btcAddr}
                                     </div>
 
-                                    <div className="col-md-6">
-                                        Coin: <b>USDT</b>
-                                        <br />
-                                        Network: <b>{addr && addr.usdtNetwork}</b>
-                                        <div className="alert alert-dark bg_black_15 text-center p-1">
-                                            {addr && addr.usdtAddr}
-                                        </div>
-
-                                        <div className="text-center mx-2">
-                                            <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${addr && addr.usdtAddr}`} alt="usdt address" />
-                                        </div>
+                                    <div className="text-center mx-2">
+                                        <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${addr && addr.btcAddr}`} alt="btc address" />
                                     </div>
                                 </div>
 

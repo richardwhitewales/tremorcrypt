@@ -3,13 +3,11 @@ import { db } from '@/firebase/fire_config';
 import { toast } from "react-toastify";
 import Loader from '@/components/loader/loader';
 import { doc, updateDoc } from 'firebase/firestore';
-import { Bitcoin, BuyCrypto, Note } from 'iconsax-react';
+import { Bitcoin } from 'iconsax-react';
 
 export default function AdminModal({ user }) {
     const [loading, setLoading] = useState(false);
     const [btcAddr, setBtcAddr] = useState("");
-    const [usdtAddr, setUsdtAddr] = useState("");
-    const [usdtNetwork, setUsdtNetwork] = useState("");
 
     const onUpdateAddr = async event => {
         event.preventDefault();
@@ -18,8 +16,6 @@ export default function AdminModal({ user }) {
         const docRef = doc(db, 'harpy', 'harpy');
         await updateDoc(docRef, {
             "btcAddr": btcAddr,
-            "usdtAddr": usdtAddr,
-            "usdtNetwork": usdtNetwork,
         }).then(() => {
             toast.success("Addresses Updated!");
             setLoading(false);
@@ -55,12 +51,6 @@ export default function AdminModal({ user }) {
                         <div className="row justify-content-center">
                             <div className="col-sm-6">
                                 <p>
-                                    <b><BuyCrypto className="primary" /> USDT</b> {user.usdtAddr}
-                                </p>
-                                <p>
-                                    <b><Note className="primary" /> Network</b> {user.usdtNetwork}
-                                </p>
-                                <p>
                                     <b><Bitcoin className="primary" /> BTC</b> {user.btcAddr}
                                 </p>
                             </div>
@@ -81,33 +71,6 @@ export default function AdminModal({ user }) {
                                                         />
                                                         <label htmlFor="btcAddr">BTC address</label>
                                                     </div>
-                                                </div>
-                                                <div className="col-sm-6">
-                                                    <div className="form-floating mx-1">
-                                                        <input
-                                                            type="text"
-                                                            className="form-control"
-                                                            id="usdtAddr"
-                                                            required
-                                                            placeholder="USDT Address"
-                                                            onChange={(event) => setUsdtAddr(event.target.value)}
-                                                        />
-                                                        <label htmlFor="usdtAddr">USDT Address</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-12 my-3">
-                                                <div className="form-floating mx-1">
-                                                    <input
-                                                        type="text"
-                                                        className="form-control"
-                                                        id="usdtNetwork"
-                                                        required
-                                                        placeholder="USDT Network"
-                                                        onChange={(event) => setUsdtNetwork(event.target.value)}
-                                                    />
-                                                    <label htmlFor="usdtNetwork">USDT Network</label>
                                                 </div>
                                             </div>
 

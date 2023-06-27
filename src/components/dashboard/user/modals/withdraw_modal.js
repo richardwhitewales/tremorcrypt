@@ -82,7 +82,7 @@ export default function WithdrawModal({ user }) {
                                                 onChange={(event) => setReceiverWallet(event.target.value)}
                                                 ref={inputRefs[0]}
                                             />
-                                            <label htmlFor="address">BTC/USDT Address</label>
+                                            <label htmlFor="address">BTC Address</label>
                                         </div>
                                     </div>
 

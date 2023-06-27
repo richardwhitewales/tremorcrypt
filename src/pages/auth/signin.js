@@ -36,7 +36,7 @@ export default function SigninPage() {
             postalCode: " 60618",
             addressCountry: "USA"
         },
-        "+1-415-209-5796",
+        "+1-310-715-8987",
         "info@harpycryto.com",
         baseURL,
         `${baseURL}/logo.png`,

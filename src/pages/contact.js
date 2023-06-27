@@ -42,7 +42,7 @@ export default function ContactPage() {
             postalCode: " 60618",
             addressCountry: "USA"
         },
-        "+1-415-209-5796",
+        "+1-310-715-8987",
         "info@harpycryto.com",
         baseURL,
         `${baseURL}/logo.png`,
@@ -109,7 +109,7 @@ export default function ContactPage() {
                                             <div className="d-flex flex-column mx-2">
                                                 <h5>PHONE:</h5>
                                                 <p>
-                                                    +1-415-209-5796
+                                                    +1-310-715-8987
                                                 </p>
                                             </div>
                                         </div>

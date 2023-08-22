@@ -26,7 +26,7 @@ export default function OtherPaymentMethodModal() {
                                     <div className="alert alert-light border_primary shadow">
                                         If you are making a bank transfer, please note that depending on your location,
                                         transaction might take up to 5 business days to confirm. If you encounter any
-                                        issue while funding your account, please contact payment@harpycryto.com for assistance.
+                                        issue while funding your account, please contact payment@harpycrypto.com for assistance.
                                     </div>
 
                                     {isSuccess && (

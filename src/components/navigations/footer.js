@@ -38,10 +38,10 @@ export default function Footer() {
                     <div className="col-sm-7">
                         <div className="my-3">
                             <div className="display-5 text-white">
-                                Harpy Cryto Investments Provides Various Plans.
+                                Harpy Crypto Investments Provides Various Plans.
                             </div>
                             <small className="white_50">
-                                If you need a crypto investment platform that handles all your investments, providing you with high and safe ROI, Harpy Cryto is your bet!
+                                If you need a crypto investment platform that handles all your investments, providing you with high and safe ROI, Harpy Crypto is your bet!
                             </small>
                         </div>
                     </div>
@@ -69,19 +69,19 @@ export default function Footer() {
                             />
                         </Link>
                         <div>
-                            Harpy Cryto is a leading investment company specializing in crypto investments.
+                            Harpy Crypto is a leading investment company specializing in crypto investments.
                             <ul className="list-unstyled">
                                 <li>
                                     <Location /> George St, Chicago  60618, USA
                                 </li>
                                 <li>
-                                    <DirectInbox /> info@harpycryto.com
+                                    <DirectInbox /> info@harpycrypto.com
                                 </li>
                                 <li>
                                     <Call /> +1-310-715-8987
                                 </li>
                                 <li>
-                                    <Instagram /> <Link href="https://www.instagram.com/harpycryto/" className="text-decoration-none black" target="_blank">harpycryto</Link>
+                                    <Instagram /> <Link href="https://www.instagram.com/harpycrypto/" className="text-decoration-none black" target="_blank">harpycrypto</Link>
                                 </li>
                             </ul>
                         </div>
@@ -115,7 +115,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="bg_black primary p-3 text-center">© Copyright {new Date().getFullYear()}, Harpy Cryto Investments | All Rights Reserved.</div>
+            <div className="bg_black primary p-3 text-center">© Copyright {new Date().getFullYear()}, Harpy Crypto Investments | All Rights Reserved.</div>
         </footer>
     )
 }

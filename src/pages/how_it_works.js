@@ -9,9 +9,9 @@ const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
 export default function HowItWorksPage() {
     // page default data
-    const pageName = "Harpy Cryto - How It Works";
-    const pageDesc = "Harpy Cryto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Cryto today and reap the rewards.";
-    const baseURL = "https://harpycryto.com/how_it_works";
+    const pageName = "Harpy Crypto - How It Works";
+    const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
+    const baseURL = "https://harpycrypto.com/how_it_works";
 
     // web site schema
     const wSSchema = getWSSchema(baseURL);
@@ -42,7 +42,7 @@ export default function HowItWorksPage() {
             addressCountry: "USA"
         },
         "+1-310-715-8987",
-        "info@harpycryto.com",
+        "info@harpycrypto.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",
@@ -60,10 +60,10 @@ export default function HowItWorksPage() {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content={pageDesc} />
-                <meta name="keywords" content="Harpy Cryto, harpycryto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
+                <meta name="keywords" content="Harpy Crypto, harpycrypto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-                <meta name="author" content="Harpy Cryto" />
+                <meta name="author" content="Harpy Crypto" />
                 <title>{pageName}</title>
 
                 <meta property="og:title" content={pageName} />

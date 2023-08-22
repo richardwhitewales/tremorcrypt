@@ -91,7 +91,7 @@ export default function Info4() {
                 </div>
 
                 <div className="col-12 mt-5 text-center">
-                    <Link className="p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@harpycryto.com">
+                    <Link className="p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@harpycrypto.com">
                         View more account type. <ArrowRight2 color="#c44a54" size={20} />
                     </Link>
                 </div>

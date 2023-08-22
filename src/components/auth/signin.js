@@ -31,7 +31,7 @@ export default function Signin() {
                         if (docSnapshot.exists()) {
                             const user = docSnapshot.data();
                             const isUserDisable = user.disable;
-                            const isAdmin = data.user.email === "info@harpycryto.com" || data.user.email === "richardwhitewales@gmail.com";
+                            const isAdmin = data.user.email === "info@harpycrypto.com" || data.user.email === "richardwhitewales@gmail.com";
 
                             if (isUserDisable) {
                                 toast.warning("User Has been disabled! contact Harpy");
@@ -94,7 +94,7 @@ export default function Signin() {
                     <header className="mb-auto">
                         <h4 className="float-md-start mb-0">
                             <Link className="text-decoration-none primary" href="/" as="/">
-                                Harpy Cryto
+                                Harpy Crypto
                             </Link>
                         </h4>
                     </header>

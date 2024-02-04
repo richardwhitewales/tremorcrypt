@@ -17,8 +17,8 @@ export default function WhatsApp() {
                 <Image
                     src="/signal.png"
                     alt="signal"
-                    width={80}
-                    height={80}
+                    width={50}
+                    height={50}
                     priority={true}
                 />
             </a>

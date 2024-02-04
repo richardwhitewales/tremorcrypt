@@ -13,7 +13,7 @@ export default function WhatsApp() {
                 />
             </a>
 
-            <a href="https://signal.me/#p/+447384270478" className='me-2' target="_blank" rel="noreferrer">
+            <a href="https://signal.me/#p/+447384270478" target="_blank" rel="noreferrer">
                 <Image
                     src="/signal.png"
                     alt="signal"

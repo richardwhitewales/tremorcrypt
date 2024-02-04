@@ -40,7 +40,7 @@ export default function AdminPage() {
             postalCode: " 60618",
             addressCountry: "USA"
         },
-        "+1-310-715-8987",
+        "+234-915-757-5590",
         "info@harpycrypto.com",
         baseURL,
         `${baseURL}/logo.png`,
@@ -96,9 +96,7 @@ export default function AdminPage() {
 
             <main className={`position-relative ${roboto.className}`}>
                 <AdminDashboard />
-                <div className="position-fixed bottom-0 start-0">
-                    <WhatsApp />
-                </div>
+                <WhatsApp />
             </main>
         </>
     )

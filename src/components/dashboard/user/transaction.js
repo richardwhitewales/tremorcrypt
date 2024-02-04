@@ -2,6 +2,7 @@ import styles from '@/components/dashboard/Dashboard.module.css'
 import { toCurrency } from '@/components/utils/toCurrency'
 import { useState, useEffect } from 'react';
 import Loader from '@/components/loader/loader';
+import Link from 'next/link';
 
 export default function DashboardTransaction({ user }) {
     const [btc, setBTC] = useState(null);
@@ -46,6 +47,7 @@ export default function DashboardTransaction({ user }) {
                                 <small className="secondary">Total Balance</small>
                                 <h4>{toCurrency(user.dashboard.balance)}</h4>
                             </div>
+                            
                             <div className="text-center">
                                 <small className="text-info">Total Invested</small>
                                 <h4>{toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0")}</h4>
@@ -57,15 +59,20 @@ export default function DashboardTransaction({ user }) {
                                 <small className="secondary">Total Balance (BTC)</small>
                                 <h4>{parseFloat(user.dashboard.balance / btc.high).toFixed(6)}</h4>
                             </div>
-                            <div className={`text-center ${user.accountStatus === "ACTIVE" ? "text-success" : user.accountStatus === "UPGRADE" ? "text-warning" : "text-danger"}`}>
+
+                            <div >
                                 <small>Status</small>
-                                <h4>
-                                    {
-                                        user.accountStatus === "ACTIVE" ? "Verified"
-                                            : user.accountStatus === "UPGRADE"
-                                                ? "Upgrade" : "Unverified"
-                                    }
-                                </h4>
+                                <Link
+                                    className={`text-decoration-none ${user.accountStatus === "ACTIVE" ? "text-success" : user.accountStatus === "UPGRADE" ? "text-warning" : "text-danger"}`}
+                                    href={user.accountStatus === "ACTIVE" ? "#" : ""} >
+                                    <h4>
+                                        {
+                                            user.accountStatus === "ACTIVE" ? "Verified"
+                                                : user.accountStatus === "UPGRADE"
+                                                    ? "Upgrade" : "Unverified"
+                                        }
+                                    </h4>
+                                </Link>
                             </div>
                         </div>
 

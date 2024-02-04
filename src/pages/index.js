@@ -10,6 +10,7 @@ import Info3 from '@/components/home/info3'
 import BuyCrypto from '@/components/home/buy_crypto';
 import Info4 from '@/components/home/info4'
 import Info5 from '@/components/home/info5'
+import WhatsApp from '@/components/whatsApp';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
@@ -47,7 +48,7 @@ export default function HomePage() {
       postalCode: " 60618",
       addressCountry: "USA"
     },
-    "+1-310-715-8987",
+    "+234-915-757-5590",
     "info@harpycrypto.com",
     baseURL,
     `${baseURL}/logo.png`,
@@ -96,6 +97,7 @@ export default function HomePage() {
         <Info4 />
         <Info5 />
         <Footer />
+        <WhatsApp />
       </main>
     </>
   )

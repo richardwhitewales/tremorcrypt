@@ -2,13 +2,13 @@ import Image from 'next/image'
 
 export default function WhatsApp() {
     return (
-        <div className="whatsapp mb-2">
-            <a href="https://wa.me/+13107158987" target="_blank" rel="noreferrer">
+        <div className="position-fixed bottom-0 ms-2 mb-2">
+            <a href="https://wa.me/+2349157575590" target="_blank" rel="noreferrer">
                 <Image
-                    src="/whatsapp.png"
-                    alt="Whatsapp"
-                    width={80}
-                    height={80}
+                    src="/telegram.png"
+                    alt="telegram"
+                    width={50}
+                    height={50}
                     priority={true}
                 />
             </a>

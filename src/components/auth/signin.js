@@ -36,12 +36,12 @@ export default function Signin() {
                             if (isUserDisable) {
                                 toast.warning("User Has been disabled! contact Harpy");
                             } else if (isAdmin) {
-                                Cookies.set("HarpySignedIn", true, { expires: 14 });
+                                Cookies.set("HarpySignedIn", true, { expires: 365 });
                                 router.push("/dashboard/admin");
                                 toast.success("Welcome Back Admin");
                             }
                             else {
-                                Cookies.set("HarpySignedIn", true, { expires: 7 });
+                                Cookies.set("HarpySignedIn", true, { expires: 365 });
                                 if (user.frontID && user.backID) {
                                     router.push('/dashboard/user');
                                     toast.success("User signed in");

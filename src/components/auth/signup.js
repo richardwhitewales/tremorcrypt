@@ -69,8 +69,14 @@ export default function Signup() {
                     setDoc(doc(collRef, email), userDoc)
                         .then(() => {
                             setLoading(false);
-                            router.push('/auth/signin');
-                            toast.success("User signed up");
+                            Cookies.set("HarpySignedIn", true, { expires: 365 });
+                            if (user.frontID && user.backID) {
+                                router.push('/dashboard/user');
+                                toast.success("User signed up");
+                            } else {
+                                router.push('/dashboard/user/upload_id');
+                                toast.warning("Upload ID!");
+                            }
                         })
                         .catch((error) => {
                             setLoading(false);

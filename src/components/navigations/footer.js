@@ -78,7 +78,7 @@ export default function Footer() {
                                     <DirectInbox /> info@harpycrypto.com
                                 </li>
                                 <li>
-                                    <Call /> +1-310-715-8987
+                                    <Call /> +234-915-757-5590
                                 </li>
                                 <li>
                                     <Instagram /> <Link href="https://www.instagram.com/harpycrypto/" className="text-decoration-none black" target="_blank">harpycrypto</Link>

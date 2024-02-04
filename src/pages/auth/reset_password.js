@@ -36,7 +36,7 @@ export default function ResetPasswordPage() {
             postalCode: " 60618",
             addressCountry: "USA"
         },
-        "+1-310-715-8987",
+        "+234-915-757-5590",
         "info@harpycrypto.com",
         baseURL,
         `${baseURL}/logo.png`,

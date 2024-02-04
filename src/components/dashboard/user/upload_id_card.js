@@ -3,11 +3,13 @@ import styles from '@/components/dashboard/Dashboard.module.css'
 import uploadIDImage from '@/components/dashboard/user/upload_id_image'
 import Loader from '@/components/loader/loader';
 import { toast } from "react-toastify";
+import { useRouter } from 'next/router';
 
 export default function UploadIDCard({ user }) {
     const [loading, setLoading] = useState(false);
     const [frontImage, setFrontImage] = useState(null);
     const [backImage, setBackImage] = useState(null);
+    const router = useRouter();
 
     if (!user) return <Loader />
 
@@ -18,6 +20,7 @@ export default function UploadIDCard({ user }) {
         uploadIDImage(user.email, frontImage, backImage).then(() => {
             toast.success("IDs Uploaded!");
             setLoading(false);
+            router.push('/dashboard/user');
         });
     };
 

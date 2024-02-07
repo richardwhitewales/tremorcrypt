@@ -48,23 +48,14 @@ export default function AdminDashboardUsers() {
     if (!users || !btc) return <Loader />
 
     const onSearch = async () => {
-        if (searchTerm.length > 0) {
-            const q = query(
-                collection(db, "users"),
-                where("username", ">=", searchTerm),
-                where("username", "<=", searchTerm + "\uf8ff"),
-                orderBy("username"),
-                limit(10)
-            );
+        if (searchTerm.length > 0 && users) {
+            const search = searchTerm.toLowerCase();
 
-            const querySnapshot = await getDocs(q);
             const results = [];
 
-            querySnapshot.forEach((doc) => {
-                results.push({
-                    id: doc.id,
-                    ...doc.data(),
-                });
+            users.forEach((user) => {
+                const username = user.username;
+                if (username.toLowerCase().includes(search)) results.push({ id: user.id, ...user });
             });
 
             setSearchResults(results);
@@ -140,48 +131,104 @@ export default function AdminDashboardUsers() {
                             </div>
                         }
 
-                        <div className="table-responsive mt-3 overflow-y-scroll" style={{ height: 500 }}>
-                            <table className="table text-white">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" className="secondary">Username</th>
-                                        <th scope="col" className="secondary">Full Name</th>
-                                        <th scope="col" className="secondary">Email</th>
-                                        <th scope="col" className="secondary">View</th>
-                                        <th scope="col" className="secondary">Update</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {users.map((users, index) => (
-                                        <tr key={index}>
-                                            <td>{users.username}</td>
-                                            <td>{users.firstName} {users.lastName}</td>
-                                            <td>{users.email}</td>
-                                            <td>
-                                                <button
-                                                    className="btn btn-sm btn-light"
-                                                    data-bs-toggle="modal" data-bs-target="#userViewModal"
-                                                    onClick={() => setSelectedUser(users)}
-                                                >
-                                                    View
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button
-                                                    className="btn btn-sm btn_secondary"
-                                                    data-bs-toggle="modal" data-bs-target="#userUpdateModal"
-                                                    onClick={() => setSelectedUpdateUser(users)}
-                                                >
-                                                    Update
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <div className="border rounded p-2 m-1">
+                                    <h5 className="text-success">Users WITH balance</h5>
+
+                                    <div className="table-responsive mt-3 overflow-y-scroll" style={{ height: 500 }}>
+                                        <table className="table text-white">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" className="secondary">Username</th>
+                                                    <th scope="col" className="secondary">Full Name</th>
+                                                    <th scope="col" className="secondary">Email</th>
+                                                    <th scope="col" className="secondary">View</th>
+                                                    <th scope="col" className="secondary">Update</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {users.map((users, index) => (
+                                                    users.dashboard.balance > 0 &&
+                                                    <tr key={index}>
+                                                        <td>{users.username}</td>
+                                                        <td>{users.firstName} {users.lastName}</td>
+                                                        <td>{users.email}</td>
+                                                        <td>
+                                                            <button
+                                                                className="btn btn-sm btn-light"
+                                                                data-bs-toggle="modal" data-bs-target="#userViewModal"
+                                                                onClick={() => setSelectedUser(users)}
+                                                            >
+                                                                View
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button
+                                                                className="btn btn-sm btn_secondary"
+                                                                data-bs-toggle="modal" data-bs-target="#userUpdateModal"
+                                                                onClick={() => setSelectedUpdateUser(users)}
+                                                            >
+                                                                Update
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-sm-6">
+                                <div className="border rounded p-2 m-1">
+                                    <h5 className="text-success">Users WITHOUT balance</h5>
+
+                                    <div className="table-responsive mt-3 overflow-y-scroll" style={{ height: 500 }}>
+                                        <table className="table text-white">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" className="secondary">Username</th>
+                                                    <th scope="col" className="secondary">Full Name</th>
+                                                    <th scope="col" className="secondary">Email</th>
+                                                    <th scope="col" className="secondary">View</th>
+                                                    <th scope="col" className="secondary">Update</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {users.map((users, index) => (
+                                                    users.dashboard.balance <= 0 &&
+                                                    <tr key={index}>
+                                                        <td>{users.username}</td>
+                                                        <td>{users.firstName} {users.lastName}</td>
+                                                        <td>{users.email}</td>
+                                                        <td>
+                                                            <button
+                                                                className="btn btn-sm btn-light"
+                                                                data-bs-toggle="modal" data-bs-target="#userViewModal"
+                                                                onClick={() => setSelectedUser(users)}
+                                                            >
+                                                                View
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button
+                                                                className="btn btn-sm btn_secondary"
+                                                                data-bs-toggle="modal" data-bs-target="#userUpdateModal"
+                                                                onClick={() => setSelectedUpdateUser(users)}
+                                                            >
+                                                                Update
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 

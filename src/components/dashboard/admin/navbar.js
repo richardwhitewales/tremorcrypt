@@ -2,6 +2,7 @@ import styles from '@/components/dashboard/Dashboard.module.css'
 import { HambergerMenu, Logout } from 'iconsax-react'
 import Link from 'next/link'
 import { useAuth } from '@/firebase/fire_auth_context';
+import { useEffect } from 'react';
 
 export default function AdminDashboardNavbar() {
     const { logOut } = useAuth();

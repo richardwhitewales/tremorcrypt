@@ -84,7 +84,6 @@ export default function UserUpdateModal({ user }) {
         setBalance("");
         setDeposit("");
 
-        inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
     if (!user) return <div className="modal fade" id="userUpdateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="userUpdateModalLabel" aria-hidden="true">

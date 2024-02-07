@@ -51,7 +51,6 @@ export default function WithdrawModal({ user }) {
         setLoading(false); setWithdraw("");
         setAccountName("");
         setAccountNumber("");
-        inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
     return (

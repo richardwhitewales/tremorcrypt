@@ -67,7 +67,6 @@ export default function DepositModal({ user, plan }) {
         setLoading(false); setDeposit("");
         setReciept(null); setSendersWallet("");
         setHasdID("");
-        inputRefs.forEach(ref => (ref.current.value = ''));
     };
 
     return (

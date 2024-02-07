@@ -34,7 +34,7 @@ export default function WithdrawModal({ user }) {
                 "dashboard.withdraw.accountNumber": accountNumber,
                 "dashboard.withdraw.accountName": accountName,
             }).then(() => {
-                toast.success("Withdrawal Completed. Harpy will confirm transtion in 2 working days");
+                toast.success("Withdrawal Pending. Harpy will confirm transtion in 2 working days");
                 setLoading(false);
                 onClearModal();
             }).catch((error) => {

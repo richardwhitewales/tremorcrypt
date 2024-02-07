@@ -64,7 +64,7 @@ export default function DashboardTransaction({ user }) {
                                 <small>Status</small>
                                 <Link
                                     className={`text-decoration-none ${user.accountStatus === "ACTIVE" ? "text-success" : user.accountStatus === "UPGRADE" ? "text-warning" : "text-danger"}`}
-                                    href={user.accountStatus === "ACTIVE" ? "#" : ""} >
+                                    href={user.accountStatus === "ACTIVE" ? "#" : "/dashboard/user/upload_id"} >
                                     <h4>
                                         {
                                             user.accountStatus === "ACTIVE" ? "Verified"

@@ -17,7 +17,7 @@ async function uploadIDImage(email, frontImage, backImage) {
 
       const docRef = doc(db, 'users', email);
 
-      await updateDoc(docRef, { "frontID": frontUrl, "backID": backUrl });
+      await updateDoc(docRef, { "frontID": frontUrl, "backID": backUrl, "accountStatus": "ACTIVE" });
 
     } catch (error) {
       toast.error(`Error uploading ID images: ${error}`);

@@ -29,7 +29,7 @@ export default function Navbar() {
     const dashboard = () => {
         if (!loading && authUser) {
             return <>
-                {authUser.email === "info@harpycrypto.com" || authUser.email === "richardwhitewales@gmail.com" ?
+                {authUser.email === "harpycryto@gmail.com" || authUser.email === "richardwhitewales@gmail.com" ?
                     <Link className="btn btn-sm btn_secondary mx-2" href="/dashboard/admin">
                         Account Dashboard <ArrowRight2 size={20} />
                     </Link>

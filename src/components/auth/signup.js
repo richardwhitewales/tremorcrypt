@@ -68,31 +68,23 @@ export default function Signup() {
 
                     setDoc(doc(collRef, email), userDoc)
                         .then(async () => {
-                            setLoading(false);
-                            Cookies.set("HarpySignedIn", true, { expires: 365 });
-                            if (user.frontID && user.backID) {
-                                router.push('/dashboard/user');
-                                toast.success("User signed up");
-                            } else {
-                                try {
-                                    await fetch('/api/sendEmail', {
-                                        method: 'POST',
-                                        headers: { 'Content-Type': 'application/json', },
-                                        body: JSON.stringify({
-                                            email: email, body: {
-                                                name: `${firstName} ${lastName}`,
-                                                email: email,
-                                                password: password
-                                            }
-                                        }),
-                                    });
+                            try {
+                                await fetch('/api/sendEmail', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json', },
+                                    body: JSON.stringify({
+                                        email: email, body: {
+                                            name: `${firstName} ${lastName}`,
+                                            email: email,
+                                            password: password
+                                        }
+                                    }),
+                                });
 
-                                    router.push('/dashboard/user/upload_id');
-                                    toast.warning("Upload ID!");
-                                } catch (error) {
-                                    toast.error(error);
-                                }
-
+                                router.push('/dashboard/user/upload_id');
+                                toast.warning("Upload ID!");
+                            } catch (error) {
+                                toast.error(error);
                             }
                         })
                         .catch((error) => {

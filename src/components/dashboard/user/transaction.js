@@ -47,7 +47,7 @@ export default function DashboardTransaction({ user }) {
                                 <small className="secondary">Total Balance</small>
                                 <h4>{toCurrency(user.dashboard.balance)}</h4>
                             </div>
-                            
+
                             <div className="text-center">
                                 <small className="text-info">Total Invested</small>
                                 <h4>{toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0")}</h4>
@@ -64,7 +64,8 @@ export default function DashboardTransaction({ user }) {
                                 <small>Status</small>
                                 <Link
                                     className={`text-decoration-none ${user.accountStatus === "ACTIVE" ? "text-success" : user.accountStatus === "UPGRADE" ? "text-warning" : "text-danger"}`}
-                                    href={user.accountStatus === "ACTIVE" ? "#" : "/dashboard/user/upload_id"} >
+                                    href="#"
+                                    data-bs-toggle="modal" data-bs-target="#depositModal">
                                     <h4>
                                         {
                                             user.accountStatus === "ACTIVE" ? "Verified"

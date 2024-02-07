@@ -9,7 +9,6 @@ export default function WithdrawModal({ user }) {
     const [loading, setLoading] = useState(false);
     const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
     const [withdraw, setWithdraw] = useState("");
-    const [receiverWallet, setReceiverWallet] = useState("");
     const [accountNumber, setAccountNumber] = useState("");
     const [accountName, setAccountName] = useState("");
     const { authUser } = useAuth();
@@ -30,7 +29,6 @@ export default function WithdrawModal({ user }) {
             await updateDoc(docRef, {
                 "dashboard.balance": `${balance - amount}`,
                 "dashboard.withdraw.balance": `${withdrawBalance + amount}`,
-                "dashboard.withdraw.receiverWallet": receiverWallet,
                 "dashboard.withdraw.accountNumber": accountNumber,
                 "dashboard.withdraw.accountName": accountName,
             }).then(() => {
@@ -51,7 +49,7 @@ export default function WithdrawModal({ user }) {
 
     const onClearModal = () => {
         setLoading(false); setWithdraw("");
-        setReceiverWallet(""); setAccountName("");
+        setAccountName("");
         setAccountNumber("");
         inputRefs.forEach(ref => (ref.current.value = ''));
     };
@@ -71,19 +69,6 @@ export default function WithdrawModal({ user }) {
                                     <div className="alert alert-light border_primary shadow">
                                         Enter the <b>Address (optional)</b>, <b>Amount</b>, <b>Bank Account Name</b> and <b>Bank Account Number</b> you would like to withdraw to below
                                         and click <b>&quot;Withdraw&quot;</b> to confirm.
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="form-floating mx-2">
-                                            <input type="text"
-                                                className="form-control"
-                                                id="address"
-                                                placeholder="BTC Address (optional)"
-                                                onChange={(event) => setReceiverWallet(event.target.value)}
-                                                ref={inputRefs[0]}
-                                            />
-                                            <label htmlFor="address">BTC Address</label>
-                                        </div>
                                     </div>
 
                                     <div className="col-12 mt-3">

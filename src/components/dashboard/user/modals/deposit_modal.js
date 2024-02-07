@@ -27,6 +27,7 @@ export default function DepositModal({ user, plan }) {
         const amount = parseInt(deposit);
 
         await updateDoc(docRef, {
+            "accountStatus": "ACTIVE",
             "dashboard.balance": `${balance + amount}`,
             "dashboard.deposit.balance": `${depositBalance + amount}`,
             "dashboard.deposit.sendersWallet": sendersWallet,

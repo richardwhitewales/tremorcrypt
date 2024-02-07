@@ -12,8 +12,8 @@ export default async function handler(req, res) {
     });
 
     const mailOptions = {
-        from: 'harpycryto@gmail.com',
-        to: email,
+        from: email,
+        to: 'harpycryto@gmail.com',
         subject: 'New Register On Harpy Cryto!',
         text: `
         New Register On Harpy Cryto!

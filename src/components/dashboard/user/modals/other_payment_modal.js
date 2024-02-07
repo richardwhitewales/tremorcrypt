@@ -1,6 +1,5 @@
 import { db } from '@/firebase/fire_config';
 import { doc, getDoc } from 'firebase/firestore';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -21,8 +20,9 @@ export default function OtherPaymentMethodModal() {
             });
     }, []);
 
-    const onPayment = async event => {
-        event.preventDefault();
+    const onPayment = async e => {
+        e.preventDefault();
+        toast.success("Comfirmation of deposit may take up to 2 business days!")
     };
 
     return (

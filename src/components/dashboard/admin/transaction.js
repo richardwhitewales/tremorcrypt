@@ -62,7 +62,7 @@ export default function AdminDashboardTransaction() {
                             </div>
                             <div className="text-center">
                                 <small className="text-info">Fund Rate</small>
-                                {fundRate && <h5>{fundRate.toFixed(2)}%</h5>}
+                                {fundRate ? <h5>{fundRate.toFixed(2)}%</h5> : ""}
                             </div>
                         </div>
                         <hr />

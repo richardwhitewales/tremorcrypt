@@ -20,12 +20,12 @@ export default function PlansModal({ user }) {
                                     <div className={`my-2 p-2 bg_white shadow rounded text-center text-muted ${plan === "STARTER" && "border_primary position-relative"}`}>
                                         <h4 className="secondary">Starter</h4>
                                         <h6>Monthly for 1 weekly</h6>
-                                        <h3 className="black my-3 fw-bold">$1000</h3>
+                                        <h3 className="black my-3 fw-bold">$500</h3>
 
                                         <hr />
                                         <ul className="text-start">
                                             <li className="my-2"><small><b>10%</b> ROI</small></li>
-                                            <li className="my-2"><small>✓ Minimum $1,000.00</small></li>
+                                            <li className="my-2"><small>✓ Minimum $500.00</small></li>
                                             <li className="my-2"><small>✓ Maximum $4,999.00</small></li>
                                             <li className="my-2"><small>✓ Deposit bonuses: All offers</small></li>
                                             <li className="my-2"><small>✓ Loyalty bonuses: All offers</small></li>

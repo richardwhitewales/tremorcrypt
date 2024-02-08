@@ -86,7 +86,7 @@ export default function Navbar() {
                                                         <ul className="list-unstyled text-muted">
                                                             <li className="mx-4 mr-0"><small>✓ Monthly for 1 weekly</small></li>
                                                             <li className="mx-4 mr-0"><small>✓ 10% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Minimum $1,000.00</small></li>
+                                                            <li className="mx-4 mr-0"><small>✓ Minimum $500.00</small></li>
                                                             <li className="mx-4 mr-0"><small>✓ Maximum $4,999.00</small></li>
                                                             <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
                                                             <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>

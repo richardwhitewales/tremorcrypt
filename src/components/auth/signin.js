@@ -42,13 +42,8 @@ export default function Signin() {
                             }
                             else {
                                 Cookies.set("HarpySignedIn", true, { expires: 365 });
-                                if (user.frontID && user.backID) {
-                                    router.push('/dashboard/user');
-                                    toast.success("User signed in");
-                                } else {
-                                    router.push('/dashboard/user/upload_id');
-                                    toast.warning("Upload ID!");
-                                }
+                                router.push('/dashboard/user');
+                                toast.success("User signed in");
                             }
                         } else {
                             toast.error("User not found");

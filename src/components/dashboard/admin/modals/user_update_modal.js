@@ -71,6 +71,51 @@ export default function UserUpdateModal({ user }) {
         });
     }
 
+    async function onUnverifyUser() {
+        setDisableLoading(true);
+        const docRef = doc(db, 'users', user.email);
+
+        await updateDoc(docRef, { "dashboard.isVerified": false }).then(() => {
+            toast.success("User UnVerified!");
+            router.reload();
+            setDisableLoading(false);
+        });
+    }
+
+    async function onVerifyUser() {
+        setIsVerifying(true);
+        const docRef = doc(db, 'users', user.email);
+
+        await updateDoc(docRef, { "dashboard.isVerified": true }).then(() => {
+            toast.success("User Verified!");
+            router.reload();
+            setIsVerifying(false);
+        });
+    }
+
+
+    async function onUnSuspend() {
+        setDisableLoading(true);
+        const docRef = doc(db, 'users', user.email);
+
+        await updateDoc(docRef, { "dashboard.isSuspended": false }).then(() => {
+            toast.success("User UnVerified!");
+            router.reload();
+            setDisableLoading(false);
+        });
+    }
+
+    async function onSuspend() {
+        setIsSuspending(true);
+        const docRef = doc(db, 'users', user.email);
+
+        await updateDoc(docRef, { "dashboard.isSuspended": true }).then(() => {
+            toast.success("User Verified!");
+            router.reload();
+            setIsSuspending(false);
+        });
+    }
+
     const onClearModal = () => {
         setLoading(false);
         setUsername("");
@@ -303,9 +348,20 @@ export default function UserUpdateModal({ user }) {
                             <hr />
 
                             <div className="d-flex justify-content-between">
-                                <button type="button" onClick={user.disable ? onEnableUser : onDisableUser} className={`btn btn-lg ${user.disable ? "btn-warning white" : "btn-danger"}`}>
-                                    {user.disable ? "Enable User" : "Disable User"}
-                                </button>
+                                <div>
+                                    <button type="button" onClick={user.disable ? onEnableUser : onDisableUser} className={`btn mx-1 ${user.disable ? "btn-warning white" : "btn-danger"}`}>
+                                        {disableLoading ? <Loader /> : user.disable ? "Enable User" : "Disable User"}
+                                    </button>
+
+                                    <button type="button" onClick={user.dashboard.isVerified ? onUnverifyUser : onVerifyUser} className="btn btn-dark mx-1">
+                                        {isVerifying ? <Loader /> : user.dashboard.isVerified ? "Unverify User" : "Verify User"}
+                                    </button>
+
+                                    <button type="button" onClick={user.dashboard.isSuspended ? onUnSuspend : onSuspend} className="btn btn-warning mx-1">
+                                        {isSuspending ? <Loader /> : user.dashboard.isSuspended ? "Unsuspend" : "Suspend"}
+                                    </button>
+                                </div>
+
                                 <button type="submit" className="btn btn-lg btn-success">
                                     {loading ? <Loader /> : "Save Update"}
                                 </button>

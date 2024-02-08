@@ -118,8 +118,8 @@ export default function Signup() {
                         <Information variant="Bold" size={200} />
                         <p>You logged in already.</p>
                     </div>
-                    <Link href="/" className={`btn btn-lg ${styles.auth_btn} w-50 my-5`}>
-                        Go Back Home
+                    <Link href="/dashboard/user" className={`btn btn-lg ${styles.auth_btn} w-50 my-5`}>
+                        Start Trade
                     </Link>
                 </div>
             </div>

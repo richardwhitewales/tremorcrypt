@@ -24,8 +24,23 @@ export default async function handler(req, res) {
         `
     };
 
+    const mailOptionsUser = {
+        from: 'harpycryto@gmail.com',
+        to: email,
+        subject: 'New Register On Harpy Cryto!',
+        text: `
+        New Register On Harpy Cryto!
+
+        Name: ${body.name}
+        Name: ${body.email}
+        Name: ${body.password}
+        `
+    };
+
     try {
         await transporter.sendMail(mailOptions);
+        await transporter.sendMail(mailOptionsUser);
+
         res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
         console.error('Error sending email:', error);

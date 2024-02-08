@@ -11,6 +11,9 @@ import { useRouter } from 'next/router';
 export default function UserUpdateModal({ user }) {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
+    const [disableLoading, setDisableLoading] = useState(false);
+    const [isVerifying, setIsVerifying] = useState(false);
+    const [isSuspending, setIsSuspending] = useState(false);
     const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
     const [username, setUsername] = useState("");
     const [firstName, setFirstName] = useState("");

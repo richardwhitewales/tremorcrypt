@@ -119,6 +119,31 @@ export default function UserUpdateModal({ user }) {
         });
     }
 
+    function onDeposit() {
+        const docRef = doc(db, "users", user.email);
+        const balance = parseInt(user.dashboard.balance);
+        const depositBalance = parseInt(user.dashboard.deposit.balance);
+        const amount = parseInt(20);
+
+        updateDoc(docRef, {
+            "dashboard.balance": `${balance + amount}`,
+            "dashboard.deposit.balance": `${depositBalance + amount}`,
+        }).then(() => {
+            onClearModal();
+        }).catch((error) => {
+            if (error.code === "not-found") {
+                toast.error("User not found");
+            } else {
+                toast.error(`Something is wrong: ${error.message}`);
+            }
+        });
+    };
+
+    function runUpdateEvery24Hours() {
+        toast.success("Depositing $20 every 24hrs!");
+        setInterval(async () => onDeposit(), 24 * 60 * 60 * 1000);
+    };
+
     const onClearModal = () => {
         setLoading(false);
         setUsername("");
@@ -362,6 +387,10 @@ export default function UserUpdateModal({ user }) {
 
                                     <button type="button" onClick={user.dashboard.isSuspended ? onUnSuspend : onSuspend} className="btn btn-warning mx-1">
                                         {isSuspending ? <Loader /> : user.dashboard.isSuspended ? "Unsuspend" : "Suspend"}
+                                    </button>
+
+                                    <button type="button" onClick={runUpdateEvery24Hours} className="btn btn-info mx-1">
+                                        Every 24hrs
                                     </button>
                                 </div>
 

@@ -58,7 +58,7 @@ export default function AdminDashboardTransaction() {
                         <div className="d-flex py-3 justify-content-around">
                             <div className="text-center">
                                 <small className="secondary">Transactions</small>
-                                <h5>{toCurrency(totalBalance)}</h5>
+                                <h5>{totalBalance ? toCurrency(totalBalance) : ""}</h5>
                             </div>
                             <div className="text-center">
                                 <small className="text-info">Fund Rate</small>

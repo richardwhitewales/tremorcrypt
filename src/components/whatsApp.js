@@ -25,7 +25,7 @@ export default function WhatsApp() {
             {methods
                 && (
                     <>
-                        <a href={`https://wa.me/+447733308730`} className='me-2' target="_blank" rel="noreferrer">
+                        <a href={`https://wa.me/${methods.whatsapp}`} className='me-2' target="_blank" rel="noreferrer">
                             <Image
                                 src="/whatsapp.png"
                                 alt="whatsapp"
@@ -34,6 +34,7 @@ export default function WhatsApp() {
                                 priority={true}
                             />
                         </a>
+                        
                         <a href={`https://t.me/${methods.telegram}`} className='me-2' target="_blank" rel="noreferrer">
                             <Image
                                 src="/telegram.png"

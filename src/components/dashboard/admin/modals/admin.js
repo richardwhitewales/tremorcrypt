@@ -10,6 +10,7 @@ export default function AdminModal({ user }) {
     const [btcAddr, setBtcAddr] = useState("");
     const [telegram, setTelegram] = useState("");
     const [signal, setSignal] = useState("");
+    const [whatsapp, setWhatsapp] = useState("");
 
     const onUpdateAddr = async e => {
         e.preventDefault();
@@ -60,6 +61,26 @@ export default function AdminModal({ user }) {
             "signal": signal,
         }).then(() => {
             toast.success("Signal Updated!");
+            setLoading(false);
+        }).catch((error) => {
+            if (error.code === "not-found") {
+                toast.error("User not found");
+            } else {
+                toast.error(`Something is wrong: ${error.message}`);
+                setLoading(false);
+            }
+        });
+    };
+
+    const onUpdateWhatsapp = async e => {
+        e.preventDefault();
+        setLoading(true);
+
+        const docRef = doc(db, 'harpy', 'harpy');
+        await updateDoc(docRef, {
+            "whatsapp": whatsapp,
+        }).then(() => {
+            toast.success("Whatsapp Updated!");
             setLoading(false);
         }).catch((error) => {
             if (error.code === "not-found") {
@@ -165,6 +186,26 @@ export default function AdminModal({ user }) {
                                             onChange={(e) => setSignal(e.target.value)}
                                         />
                                         <label htmlFor="signal">Signal (e.g: +10000000000)</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" className="btn btn-lg btn_secondary w-100">
+                                    {loading ? <Loader /> : "Update"}
+                                </button>
+                            </form>
+
+                            <form className="col-12" onSubmit={onUpdateWhatsapp}>
+                                <div className="mb-3">
+                                    <div className="form-floating">
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            id="whatsapp"
+                                            required
+                                            placeholder="Whatsapp (e.g: +10000000000)"
+                                            onChange={(e) => setWhatsapp(e.target.value)}
+                                        />
+                                        <label htmlFor="whatsapp">Whatsapp (e.g: +10000000000)</label>
                                     </div>
                                 </div>
 

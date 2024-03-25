@@ -48,7 +48,7 @@ export default function HomePage() {
       postalCode: " 60618",
       addressCountry: "USA"
     },
-    "+234-915-757-5590",
+    "+447733308730",
     "info@harpycrypto.com",
     baseURL,
     `${baseURL}/logo.png`,

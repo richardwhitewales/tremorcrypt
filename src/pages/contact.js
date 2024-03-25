@@ -42,7 +42,7 @@ export default function ContactPage() {
             postalCode: " 60618",
             addressCountry: "USA"
         },
-        "+234-915-757-5590",
+        "+447733308730",
         "info@harpycrypto.com",
         baseURL,
         `${baseURL}/logo.png`,
@@ -109,7 +109,7 @@ export default function ContactPage() {
                                             <div className="d-flex flex-column mx-2">
                                                 <h5>PHONE:</h5>
                                                 <p>
-                                                    +234-915-757-5590
+                                                    +447733308730
                                                 </p>
                                             </div>
                                         </div>

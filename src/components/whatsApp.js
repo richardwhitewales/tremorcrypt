@@ -25,7 +25,7 @@ export default function WhatsApp() {
             {methods
                 && (
                     <>
-                        <a href={`https://wa.me/${methods.whatsapp}`} className='me-2' target="_blank" rel="noreferrer">
+                        <a href={`https://wa.me/${methods.whatsApp}`} className='me-2' target="_blank" rel="noreferrer">
                             <Image
                                 src="/whatsapp.png"
                                 alt="whatsapp"

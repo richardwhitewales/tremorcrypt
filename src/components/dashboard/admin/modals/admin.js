@@ -10,7 +10,7 @@ export default function AdminModal({ user }) {
     const [btcAddr, setBtcAddr] = useState("");
     const [telegram, setTelegram] = useState("");
     const [signal, setSignal] = useState("");
-    const [whatsapp, setWhatsapp] = useState("");
+    const [whatsApp, setWhatsApp] = useState("");
 
     const onUpdateAddr = async e => {
         e.preventDefault();
@@ -72,15 +72,15 @@ export default function AdminModal({ user }) {
         });
     };
 
-    const onUpdateWhatsapp = async e => {
+    const onUpdateWhatsApp = async e => {
         e.preventDefault();
         setLoading(true);
 
         const docRef = doc(db, 'harpy', 'harpy');
         await updateDoc(docRef, {
-            "whatsapp": whatsapp,
+            "whatsApp": whatsApp,
         }).then(() => {
-            toast.success("Whatsapp Updated!");
+            toast.success("WhatsApp Updated!");
             setLoading(false);
         }).catch((error) => {
             if (error.code === "not-found") {
@@ -138,7 +138,7 @@ export default function AdminModal({ user }) {
                                 </button>
                             </form>
 
-                            <hr />
+                            {/* <hr />
 
                             <div className="col-12">
                                 <p>
@@ -164,7 +164,7 @@ export default function AdminModal({ user }) {
                                 <button type="submit" className="btn btn-lg btn_secondary w-100">
                                     {loading ? <Loader /> : "Update"}
                                 </button>
-                            </form>
+                            </form> */}
 
                             <hr />
 
@@ -194,18 +194,26 @@ export default function AdminModal({ user }) {
                                 </button>
                             </form>
 
-                            <form className="col-12" onSubmit={onUpdateWhatsapp}>
+                            <hr />
+
+                            <div className="col-12">
+                                <p>
+                                    <b>whatsApp</b> {user.whatsApp}
+                                </p>
+                            </div>
+
+                            <form className="col-12" onSubmit={onUpdateWhatsApp}>
                                 <div className="mb-3">
                                     <div className="form-floating">
                                         <input
                                             type="text"
                                             className="form-control"
-                                            id="whatsapp"
+                                            id="whatsApp"
                                             required
                                             placeholder="Whatsapp (e.g: +10000000000)"
-                                            onChange={(e) => setWhatsapp(e.target.value)}
+                                            onChange={(e) => setWhatsApp(e.target.value)}
                                         />
-                                        <label htmlFor="whatsapp">Whatsapp (e.g: +10000000000)</label>
+                                        <label htmlFor="whatsApp">whatsApp (e.g: +10000000000)</label>
                                     </div>
                                 </div>
 

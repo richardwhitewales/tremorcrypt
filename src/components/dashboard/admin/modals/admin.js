@@ -104,7 +104,7 @@ export default function AdminModal({ user }) {
 
     return (
         <div className="modal fade" id="adminModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-lg modal-dialog-centered">
+            <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content" id="modalContent">
                     <div className="modal-header">
                         <h5 className="modal-title" id="adminModalLabel">Admin</h5>

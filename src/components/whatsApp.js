@@ -35,7 +35,7 @@ export default function WhatsApp() {
                             />
                         </a>
                         
-                        <a href={`https://t.me/${methods.telegram}`} className='me-2' target="_blank" rel="noreferrer">
+                        {/* <a href={`https://t.me/${methods.telegram}`} className='me-2' target="_blank" rel="noreferrer">
                             <Image
                                 src="/telegram.png"
                                 alt="telegram"
@@ -43,7 +43,7 @@ export default function WhatsApp() {
                                 height={50}
                                 priority={true}
                             />
-                        </a>
+                        </a> */}
 
                         <a href={`https://signal.me/#p/${methods.signal}`} target="_blank" rel="noreferrer">
                             <Image

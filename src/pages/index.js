@@ -97,7 +97,7 @@ export default function HomePage() {
         <Info4 />
         <Info5 />
         <Footer />
-        <WhatsApp />
+        {/* <WhatsApp /> */}
       </main>
     </>
   )

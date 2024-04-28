@@ -96,7 +96,7 @@ export default function AdminPage() {
 
             <main className={`position-relative ${roboto.className}`}>
                 <AdminDashboard />
-                <WhatsApp />
+                {/* <WhatsApp /> */}
             </main>
         </>
     )

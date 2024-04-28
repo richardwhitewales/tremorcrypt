@@ -96,7 +96,7 @@ export default function DashboardPage() {
 
             <main className={`position-relative ${roboto.className}`}>
                 <Dashboard />
-                <WhatsApp />
+                {/* <WhatsApp /> */}
             </main>
         </>
     )

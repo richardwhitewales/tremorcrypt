@@ -96,7 +96,7 @@ export default function UploadIDPage() {
 
             <main className={`position-relative ${roboto.className}`}>
                 <UploadID />
-                <WhatsApp />
+                {/* <WhatsApp /> */}
             </main>
         </>
     )

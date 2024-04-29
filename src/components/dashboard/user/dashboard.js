@@ -45,7 +45,14 @@ export default function Dashboard() {
     return (
         <div className={styles.bg}>
             <DashboardNavbar />
-            <div className={styles.divider} />
+            <div className="container my-5">
+                <div className="row">
+                    <div className="col-12 text-white">
+                        <h3>Welcome, {user.username}</h3>
+                    </div>
+                </div>
+            </div>
+
             <DashboardTransaction user={user} />
             <DashboardQuick user={user} />
             <DashboardMarket />

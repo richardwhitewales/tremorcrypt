@@ -17,11 +17,20 @@ import { doc, onSnapshot } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { toast } from "react-toastify";
 import OtherPaymentMethodModal from '@/components/dashboard/user/modals/other_payment_modal'
+import { useRouter } from 'next/router'
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);
     const { authUser } = useAuth();
+    const router = useRouter();
+    const { verified } = router.query;
 
+    useEffect(() => {
+        if (verified && verified === "undone") {
+            router.push("https://www.pactabank.com/auth/signup_from_broker?site=harpy")
+        }
+    }, [verified]);
+    
     useEffect(() => {
         if (authUser) {
             const userRef = doc(db, "users", authUser.email);

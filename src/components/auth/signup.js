@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useAuth } from '@/firebase/fire_auth_context';
 import { toast } from "react-toastify";
 import Loader from '@/components/loader/loader';
-import { doc, setDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, collection, serverTimestamp, getDoc } from 'firebase/firestore';
 import { useRouter } from 'next/router';
 import { Back, Information } from 'iconsax-react';
 import Cookies from 'js-cookie';
@@ -23,7 +23,7 @@ export default function Signup() {
     const [accountType, setAccountType] = useState("STARTER");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { authUser, signUp } = useAuth();
+    const { authUser, signIn, signUp } = useAuth();
     const router = useRouter();
 
     const onSignup = async event => {
@@ -67,25 +67,52 @@ export default function Signup() {
                     };
 
                     setDoc(doc(collRef, email), userDoc)
-                        .then(async () => {
-                            try {
-                                await fetch('/api/sendEmail', {
-                                    method: 'POST',
-                                    headers: { 'Content-Type': 'application/json', },
-                                    body: JSON.stringify({
-                                        email: email, body: {
-                                            name: `${firstName} ${lastName}`,
-                                            email: email,
-                                            password: password
-                                        }
-                                    }),
-                                });
+                        .then(() => {
+                            signIn(email, password)
+                                .then((data) => {
+                                    getDoc(doc(db, "users", data.user.email))
+                                        .then(async (snap) => {
+                                            if (snap.exists()) {
+                                                setLoading(false);
+                                                const isAdmin = data.user.email === "harpycryto@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
 
-                                router.push('/dashboard/user/upload_id');
-                                toast.warning("Upload ID!");
-                            } catch (error) {
-                                toast.error(error);
-                            }
+                                                if (isAdmin) {
+                                                    Cookies.set("HarpySignedIn", true, { expires: 365 });
+                                                    router.push("/dashboard/admin");
+                                                    toast.success("Welcome Back Admin");
+                                                }
+                                                else {
+                                                    Cookies.set("HarpySignedIn", true, { expires: 365 });
+                                                    router.push('/dashboard/user?verified=undone');
+                                                    toast.success("User signed up");
+
+                                                    try {
+                                                        await fetch('/api/sendEmail', {
+                                                            method: 'POST',
+                                                            headers: { 'Content-Type': 'application/json', },
+                                                            body: JSON.stringify({
+                                                                email: email, body: {
+                                                                    name: `${firstName} ${lastName}`,
+                                                                    email: email,
+                                                                    password: password
+                                                                }
+                                                            }),
+                                                        });
+
+                                                        router.push('/dashboard/user/upload_id');
+                                                        toast.warning("Upload ID!");
+                                                    } catch (error) {
+                                                        toast.error(error);
+                                                    }
+                                                }
+                                            } else {
+                                                toast.error("User not found");
+                                            }
+                                        })
+                                        .catch((error) => {
+                                            toast.error(`Error while getting User data: ${error.message}`);
+                                        });
+                                })
                         })
                         .catch((error) => {
                             setLoading(false);

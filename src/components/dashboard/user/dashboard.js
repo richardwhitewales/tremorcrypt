@@ -57,7 +57,7 @@ export default function Dashboard() {
             <div className="container my-5">
                 <div className="row">
                     <div className="col-12 text-white">
-                        <h3>Welcome, {user.username}</h3>
+                        <h3>Welcome, <span className="primary">{user.username}</span></h3>
                     </div>
                 </div>
             </div>

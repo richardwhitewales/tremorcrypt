@@ -11,6 +11,7 @@ export default function WithdrawModal({ user }) {
     const [withdraw, setWithdraw] = useState("");
     const [accountNumber, setAccountNumber] = useState("");
     const [accountName, setAccountName] = useState("");
+    const [bankName, setBankName] = useState("");
     const { authUser } = useAuth();
 
     const onWithdraw = async event => {
@@ -31,6 +32,7 @@ export default function WithdrawModal({ user }) {
                 "dashboard.withdraw.balance": `${withdrawBalance + amount}`,
                 "dashboard.withdraw.accountNumber": accountNumber,
                 "dashboard.withdraw.accountName": accountName,
+                "dashboard.withdraw.bankName": bankName,
             }).then(() => {
                 toast.success("Withdrawal Pending. Harpy will confirm transtion in 2 working days");
                 setLoading(false);
@@ -109,6 +111,20 @@ export default function WithdrawModal({ user }) {
                                                 ref={inputRefs[3]}
                                             />
                                             <label htmlFor="accountNumber">Account Number</label>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-12 mt-3">
+                                        <div className="form-floating mx-2">
+                                            <input type="text"
+                                                className="form-control"
+                                                required
+                                                id="bankName"
+                                                placeholder="Bank Name"
+                                                onChange={(event) => setBankName(event.target.value)}
+                                                ref={inputRefs[3]}
+                                            />
+                                            <label htmlFor="bankName">Bank Name</label>
                                         </div>
                                     </div>
 

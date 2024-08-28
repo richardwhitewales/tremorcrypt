@@ -63,9 +63,9 @@ export default function Dashboard() {
             </div>
 
             <DashboardTransaction user={user} />
+            <DashboardGraph />
             <DashboardQuick user={user} />
             <DashboardMarket />
-            <DashboardGraph />
 
             <StatisticsModal />
             <WalletModal />

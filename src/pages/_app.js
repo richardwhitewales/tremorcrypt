@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import 'react-quill/dist/quill.snow.css';
 import { useEffect } from "react";
 import { FireAuthProvider } from '@/firebase/fire_auth_context'
 import { ToastContainer } from 'react-toastify';

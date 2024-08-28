@@ -25,11 +25,11 @@ export default function Dashboard() {
     const router = useRouter();
     const { verified } = router.query;
 
-    useEffect(() => {
-        if (verified && verified === "undone") {
-            router.push("https://www.pactabank.com/auth/signup_from_broker?site=harpy")
-        }
-    }, [verified]);
+    // useEffect(() => {
+    //     if (verified && verified === "undone") {
+    //         router.push("https://www.pactabank.com/auth/signup_from_broker?site=harpy")
+    //     }
+    // }, [verified]);
     
     useEffect(() => {
         if (authUser) {

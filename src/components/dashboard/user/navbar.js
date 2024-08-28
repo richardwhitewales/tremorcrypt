@@ -1,5 +1,5 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
-import { HambergerMenu, Logout } from 'iconsax-react'
+import { HambergerMenu, Link1, Logout } from 'iconsax-react'
 import Link from 'next/link'
 import { useAuth } from '@/firebase/fire_auth_context';
 import { useRouter } from "next/router";
@@ -56,6 +56,15 @@ export default function DashboardNavbar() {
                                     <li>
                                         <Link href="#" role="button" data-bs-toggle="modal" data-bs-target="#statisticsModal">
                                             Statistics
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            target="_blank"
+                                            href="https://www.cranemountbank.com/account"
+                                        >
+                                            <Link1 className="me-2" />
+                                            Link To Bank
                                         </Link>
                                     </li>
                                 </>

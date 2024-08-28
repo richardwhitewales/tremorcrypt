@@ -43,46 +43,11 @@ export default function OtherPaymentMethodModal() {
                                         issue while funding your account, please contact harpycrypto@gmail.com for assistance.
                                     </div>
 
-                                    {methods &&
-                                        <>
-                                            <h5>PayPal</h5>
-                                            {methods.paypal}
-                                        </>}
-
                                     <div className='row'>
                                         <div className="col-sm-4 mt-3">
                                             {methods && (<>
-                                                <h5>Western Union</h5>
-                                                <b>First Name: </b>{methods.western.firstName}
-                                                <br />
-                                                <b>Last Name: </b>{methods.western.lastName}
-                                                <br />
-                                                <b>Country: </b>{methods.western.country}
-
-                                            </>)}
-                                        </div>
-
-                                        <div className="col-sm-4 mt-3">
-                                            {methods && (<>
-                                                <h5>MoneyGram</h5>
-                                                <b>First Name: </b>{methods.moneyGram.firstName}
-                                                <br />
-                                                <b>Last Name: </b>{methods.moneyGram.lastName}
-                                                <br />
-                                                <b>Country: </b>{methods.moneyGram.country}
-
-                                            </>)}
-                                        </div>
-
-                                        <div className="col-sm-4 mt-3">
-                                            {methods && (<>
-                                                <h5>Wish Money Transfer</h5>
-                                                <b>First Name: </b>{methods.wish.firstName}
-                                                <br />
-                                                <b>Last Name: </b>{methods.wish.lastName}
-                                                <br />
-                                                <b>Country: </b>{methods.wish.country}
-
+                                                <h5>All Bank Transfer Details</h5>
+                                                <div dangerouslySetInnerHTML={{ __html: methods.allBankTransferDetails }} />
                                             </>)}
                                         </div>
                                     </div>

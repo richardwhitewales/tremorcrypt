@@ -86,8 +86,8 @@ export default function Navbar() {
                                                         <ul className="list-unstyled text-muted">
                                                             <li className="mx-4 mr-0"><small>✓ Monthly for 1 weekly</small></li>
                                                             <li className="mx-4 mr-0"><small>✓ 10% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Minimum $500.00</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Maximum $4,999.00</small></li>
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Minimum $500.00</small></li> */}
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Maximum $4,999.00</small></li> */}
                                                             <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
                                                             <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
                                                         </ul>
@@ -99,8 +99,8 @@ export default function Navbar() {
                                                         <ul className="list-unstyled text-muted">
                                                             <li className="mx-4 mr-0"><small>✓ Monthly for 1 month</small></li>
                                                             <li className="mx-4 mr-0"><small>✓ 20% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Minimum $15,000.00</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Maximum $24,999.00</small></li>
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Minimum $15,000.00</small></li> */}
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Maximum $24,999.00</small></li> */}
                                                             <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
                                                             <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
                                                         </ul>
@@ -117,8 +117,8 @@ export default function Navbar() {
                                                         <ul className="list-unstyled text-muted">
                                                             <li className="mx-4 mr-0"><small>✓ Monthly for 1 month</small></li>
                                                             <li className="mx-4 mr-0"><small>✓ 15% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Minimum $5,000.00</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Maximum $14,999.00</small></li>
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Minimum $5,000.00</small></li> */}
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Maximum $14,999.00</small></li> */}
                                                             <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
                                                             <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
                                                         </ul>
@@ -131,8 +131,8 @@ export default function Navbar() {
                                                             <MagicStar color="#12b772" /> Core
                                                             <li className="mx-4 mr-0"><small>✓ Monthly for 1 month</small></li>
                                                             <li className="mx-4 mr-0"><small>✓ 24.99% ROI</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Minimum $25,000.00</small></li>
-                                                            <li className="mx-4 mr-0"><small>✓ Maximum $34,999.00</small></li>
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Minimum $25,000.00</small></li> */}
+                                                            {/* <li className="mx-4 mr-0"><small>✓ Maximum $34,999.00</small></li> */}
                                                             <li className="mx-4 mr-0"><small>✓ Deposit bonuses: All offers</small></li>
                                                             <li className="mx-4 mr-0 fw-bold"><small>✓ Loyalty bonuses: All offers</small></li>
                                                         </ul>

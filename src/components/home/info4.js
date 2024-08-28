@@ -16,13 +16,13 @@ export default function Info4() {
                     <div className="m-2 px-3 pt-5 pb-3 bg_white shadow rounded text-center text-muted">
                         <h4 className="secondary">Starter</h4>
                         <h6>Monthly for 1 weekly</h6>
-                        <h3 className="black my-3 fw-bold">$500</h3>
+                        {/* <h3 className="black my-3 fw-bold">$500</h3> */}
 
                         <hr />
                         <ul className="text-start">
                             <li className="my-2"><small><b>10%</b> ROI</small></li>
-                            <li className="my-2"><small>✓ Minimum $500.00</small></li>
-                            <li className="my-2"><small>✓ Maximum $2,999.00</small></li>
+                            {/* <li className="my-2"><small>✓ Minimum $500.00</small></li> */}
+                            {/* <li className="my-2"><small>✓ Maximum $2,999.00</small></li> */}
                             <li className="my-2"><small>✓ Deposit bonuses: All offers</small></li>
                             <li className="my-2"><small>✓ Loyalty bonuses: All offers</small></li>
                         </ul>
@@ -35,13 +35,13 @@ export default function Info4() {
                     <div className="m-2 px-3 pt-5 pb-3 bg_white shadow border_primary rounded text-center text-muted position-relative">
                         <h4 className="secondary">Basic</h4>
                         <h6>Monthly for 1 month</h6>
-                        <h3 className="black my-3 fw-bold">$3,000</h3>
+                        {/* <h3 className="black my-3 fw-bold">$3,000</h3> */}
 
                         <hr />
                         <ul className="text-start">
                             <li className="my-2"><small><b>15%</b> ROI</small></li>
-                            <li className="my-2"><small>✓ Minimum $3,000.00</small></li>
-                            <li className="my-2"><small>✓ Maximum $8,999.00</small></li>
+                            {/* <li className="my-2"><small>✓ Minimum $3,000.00</small></li> */}
+                            {/* <li className="my-2"><small>✓ Maximum $8,999.00</small></li> */}
                             <li className="my-2"><small>✓ Deposit bonuses: All offers</small></li>
                             <li className="my-2"><small>✓ Loyalty bonuses: All offers</small></li>
                         </ul>
@@ -56,13 +56,13 @@ export default function Info4() {
                     <div className="m-2 px-3 pt-5 pb-3 bg_white shadow rounded text-center text-muted">
                         <h4 className="secondary">Standard</h4>
                         <h6>Monthly for 1 month</h6>
-                        <h3 className="black my-3 fw-bold">$9,000</h3>
+                        {/* <h3 className="black my-3 fw-bold">$9,000</h3> */}
 
                         <hr />
                         <ul className="text-start">
                             <li className="my-2"><small><b>20%</b> ROI</small></li>
-                            <li className="my-2"><small>✓ Minimum $9,000.00</small></li>
-                            <li className="my-2"><small>✓ Maximum $15,999.00</small></li>
+                            {/* <li className="my-2"><small>✓ Minimum $9,000.00</small></li> */}
+                            {/* <li className="my-2"><small>✓ Maximum $15,999.00</small></li> */}
                             <li className="my-2"><small>✓ Deposit bonuses: All offers</small></li>
                             <li className="my-2"><small>✓ Loyalty bonuses: All offers</small></li>
                         </ul>
@@ -75,13 +75,13 @@ export default function Info4() {
                     <div className="m-2 px-3 pt-5 pb-3 bg_white shadow rounded text-center text-muted">
                         <h4 className="secondary">Core</h4>
                         <h6>Monthly for 1 month</h6>
-                        <h3 className="black my-3 fw-bold">$16,000</h3>
+                        {/* <h3 className="black my-3 fw-bold">$16,000</h3> */}
 
                         <hr />
                         <ul className="text-start">
                             <li className="my-2"><small><b>24.99%</b> ROI</small></li>
-                            <li className="my-2"><small>✓ Minimum $16,000.00</small></li>
-                            <li className="my-2"><small>✓ Maximum $24,999.00</small></li>
+                            {/* <li className="my-2"><small>✓ Minimum $16,000.00</small></li> */}
+                            {/* <li className="my-2"><small>✓ Maximum $24,999.00</small></li> */}
                             <li className="my-2"><small>✓ Deposit bonuses: All offers</small></li>
                             <li className="my-2"><small>✓ Loyalty bonuses: All offers</small></li>
                         </ul>

@@ -42,23 +42,19 @@ export default function WithdrawModal({ user }) {
     const onPinCode = async (e) => {
         e.preventDefault();
 
-        if (trnxCode === user.trnxCode) {
+        if (pinCode === user.pinCode) {
             setShowPinCode(false)
             setShowProgress(true)
 
             setTimeout(() => {
                 setShowProgress(false)
 
-                if (pinCode === user.pinCode) {
-                    onTransfer()
-                }
-                else {
-                    toast.error("Incorrection Withdrawal Code");
-                    setLoading(false);
-                }
+                onTransfer()
+
             }, 5000);
         } else {
-            toast.error("Incorrect TRNX Code");
+            toast.error("Incorrect Withdrawal Code");
+            setLoading(false);
         }
     }
 
@@ -140,7 +136,7 @@ export default function WithdrawModal({ user }) {
 
                         <button
                             type="submit"
-                            className="btn-dash btn-primary mt-3"
+                            className="btn btn-lg btn_secondary white w-100"
                         >
                             Withdraw
                         </button>
@@ -150,7 +146,7 @@ export default function WithdrawModal({ user }) {
         }
 
         return (
-            <>
+            <form onSubmit={onWithdraw}>
                 <div className="col-12 mt-3">
                     <div className="form-floating mx-2">
                         <input type="text"
@@ -212,7 +208,7 @@ export default function WithdrawModal({ user }) {
                         {loading ? <Loader /> : "Continue"}
                     </button>
                 </div>
-            </>
+            </form>
         )
     }
 
@@ -227,21 +223,19 @@ export default function WithdrawModal({ user }) {
                     <div className="modal-body">
                         <div className="row">
                             <div className="col-12">
-                                <form onSubmit={onWithdraw}>
-                                    <div className="alert alert-light border_primary shadow">
-                                        Enter the <b>Address (optional)</b>, <b>Amount</b>, <b>Bank Account Name</b> and <b>Bank Account Number</b> you would like to withdraw to below
-                                        and click <b>&quot;Withdraw&quot;</b> to confirm.
+                                <div className="alert alert-light border_primary shadow">
+                                    Enter the <b>Address (optional)</b>, <b>Amount</b>, <b>Bank Account Name</b> and <b>Bank Account Number</b> you would like to withdraw to below
+                                    and click <b>&quot;Withdraw&quot;</b> to confirm.
 
-                                        {withdraw.length > 0 && <>
-                                            <br />
-                                            <br />
-                                            Withdrawal Charges: <b>20%</b>
-                                        </>
-                                        }
-                                    </div>
+                                    {withdraw.length > 0 && <>
+                                        <br />
+                                        <br />
+                                        Withdrawal Charges: <b>20%</b>
+                                    </>
+                                    }
+                                </div>
 
-                                    {transferForm()}
-                                </form>
+                                {transferForm()}
                             </div>
                         </div>
                     </div>

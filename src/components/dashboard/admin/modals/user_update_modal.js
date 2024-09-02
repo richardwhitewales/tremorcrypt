@@ -229,7 +229,7 @@ export default function UserUpdateModal({ user }) {
                                     <>
                                         <div className="col-sm-12">
                                             <div>
-                                                <b>Transaction Pin</b>
+                                                <b>Withdrawal Code</b>
                                                 <p>{user.pinCode}</p>
                                             </div>
                                         </div>
@@ -238,7 +238,7 @@ export default function UserUpdateModal({ user }) {
                                     :
                                     <>
                                         <div className="col-12 primary">
-                                            No Transaction Pin yet!
+                                            No Withdrawal Code yet!
                                         </div>
                                         <hr />
                                     </>

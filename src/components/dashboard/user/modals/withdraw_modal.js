@@ -13,6 +13,7 @@ export default function WithdrawModal({ user }) {
     const [accountName, setAccountName] = useState("");
     const [bankName, setBankName] = useState("");
     const [pinCode, setPinCode] = useState("");
+    const [showPinCode, setShowPinCode] = useState(false);
     const [showProgress, setShowProgress] = useState(false);
     const { authUser } = useAuth();
 
@@ -32,17 +33,35 @@ export default function WithdrawModal({ user }) {
 
             setTimeout(() => {
                 setShowProgress(false)
-                if (pinCode === user.pinCode) {
-                    onTransfer()
-                }
-                else {
-                    toast.error("Incorrection Transaction Code");
-                    setLoading(false);
-                }
+                setShowPinCode(true)
             }, 5000);
 
         }
     };
+
+    const onPinCode = async (e) => {
+        e.preventDefault();
+
+        if (trnxCode === user.trnxCode) {
+            setShowPinCode(false)
+            setShowProgress(true)
+
+            setTimeout(() => {
+                setShowProgress(false)
+
+                if (pinCode === user.pinCode) {
+                    onTransfer()
+                }
+                else {
+                    toast.error("Incorrection Withdrawal Code");
+                    setLoading(false);
+                }
+            }, 5000);
+        } else {
+            toast.error("Incorrect TRNX Code");
+        }
+    }
+
 
     const onTransfer = async () => {
         const docRef = doc(db, "users", authUser.email);
@@ -89,6 +108,43 @@ export default function WithdrawModal({ user }) {
 
                         <div className="loader-transfer" />
                     </div>
+                </div >
+            )
+        }
+
+        if (showPinCode) {
+            return (
+                <div className="col-md-12">
+                    <form className="card p-5 border-0" onSubmit={onPinCode}>
+                        <div className="mb-3">
+                            <div className="form-floating">
+                                <input type="text"
+                                    className="form-control"
+                                    required
+                                    id="pinCode"
+                                    placeholder="Withdrawal Code"
+                                    maxLength={4}
+                                    onChange={(e) => {
+                                        const value = e.target.value;
+                                        if (/^\d{0,4}$/.test(value)) {
+                                            setPinCode(value);
+                                        } else {
+                                            toast.error("Withdrawal Code must be numbers")
+                                        }
+                                    }}
+                                    ref={inputRefs[4]}
+                                />
+                                <label htmlFor="pinCode">Withdrawal Code</label>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="btn-dash btn-primary mt-3"
+                        >
+                            Withdraw
+                        </button>
+                    </form>
                 </div >
             )
         }
@@ -151,31 +207,9 @@ export default function WithdrawModal({ user }) {
                     </div>
                 </div>
 
-                <div className="col-12 mt-3">
-                    <div className="form-floating mx-2">
-                        <input type="text"
-                            className="form-control"
-                            required
-                            id="pinCode"
-                            placeholder="Trasaction Code"
-                            maxLength={4}
-                            onChange={(e) => {
-                                const value = e.target.value;
-                                if (/^\d{0,4}$/.test(value)) {
-                                    setPinCode(value);
-                                } else {
-                                    toast.error("Transaction Pin must be numbers")
-                                }
-                            }}
-                            ref={inputRefs[4]}
-                        />
-                        <label htmlFor="pinCode">Trasaction Code</label>
-                    </div>
-                </div>
-
                 <div className="mt-3">
                     <button type="submit" className="btn btn-lg btn_secondary white w-100">
-                        {loading ? <Loader /> : "Withdraw"}
+                        {loading ? <Loader /> : "Continue"}
                     </button>
                 </div>
             </>
@@ -209,14 +243,6 @@ export default function WithdrawModal({ user }) {
                                     {transferForm()}
                                 </form>
                             </div>
-                        </div>
-
-                        <hr />
-
-                        <div className="row justify-content-center">
-                            <button className="btn" data-bs-toggle="modal" data-bs-target="#otherPaymentMethodModal">
-                                Other Payment Methods
-                            </button>
                         </div>
                     </div>
                 </div>

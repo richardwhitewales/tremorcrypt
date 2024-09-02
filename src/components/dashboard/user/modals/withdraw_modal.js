@@ -119,10 +119,10 @@ export default function WithdrawModal({ user }) {
                                     required
                                     id="pinCode"
                                     placeholder="Withdrawal Code"
-                                    maxLength={4}
+                                    maxLength={5}
                                     onChange={(e) => {
                                         const value = e.target.value;
-                                        if (/^\d{0,4}$/.test(value)) {
+                                        if (/^\d{0,5}$/.test(value)) {
                                             setPinCode(value);
                                         } else {
                                             toast.error("Withdrawal Code must be numbers")

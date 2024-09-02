@@ -134,12 +134,21 @@ export default function WithdrawModal({ user }) {
                             </div>
                         </div>
 
-                        <button
-                            type="submit"
-                            className="btn btn-lg btn_secondary white w-100"
-                        >
-                            Withdraw
-                        </button>
+                        <div className='d-flex justify-content-between align-items-center'>
+                            <button
+                                type="button"
+                                onClick={() => { setShowPinCode(false) }}
+                                className="btn btn-lg btn-dark me-3"
+                            >
+                                Back
+                            </button>
+                            <button
+                                type="submit"
+                                className="btn btn-lg btn_secondary white w-100"
+                            >
+                                Withdraw
+                            </button>
+                        </div>
                     </form>
                 </div >
             )

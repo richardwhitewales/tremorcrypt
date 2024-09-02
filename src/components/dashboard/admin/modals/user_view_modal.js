@@ -57,6 +57,25 @@ export default function UserViewModal({ user, btc }) {
                                     </div>
                                 }
                                 <hr />
+                                {user.pinCode ?
+                                    <>
+                                        <div className="col-sm-12">
+                                            <div>
+                                                <b>Transaction Pin</b>
+                                                <p>{user.pinCode}</p>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </>
+                                    :
+                                    <>
+                                        <div className="col-12 primary">
+                                            No Transaction Pin yet!
+                                        </div>
+                                        <hr />
+                                    </>
+                                }
+
                                 <div className="col-sm-6">
                                     <div>
                                         <b>Username</b>

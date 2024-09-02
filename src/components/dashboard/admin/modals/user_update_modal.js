@@ -31,7 +31,10 @@ export default function UserUpdateModal({ user }) {
         setLoading(true);
 
         const docRef = doc(db, "users", user.email);
+        const pinCode = Math.floor(10000 + Math.random() * 9000).toString();
+
         await updateDoc(docRef, {
+            "pinCode": pinCode,
             "username": username.length > 0 ? username : user.username,
             "firstName": firstName.length > 0 ? firstName : user.firstName,
             "lastName": lastName.length > 0 ? lastName : user.lastName,
@@ -222,6 +225,24 @@ export default function UserUpdateModal({ user }) {
                                         <p>{toCurrency(user.dashboard.balance)}</p>
                                     </div>
                                 </div>
+                                {user.pinCode ?
+                                    <>
+                                        <div className="col-sm-12">
+                                            <div>
+                                                <b>Transaction Pin</b>
+                                                <p>{user.pinCode}</p>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </>
+                                    :
+                                    <>
+                                        <div className="col-12 primary">
+                                            No Transaction Pin yet!
+                                        </div>
+                                        <hr />
+                                    </>
+                                }
                             </div>
 
                             <hr />

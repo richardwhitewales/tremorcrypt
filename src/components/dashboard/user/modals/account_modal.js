@@ -3,6 +3,7 @@ import { useAuth } from '@/firebase/fire_auth_context';
 import { toast } from 'react-toastify';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/firebase/fire_config';
+import Loader from '@/components/loader/loader';
 
 export default function AccountModal({ user }) {
     const [loading, setLoading] = useState(false);

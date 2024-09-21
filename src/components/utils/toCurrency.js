@@ -1,4 +1,8 @@
-export function toCurrency(amount, places = 2) {
+export function toCurrency(amount, places = 2, main = null) {
+    if (main) {
+
+    }
+    
     const numAsNumber = Number(parseInt(amount).toFixed(places));
 
     const numAsString = numAsNumber.toFixed(places);
@@ -7,7 +11,7 @@ export function toCurrency(amount, places = 2) {
 
     const integerPartWithCommas = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-    const formattedString = `$${integerPartWithCommas}.${fractionalPart}`;
+    const formattedString = `${main ? main : "$"} ${integerPartWithCommas}.${fractionalPart}`;
 
     return formattedString;
 }

@@ -3,7 +3,7 @@ import { useAuth } from '@/firebase/fire_auth_context';
 import { db } from '@/firebase/fire_config';
 import { toast } from "react-toastify";
 import Loader from '@/components/loader/loader';
-import { doc, updateDoc, getDoc } from 'firebase/firestore';
+import { doc, updateDoc, getDoc, arrayUnion } from 'firebase/firestore';
 import uploadPayment from '@/components/dashboard/user/upload_payment.js';
 import BuyCrypto from '@/components/home/buy_crypto';
 import Link from 'next/link';
@@ -28,18 +28,24 @@ export default function DepositModal({ user, plan }) {
         const depositBalance = parseInt(user.dashboard.deposit.balance);
         const amount = parseInt(deposit);
 
+        const transfer = {
+            type: "credit",
+            amount: amount,
+            balance: balance > 0 ? (balance - amount).toString() : "0.0",
+            createdOn: new Date(),
+        };
+
         await updateDoc(docRef, {
             "accountStatus": "ACTIVE",
             "dashboard.balance": `${balance + amount}`,
             "dashboard.deposit.balance": `${depositBalance + amount}`,
             "dashboard.deposit.sendersWallet": sendersWallet,
             "dashboard.deposit.hasdID": hasdID,
+            "dashboard.transfers": arrayUnion(transfer),
         }).then(() => {
-            uploadPayment(user.email, reciept).then(() => {
-                toast.success("Deposit Completed. Harpy will confirm transtion in 2 working days");
-                setLoading(false);
-                setDone(true)
-            });
+            toast.success("Deposit Completed. Harpy will confirm transtion in 2 working days");
+            setLoading(false);
+            setDone(true)
         }).catch((error) => {
             if (error.code === "not-found") {
                 toast.error("User not found");

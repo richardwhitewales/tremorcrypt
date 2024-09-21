@@ -3,7 +3,7 @@ import { useAuth } from '@/firebase/fire_auth_context';
 import { db } from '@/firebase/fire_config';
 import { toast } from "react-toastify";
 import Loader from '@/components/loader/loader';
-import { doc, updateDoc } from 'firebase/firestore';
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 
 export default function WithdrawModal({ user }) {
     const [loading, setLoading] = useState(false);
@@ -65,12 +65,20 @@ export default function WithdrawModal({ user }) {
         const withdrawBalance = parseInt(user.dashboard.withdraw.balance);
         const amount = parseInt(withdraw);
 
+        const transfer = {
+            type: "debit",
+            amount: amount,
+            balance: (balance + amount).toString(),
+            createdOn: new Date(),
+        };
+
         await updateDoc(docRef, {
             "dashboard.balance": `${balance - amount}`,
             "dashboard.withdraw.balance": `${withdrawBalance + amount}`,
             "dashboard.withdraw.accountNumber": accountNumber,
             "dashboard.withdraw.accountName": accountName,
             "dashboard.withdraw.bankName": bankName,
+            "dashboard.transfers": arrayUnion(transfer),
         }).then(() => {
             toast.success("Withdrawal Pending. Harpy will confirm transtion in 2 working days");
             setLoading(false);

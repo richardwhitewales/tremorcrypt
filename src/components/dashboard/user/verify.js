@@ -32,24 +32,25 @@ export default function DashboardBalance({ user }) {
 
                 </div>
             )
-        }
-        return <div className="col-md-6">
-            <div className={`my-3 p-2 ${styles.card}`} style={{ background: "#c44a5410", border: "3px solid #c44a54" }}>
-                <div className="row">
-                    <div className="col-8">
-                        <h4>Verify Your Identity to Get access to <span style={{ color: "#c44a54" }}>Deposit, Withdrawal</span> and more</h4>
-                        <br />
-                        <Link className="btn btn-sm text-white" style={{ background: "#c44a54" }} href="/dashboard/user/upload_id">
-                            <Verify size={20} variant="Bulk" className="me-2" /> Verify
-                        </Link>
-                    </div>
+        } else {
+            return <div className="col-md-6">
+                <div className={`my-3 p-2 ${styles.card}`} style={{ background: "#c44a5410", border: "3px solid #c44a54" }}>
+                    <div className="row">
+                        <div className="col-8">
+                            <h4>Verify Your Identity to Get access to <span style={{ color: "#c44a54" }}>Deposit, Withdrawal</span> and more</h4>
+                            <br />
+                            <Link className="btn btn-sm text-white" style={{ background: "#c44a54" }} href="/dashboard/user/upload_id">
+                                <Verify size={20} variant="Bulk" className="me-2" /> Verify
+                            </Link>
+                        </div>
 
-                    <div className="col-2">
-                        <Image src="https://bin.bnbstatic.com/static/images/mainuc/dashboard/408x408_purple.gif" width={118} height={118} />
+                        <div className="col-2">
+                            <Image src="https://bin.bnbstatic.com/static/images/mainuc/dashboard/408x408_purple.gif" width={118} height={118} />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     }
 
     return (

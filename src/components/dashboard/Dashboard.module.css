@@ -1,7 +1,7 @@
 .bg {
     min-width: 100vw;
     min-height: 100vh;
-    background: black;
+    background: #222222;
 }
 
 .divider {
@@ -9,7 +9,6 @@
 }
 
 .nav {
-    display: flex;
     justify-content: space-between;
     padding: .5rem;
 }
@@ -17,7 +16,7 @@
 .nav>ul {
     display: flex;
     list-style: none;
-    align-items: center;
+    align-items: start;
 }
 
 .nav>ul>li {
@@ -56,10 +55,11 @@
 }
 
 .card {
+    padding: 15px !important;
     position: relative;
     border-radius: .5rem;
-    background: #ffffff1a;
-    border: 1px solid #808080;
+    /* background: #ffffff1a; */
+    border: 1px solid #80808093;
     color: white;
     display: flex;
     flex-direction: column;
@@ -135,4 +135,32 @@
 
 .balance>span {
     margin-right: 10px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    list-style: none;
+    padding: 10px 0 0 10px;
+}
+
+.sidebar_none_path:hover{
+    color: #16F196 !important;
+}
+
+.sidebar_path, .sidebar_path:hover {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    background: #ffffff40;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.sidebar_none_path {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    align-items: center;
 }

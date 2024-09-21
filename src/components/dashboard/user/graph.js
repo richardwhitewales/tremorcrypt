@@ -6,7 +6,7 @@ export default function DashboardGraph() {
         <div className="container">
             <div className="row">
                 <div className="col-12 mb-5">
-                    <div className={`my-3 p-2 ${styles.card} bg_white`}>
+                    <div className={`my-3 p-2 ${styles.card}`}>
                         <div className="row">
                             <div className="col-12">
                                 <Chart />

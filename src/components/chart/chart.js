@@ -32,7 +32,7 @@ export default function Chart() {
                         symbol: "BITSTAMP:BTCUSD",
                         interval: "D",
                         timezone: "Etc/UTC",
-                        theme: "light",
+                        theme: "dark",
                         style: "2",
                         locale: "en",
                         toolbar_bg: "#ffffff",
@@ -40,7 +40,8 @@ export default function Chart() {
                         hide_top_toolbar: true,
                         hide_legend: true,
                         save_image: false,
-                        container_id: "tradingview_1"
+                        container_id: "tradingview_1",
+                        backgroundColor: "#222222"
                     });
                 }
             }

@@ -62,10 +62,9 @@ export default function DashboardTransaction({ user }) {
 
                             <div >
                                 <small>Status</small>
-                                <Link
+                                <div
                                     className={`text-decoration-none ${user.accountStatus === "ACTIVE" ? "text-success" : user.accountStatus === "UPGRADE" ? "text-warning" : "text-danger"}`}
-                                    href="#"
-                                    data-bs-toggle="modal" data-bs-target="#depositModal">
+                                    href="#">
                                     <h4>
                                         {
                                             user.accountStatus === "ACTIVE" ? "Verified"
@@ -73,7 +72,7 @@ export default function DashboardTransaction({ user }) {
                                                     ? "Upgrade" : "Unverified"
                                         }
                                     </h4>
-                                </Link>
+                                </div>
                             </div>
                         </div>
 

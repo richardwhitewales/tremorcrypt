@@ -1,7 +1,9 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
 import DashboardNavbar from '@/components/dashboard/user/navbar'
+import DashboardSidebar from '@/components/dashboard/user/sidebar'
 import DashboardTransaction from '@/components/dashboard/user/transaction'
-import DashboardMarket from '@/components/dashboard/user/market'
+import DashboardVerify from '@/components/dashboard/user/verify'
+import DashboardBalance from '@/components/dashboard/user/balance'
 import DashboardQuick from '@/components/dashboard/user/quick'
 import DashboardGraph from '@/components/dashboard/user/graph'
 import WithdrawModal from '@/components/dashboard/user/modals/withdraw_modal'
@@ -17,20 +19,15 @@ import { doc, onSnapshot } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { toast } from "react-toastify";
 import OtherPaymentMethodModal from '@/components/dashboard/user/modals/other_payment_modal'
-import { useRouter } from 'next/router'
+import { useMediaQuery } from "@chakra-ui/react";
+import { CloseSquare, HambergerMenu } from 'iconsax-react'
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);
     const { authUser } = useAuth();
-    const router = useRouter();
-    const { verified } = router.query;
+    const [showMenu, setShowMenu] = useState(false);
+    const [isMobile] = useMediaQuery("(max-width: 1024px)");
 
-    // useEffect(() => {
-    //     if (verified && verified === "undone") {
-    //         router.push("https://www.pactabank.com/auth/signup_from_broker?site=harpy")
-    //     }
-    // }, [verified]);
-    
     useEffect(() => {
         if (authUser) {
             const userRef = doc(db, "users", authUser.email);
@@ -54,25 +51,41 @@ export default function Dashboard() {
     return (
         <div className={styles.bg}>
             <DashboardNavbar />
-            <div className="container my-5">
-                <div className="row">
-                    <div className="col-12 text-white">
-                        <h3>Welcome, <span className="primary">{user.username}</span></h3>
-                    </div>
+
+            <div className={isMobile ? (showMenu && "d-flex") : "d-flex"}>
+                {isMobile ? (showMenu && <DashboardSidebar />) : <DashboardSidebar />}
+
+                <div className={isMobile ? (showMenu && "px-5") : "px-5"}>
+                    {isMobile && (
+                        <div>
+                            {showMenu ?
+                                <CloseSquare size={32} className="text-danger pe-active" variant="Bold" onClick={() => setShowMenu(false)} /> :
+                                <div className="d-flex w-100 justify-content-between mt-4 ps-2">
+                                    <div className="d-flex justify-content-start pe-active">
+                                        <HambergerMenu size={28} className="me-2 text-white" onClick={() => setShowMenu(true)} />
+                                        <h5 className="text-white">Menu</h5>
+                                    </div>
+
+                                    <h5 className="me-3 primary">Dashboard</h5>
+                                </div>
+                            }
+                        </div>
+                    )}
+
+                    <DashboardVerify user={user} />
+                    <DashboardBalance user={user} />
+                    <DashboardTransaction user={user} />
+                    <DashboardGraph />
+                    <DashboardQuick user={user} />
+
+                    <StatisticsModal />
+                    <WalletModal />
+                    <PaymentsModal />
+                    <WithdrawModal user={user} />
+                    <OtherPaymentMethodModal />
+                    <PlansModal user={user} />
                 </div>
             </div>
-
-            <DashboardTransaction user={user} />
-            <DashboardGraph />
-            <DashboardQuick user={user} />
-            <DashboardMarket />
-
-            <StatisticsModal />
-            <WalletModal />
-            <PaymentsModal />
-            <WithdrawModal user={user} />
-            <OtherPaymentMethodModal />
-            <PlansModal user={user} />
         </div>
     )
 }

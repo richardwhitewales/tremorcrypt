@@ -18,6 +18,12 @@ body {
     border-color: black !important;
 }
 
+.btn_white {
+    background: white !important;
+    border-color: white !important;
+    color: black !important;
+}
+
 .btn_primary {
     background: #16F196 !important;
     border-color: #16F196 !important;
@@ -34,8 +40,16 @@ body {
     color: #16F196 !important;
 }
 
+.bg-white-50 {
+    background: #ffffff40 !important;
+}
+
 .btn_secondary:hover {
     color: #12B772 !important;
+}
+
+.btn_white:hover {
+    color: white !important;
 }
 
 .primary {
@@ -172,4 +186,13 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.gift {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
 }

@@ -38,10 +38,10 @@ export default function DashboardMarket() {
                     <div className={`my-3 p-2 ${styles.card}`}>
                         <div className="row">
                             <div className="col-12">
-                                <h5>Top Markets</h5>
-                                <hr />
+                                <h4>Top Markets</h4>
                             </div>
-                            <div className="col-12">
+
+                            <div className="col-12 mt-3">
                                 <div className="table-responsive">
                                     <table className="table text-white table-borderless">
                                         <thead>
@@ -56,7 +56,7 @@ export default function DashboardMarket() {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th scope="row"><Bitcoin variant="Bold" size={44} className="primary" /></th>
+                                                <th scope="row"><Bitcoin variant="Bold" size={32} className="primary" /></th>
                                                 <td className="text-success">{toCurrency(btc.high)}</td>
                                                 <td className="text-danger">{toCurrency(btc.low)}</td>
                                                 <td>{toCurrency(btc.last)}</td>
@@ -64,7 +64,7 @@ export default function DashboardMarket() {
                                                 <td>% {btc.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><Ethereum variant="Bold" size={44} className="primary" /></th>
+                                                <th scope="row"><Ethereum variant="Bold" size={32} className="primary" /></th>
                                                 <td className="text-success">{toCurrency(eth.high)}</td>
                                                 <td className="text-danger">{toCurrency(eth.low)}</td>
                                                 <td>{toCurrency(eth.last)}</td>
@@ -72,7 +72,7 @@ export default function DashboardMarket() {
                                                 <td>% {eth.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><Litecoin variant="Bold" size={44} className="primary" /></th>
+                                                <th scope="row"><Litecoin variant="Bold" size={32} className="primary" /></th>
                                                 <td className="text-success">{toCurrency(ltc.high)}</td>
                                                 <td className="text-danger">{toCurrency(ltc.low)}</td>
                                                 <td>{toCurrency(ltc.last)}</td>
@@ -80,7 +80,7 @@ export default function DashboardMarket() {
                                                 <td>% {ltc.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><Xrp variant="Bold" size={44} className="primary" /></th>
+                                                <th scope="row"><Xrp variant="Bold" size={32} className="primary" /></th>
                                                 <td className="text-success">{toCurrency(xrp.high)}</td>
                                                 <td className="text-danger">{toCurrency(xrp.low)}</td>
                                                 <td>{toCurrency(xrp.last)}</td>

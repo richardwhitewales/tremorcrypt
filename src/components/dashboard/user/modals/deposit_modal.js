@@ -6,9 +6,11 @@ import Loader from '@/components/loader/loader';
 import { doc, updateDoc, getDoc } from 'firebase/firestore';
 import uploadPayment from '@/components/dashboard/user/upload_payment.js';
 import BuyCrypto from '@/components/home/buy_crypto';
+import Link from 'next/link';
 
 export default function DepositModal({ user, plan }) {
     const [loading, setLoading] = useState(false);
+    const [done, setDone] = useState(false);
     const inputRefs = [useRef(null), useRef(null), useRef(null)];
     const [deposit, setDeposit] = useState("");
     const [reciept, setReciept] = useState(null);
@@ -36,7 +38,7 @@ export default function DepositModal({ user, plan }) {
             uploadPayment(user.email, reciept).then(() => {
                 toast.success("Deposit Completed. Harpy will confirm transtion in 2 working days");
                 setLoading(false);
-                onClearModal();
+                setDone(true)
             });
         }).catch((error) => {
             if (error.code === "not-found") {
@@ -64,7 +66,7 @@ export default function DepositModal({ user, plan }) {
     }, []);
 
     const onClearModal = () => {
-        setLoading(false); setDeposit("");
+        setLoading(false); setDone(false); setDeposit("");
         setReciept(null); setSendersWallet("");
         setHasdID("");
     };
@@ -78,99 +80,76 @@ export default function DepositModal({ user, plan }) {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={onClearModal}></button>
                     </div>
                     <div className="modal-body">
-                        <div className="row">
-                            <form onSubmit={onDeposit}>
-                                <div className="col-md-12">
-                                    Make deposit to the <b>BitCoin (BTC)</b> address below or scan the QR code.
+                        <form className="row" onSubmit={onDeposit}>
+                            <div className="col-md-6 mb-3">
+                                Make deposit to the <b>BitCoin (BTC)</b> address below or scan the QR code.
 
-                                    <div className="alert alert-dark bg_black_15 text-center p-1">
-                                        {addr && addr.btcAddr}
-                                    </div>
-
-                                    <div className="text-center mx-2">
-                                        <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${addr && addr.btcAddr}`} alt="btc address" />
-                                    </div>
+                                <div className="alert alert-dark bg_black_15 text-center p-1">
+                                    {addr && addr.btcAddr}
                                 </div>
 
+                                <div className="text-center mx-2">
+                                    <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${addr && addr.btcAddr}`} alt="btc address" />
+                                </div>
+                            </div>
+
+                            <div className="col-md-6 mb-3">
+                                Make deposit to the <b>USDT {addr && addr.usdtNetwork}</b> address below or scan the QR code.
+
+                                <div className="alert alert-dark bg_black_15 text-center p-1">
+                                    {addr && addr.usdtAddr}
+                                </div>
+
+                                <div className="text-center mx-2">
+                                    <img src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${addr && addr.usdtAddr}`} alt="usdt address" />
+                                </div>
+                            </div>
+
+                            {done ?
                                 <div className="alert alert-light my-3 border_primary shadow">
-                                    After making payment;
-                                    <ul>
-                                        <li>
-                                            <small>Enter the <b>Amount</b>, <b>Address</b> and <b>HashID (Optional)</b> below</small>
-                                        </li>
-                                        <li>
-                                            <small>Upload the <b>Proof</b> below, screenshot or reciept image</small>
-                                        </li>
-                                    </ul>
-                                    and click <b>&quot;Deposit&quot;</b> to confirm.
+                                    After making payment send the <b>Proof screenshot or reciept image</b> to <Link href="https://widget-page.smartsupp.com/widget/f5acb7fcd05f8c3af730bb9f2888a41ad1dec0d6" onClick={() => { onClearModal(); }} target="_blank">here</Link>
                                 </div>
+                                :
+                                <>
+                                    <div className="row">
+                                        <div className="col-12 mb-3">
+                                            <div className="form-floating ">
+                                                <input type="text"
+                                                    className="form-control"
+                                                    required
+                                                    id="deposit"
+                                                    placeholder="Amount in $"
+                                                    onChange={(event) => setDeposit(event.target.value)}
+                                                    ref={inputRefs[0]}
+                                                />
+                                                <label htmlFor="deposit">Amount in $</label>
+                                            </div>
+                                        </div>
 
-                                <div className="row">
-                                    <div className="col-6">
-                                        <div className="form-floating ">
-                                            <input type="text"
-                                                className="form-control"
-                                                required
-                                                id="deposit"
-                                                placeholder="Amount in $"
-                                                onChange={(event) => setDeposit(event.target.value)}
-                                                ref={inputRefs[0]}
-                                            />
-                                            <label htmlFor="deposit">Amount in $</label>
+                                        <div className="col-12">
+                                            <div className="form-floating ">
+                                                <input type="text"
+                                                    className="form-control"
+                                                    required
+                                                    id="address"
+                                                    placeholder="Address"
+                                                    onChange={(event) => setSendersWallet(event.target.value)}
+                                                    ref={inputRefs[1]}
+                                                />
+                                                <label htmlFor="address">Address</label>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div className="col-6">
-                                        <div className="form-floating ">
-                                            <input type="text"
-                                                className="form-control"
-                                                required
-                                                id="address"
-                                                placeholder="Address"
-                                                onChange={(event) => setSendersWallet(event.target.value)}
-                                                ref={inputRefs[1]}
-                                            />
-                                            <label htmlFor="address">Address</label>
-                                        </div>
+                                    <div className="col-12 mt-3">
+                                        <button type="submit" className="btn btn-lg btn_secondary white w-100">
+                                            {loading ? <Loader /> : "I have Deposited"}
+                                        </button>
                                     </div>
-                                </div>
+                                </>
+                            }
 
-                                <div className="row mt-3">
-                                    <div className="col-6">
-                                        <div className="form-floating ">
-                                            <input type="text"
-                                                className="form-control"
-                                                id="hashID"
-                                                placeholder="Hash ID (optional)"
-                                                onChange={(event) => setHasdID(event.target.value)}
-                                                ref={inputRefs[2]}
-                                            />
-                                            <label htmlFor="hashID">Hash ID (optional)</label>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-6">
-                                        <div className="form-floating ">
-                                            <input type="file"
-                                                className="form-control"
-                                                required
-                                                id="deposit"
-                                                placeholder="Proof (screenshot or reciept)"
-                                                onChange={(event) => setReciept(event.target.files[0])}
-                                            />
-                                            <label htmlFor="deposit">Proof (screenshot or reciept)</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-12 mt-3">
-                                    <button type="submit" className="btn btn-lg btn_secondary white w-100">
-                                        {loading ? <Loader /> : "Deposit"}
-                                    </button>
-                                </div>
-
-                            </form>
-                        </div>
+                        </form>
 
                         <hr />
 

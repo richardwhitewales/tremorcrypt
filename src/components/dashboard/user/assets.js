@@ -2,10 +2,7 @@ import styles from '@/components/dashboard/Dashboard.module.css'
 import DashboardNavbar from '@/components/dashboard/user/navbar'
 import DashboardSidebar from '@/components/dashboard/user/sidebar'
 import DashboardTransaction from '@/components/dashboard/user/transaction'
-import DashboardVerify from '@/components/dashboard/user/verify'
 import DashboardBalance from '@/components/dashboard/user/balance'
-import DashboardQuick from '@/components/dashboard/user/quick'
-import DashboardGraph from '@/components/dashboard/user/graph'
 import WithdrawModal from '@/components/dashboard/user/modals/withdraw_modal'
 import PlansModal from '@/components/dashboard/user/modals/plans_modal'
 import AccountModal from '@/components/dashboard/user/modals/account_modal'
@@ -23,7 +20,7 @@ import OtherPaymentMethodModal from '@/components/dashboard/user/modals/other_pa
 import { useMediaQuery } from "@chakra-ui/react";
 import { CloseSquare, HambergerMenu } from 'iconsax-react'
 
-export default function Dashboard() {
+export default function Assets() {
     const [user, setUser] = useState(null);
     const { authUser } = useAuth();
     const [showMenu, setShowMenu] = useState(false);
@@ -73,11 +70,8 @@ export default function Dashboard() {
                         </div>
                     )}
 
-                    <DashboardVerify user={user} />
                     <DashboardBalance user={user} />
                     <DashboardTransaction user={user} />
-                    <DashboardGraph />
-                    <DashboardQuick user={user} />
 
                     <StatisticsModal />
                     <WalletModal />

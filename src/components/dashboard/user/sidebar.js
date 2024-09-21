@@ -55,8 +55,8 @@ export default function DashboardNavbar() {
 
             <li className="mb-5">
                 <Link
-                    className={router.pathname == "/dashboard/user/account" ? styles.sidebar_path : styles.sidebar_none_path}
-                    href="/dashboard/user/account"
+                    className={styles.sidebar_none_path}
+                    href="#" data-bs-toggle="modal" data-bs-target="#accountModal"
                 >
                     <UserOctagon className="me-2" variant="Bulk" size={18} /> Account
                 </Link>

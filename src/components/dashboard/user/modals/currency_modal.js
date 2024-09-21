@@ -5,6 +5,7 @@ import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/firebase/fire_config';
 import Loader from '@/components/loader/loader';
 import { currencies } from '@/components/utils/toCurrency';
+import Cookies from 'js-cookie';
 
 export default function CurrencyModal({ user }) {
     const [loading, setLoading] = useState(false);
@@ -35,11 +36,24 @@ export default function CurrencyModal({ user }) {
             const docRef = doc(db, "users", authUser.email);
             await updateDoc(docRef, {
                 "currency": currency,
-            }).then(() => {
-                toast.success("Currency Updated.");
-                onClearModal()
-                setLoading(false);
-                location.reload();
+            }).then(async () => {
+                try {
+                    const res = await fetch(`https://v6.exchangerate-api.com/v6/731ceed2819539a3be14f7d8/latest/${user.currency}`, { method: 'GET' });
+
+                    if (!res.ok) {
+                        throw new Error(`Error: ${res.statusText}`);
+                    }
+
+                    const data = await res.json();
+                    Cookies.set("HarpyRate", data["conversion_rates"]["USD"], { expires: 1 });
+                    toast.success("Currency Updated.");
+                    onClearModal()
+                    setLoading(false);
+                    location.reload();
+                } catch (error) {
+                    toast.error(`Failed to fetch exchange rate: ${error.message}`);
+                }
+
             }).catch((error) => {
                 if (error.code === "not-found") {
                     toast.error("User not found");

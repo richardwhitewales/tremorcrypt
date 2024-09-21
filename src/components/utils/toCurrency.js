@@ -1,7 +1,14 @@
+import Cookies from "js-cookie";
+
 export function toCurrency(amount, places = 2, main = null) {
     let hasMain = main !== undefined && main !== null && main !== "undefined";
-    
-    if (hasMain) {
+    let rate = Cookies.get("HarpyRate");
+
+    if (hasMain && rate !== undefined) {
+        
+        let usdRate = (1 / parseFloat(rate))
+        amount = (parseFloat(amount) * usdRate).toString()
+        console.log(amount);
 
     }
 

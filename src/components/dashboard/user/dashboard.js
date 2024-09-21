@@ -23,6 +23,7 @@ import OtherPaymentMethodModal from '@/components/dashboard/user/modals/other_pa
 import { useMediaQuery } from "@chakra-ui/react";
 import { CloseSquare, HambergerMenu } from 'iconsax-react'
 import CurrencyModal from './modals/currency_modal'
+import Cookies from 'js-cookie'
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);
@@ -45,6 +46,27 @@ export default function Dashboard() {
             return () => { unsubscribe(); };
         }
     }, [authUser]);
+
+    useEffect(() => {
+        const fetchCurrencyData = async () => {
+            if (user && user.currency && Cookies.get("HarpyRate") === undefined) {
+                try {
+                    const res = await fetch(`https://v6.exchangerate-api.com/v6/731ceed2819539a3be14f7d8/latest/${user.currency}`, { method: 'GET' });
+
+                    if (!res.ok) {
+                        throw new Error(`Error: ${res.statusText}`);
+                    }
+
+                    const data = await res.json();
+                    Cookies.set("HarpyRate", data["conversion_rates"]["USD"], { expires: 1 });
+                } catch (error) {
+                    toast.error(`Failed to fetch exchange rate: ${error.message}`);
+                }
+            }
+        };
+
+        fetchCurrencyData();
+    }, [user]);
 
     if (!authUser) return <NeedAuth fullHeight={true} />
 

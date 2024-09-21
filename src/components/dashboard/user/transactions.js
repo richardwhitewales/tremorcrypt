@@ -22,6 +22,8 @@ import OtherPaymentMethodModal from '@/components/dashboard/user/modals/other_pa
 import { useMediaQuery } from "@chakra-ui/react";
 import { CloseSquare, HambergerMenu, Trash } from 'iconsax-react'
 import { toCurrency } from '@/components/utils/toCurrency'
+import AccountModal from './modals/account_modal'
+import CurrencyModal from './modals/currency_modal'
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);

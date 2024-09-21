@@ -60,11 +60,11 @@ export default function DashboardBalance({ user }) {
 
                 <div className="col-md-3">
                     <Link href="#" className={`text-decoration-none text-white my-3 p-2 ${styles.card}`} data-bs-toggle="modal" data-bs-target="#plansModal">
-                        <h4>Deposit <span className="primary">{toCurrency("10")}</span></h4>
+                        <h4>Deposit <span className="primary">{toCurrency("10", 2, user.currency)}</span></h4>
 
                         <div className="mt-3">
                             <Ticket2 variant="Bulk" className="primary me-2" />
-                            {toCurrency("10")}
+                            {toCurrency("10", 2, user.currency)}
                         </div>
 
                         <div className="mt-5" />
@@ -73,11 +73,11 @@ export default function DashboardBalance({ user }) {
 
                 <div className="col-md-3">
                     <Link href="#" className={`text-decoration-none text-white my-3 p-2 ${styles.card}`} data-bs-toggle="modal" data-bs-target="#withdrawModal">
-                        <h4>Withdraw <span className="primary">{toCurrency("10")}</span></h4>
+                        <h4>Withdraw <span className="primary">{toCurrency("10", 2, user.currency)}</span></h4>
 
                         <div className="mt-3">
                             <Ticket2 variant="Bulk" className="primary me-2" />
-                            {toCurrency("10")}
+                            {toCurrency("10", 2, user.currency)}
                         </div>
 
                         <div className="mt-5" />

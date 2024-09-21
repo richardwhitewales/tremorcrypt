@@ -22,6 +22,7 @@ import { toast } from "react-toastify";
 import OtherPaymentMethodModal from '@/components/dashboard/user/modals/other_payment_modal'
 import { useMediaQuery } from "@chakra-ui/react";
 import { CloseSquare, HambergerMenu } from 'iconsax-react'
+import CurrencyModal from './modals/currency_modal'
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);
@@ -85,8 +86,8 @@ export default function Dashboard() {
                     <WithdrawModal user={user} />
                     <OtherPaymentMethodModal />
                     <PlansModal user={user} />
-                    <PlansModal user={user} />
                     <AccountModal user={user} />
+                    <CurrencyModal user={user} />
                 </div>
             </div>
         </div>

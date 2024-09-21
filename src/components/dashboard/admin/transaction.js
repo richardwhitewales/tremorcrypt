@@ -58,7 +58,7 @@ export default function AdminDashboardTransaction() {
                         <div className="d-flex py-3 justify-content-around">
                             <div className="text-center">
                                 <small className="secondary">Transactions</small>
-                                <h5>{totalBalance ? toCurrency(totalBalance) : ""}</h5>
+                                <h5>{totalBalance ? toCurrency(totalBalance, 2, user.currency) : ""}</h5>
                             </div>
                             <div className="text-center">
                                 <small className="text-info">Fund Rate</small>
@@ -69,7 +69,7 @@ export default function AdminDashboardTransaction() {
                         <div className="d-flex py-3 justify-content-around">
                             <div className="text-center">
                                 <small className="secondary">Last (BTC)</small>
-                                <h5>{toCurrency(btc.high)}</h5>
+                                <h5>{toCurrency(btc.high, 2, user.currency)}</h5>
                             </div>
                             <div className="text-success">
                                 <small>Status</small>

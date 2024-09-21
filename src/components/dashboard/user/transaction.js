@@ -45,12 +45,12 @@ export default function DashboardTransaction({ user }) {
                         <div className="d-flex py-3 justify-content-around">
                             <div className="text-center">
                                 <small className="secondary">Total Balance</small>
-                                <h4>{toCurrency(user.dashboard.balance)}</h4>
+                                <h4>{toCurrency(user.dashboard.balance, 2, user.currency)}</h4>
                             </div>
 
                             <div className="text-center">
                                 <small className="text-info">Total Invested</small>
-                                <h4>{toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0")}</h4>
+                                <h4>{toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0", 2, user.currency)}</h4>
                             </div>
                         </div>
                         <hr />

@@ -4,7 +4,7 @@ import Loader from '@/components/loader/loader';
 import { toCurrency } from '@/components/utils/toCurrency'
 import { Bitcoin, Ethereum, Litecoin, Xrp } from 'iconsax-react'
 
-export default function DashboardMarket() {
+export default function DashboardMarket({ user }) {
     const [btc, setBTC] = useState(null);
     const [ltc, setLTC] = useState(null);
     const [xrp, setXRP] = useState(null);
@@ -57,34 +57,34 @@ export default function DashboardMarket() {
                                         <tbody>
                                             <tr>
                                                 <th scope="row"><Bitcoin variant="Bold" size={32} className="primary" /></th>
-                                                <td className="text-success">{toCurrency(btc.high)}</td>
-                                                <td className="text-danger">{toCurrency(btc.low)}</td>
-                                                <td>{toCurrency(btc.last)}</td>
-                                                <td>{toCurrency(btc.bid)}</td>
+                                                <td className="text-success">{toCurrency(btc.high, 2, user.currency)}</td>
+                                                <td className="text-danger">{toCurrency(btc.low, 2, user.currency)}</td>
+                                                <td>{toCurrency(btc.last, 2, user.currency)}</td>
+                                                <td>{toCurrency(btc.bid, 2, user.currency)}</td>
                                                 <td>% {btc.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><Ethereum variant="Bold" size={32} className="primary" /></th>
-                                                <td className="text-success">{toCurrency(eth.high)}</td>
-                                                <td className="text-danger">{toCurrency(eth.low)}</td>
-                                                <td>{toCurrency(eth.last)}</td>
-                                                <td>{toCurrency(eth.bid)}</td>
+                                                <td className="text-success">{toCurrency(eth.high, 2, user.currency)}</td>
+                                                <td className="text-danger">{toCurrency(eth.low, 2, user.currency)}</td>
+                                                <td>{toCurrency(eth.last, 2, user.currency)}</td>
+                                                <td>{toCurrency(eth.bid, 2, user.currency)}</td>
                                                 <td>% {eth.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><Litecoin variant="Bold" size={32} className="primary" /></th>
-                                                <td className="text-success">{toCurrency(ltc.high)}</td>
-                                                <td className="text-danger">{toCurrency(ltc.low)}</td>
-                                                <td>{toCurrency(ltc.last)}</td>
-                                                <td>{toCurrency(ltc.bid)}</td>
+                                                <td className="text-success">{toCurrency(ltc.high, 2, user.currency)}</td>
+                                                <td className="text-danger">{toCurrency(ltc.low, 2, user.currency)}</td>
+                                                <td>{toCurrency(ltc.last, 2, user.currency)}</td>
+                                                <td>{toCurrency(ltc.bid, 2, user.currency)}</td>
                                                 <td>% {ltc.volume_percent.toFixed(2)}</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><Xrp variant="Bold" size={32} className="primary" /></th>
-                                                <td className="text-success">{toCurrency(xrp.high)}</td>
-                                                <td className="text-danger">{toCurrency(xrp.low)}</td>
-                                                <td>{toCurrency(xrp.last)}</td>
-                                                <td>{toCurrency(xrp.bid)}</td>
+                                                <td className="text-success">{toCurrency(xrp.high, 2, user.currency)}</td>
+                                                <td className="text-danger">{toCurrency(xrp.low, 2, user.currency)}</td>
+                                                <td>{toCurrency(xrp.last, 2, user.currency)}</td>
+                                                <td>{toCurrency(xrp.bid, 2, user.currency)}</td>
                                                 <td>% {xrp.volume_percent.toFixed(2)}</td>
                                             </tr>
                                         </tbody>

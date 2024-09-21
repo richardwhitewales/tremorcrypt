@@ -20,8 +20,8 @@ export default function DashboardBalance({ user }) {
                             <div className="col-12 mt-3">
                                 <div className="d-flex justify-content-between">
                                     <div>
-                                        <h5 className="fw-bold">{toCurrency(user.dashboard.balance, 2, "ZAR")}</h5>
-                                        <h6 className="primary">≈ {toCurrency(user.dashboard.balance, 2, "ZAR")}</h6>
+                                        <h5 className="fw-bold">{toCurrency(user.dashboard.balance, 2, user.currency)}</h5>
+                                        <h6 className="primary">≈ {toCurrency(user.dashboard.balance, 2, "USD")}</h6>
                                         <p>Today&lsquo;s PnL <span className="text-white-50">+ $0.00(0.00%)</span></p>
                                     </div>
 

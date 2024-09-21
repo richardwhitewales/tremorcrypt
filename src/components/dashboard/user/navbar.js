@@ -91,7 +91,7 @@ export default function DashboardNavbar() {
                         </li>
 
                         <li className="m-0">
-                            <Link role="button" className="btn btn-sm btn_white text-dark" href="#" data-bs-toggle="modal" data-bs-target="#currenciesModal">
+                            <Link role="button" className="btn btn-sm btn_white text-dark" href="#" data-bs-toggle="modal" data-bs-target="#currencyModal">
                                 <DollarSquare size={20} variant="Bulk" className="me-2" /> Currency
                             </Link>
                         </li>

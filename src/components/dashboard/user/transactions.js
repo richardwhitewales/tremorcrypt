@@ -109,8 +109,8 @@ export default function Dashboard() {
                                                                             </span>
                                                                         }
                                                                     </td>
-                                                                    <td>{toCurrency(transfer.amount)}</td>
-                                                                    <td>{toCurrency(transfer.balance)}</td>
+                                                                    <td>{toCurrency(transfer.amount, 2, user.currency)}</td>
+                                                                    <td>{toCurrency(transfer.balance, 2, user.currency)}</td>
                                                                 </tr>
                                                             ))}
                                                         </tbody>
@@ -130,6 +130,8 @@ export default function Dashboard() {
                     <WithdrawModal user={user} />
                     <OtherPaymentMethodModal />
                     <PlansModal user={user} />
+                    <AccountModal user={user} />
+                    <CurrencyModal user={user} />
                 </div>
             </div>
         </div>

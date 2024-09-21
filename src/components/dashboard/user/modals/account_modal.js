@@ -37,7 +37,7 @@ export default function AccountModal({ user }) {
     }
 
     const onClearModal = () => {
-        setLoading(false); firstName(""); setLastName("");
+        setLoading(false); setFirstName(""); setLastName("");
         setPhoneNumber("");
     };
 

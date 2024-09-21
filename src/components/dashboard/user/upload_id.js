@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react';
 import { toast } from "react-toastify";
 import UploadIDCard from '@/components/dashboard/user/upload_id_card'
 import { useMediaQuery } from '@chakra-ui/react';
+import { CloseSquare, HambergerMenu } from 'iconsax-react';
 
 export default function UploadID() {
     const [user, setUser] = useState(null);

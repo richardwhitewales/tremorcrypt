@@ -22,7 +22,7 @@ export default function DashboardBalance({ user }) {
                                     <div>
                                         <h5 className="fw-bold">{toCurrency(user.dashboard.balance)}</h5>
                                         <h6 className="primary">≈ {toCurrency(user.dashboard.balance)}</h6>
-                                        <p>Today's PnL <span className="text-white-50">+ $0.00(0.00%)</span></p>
+                                        <p>Today&lsquo;s PnL <span className="text-white-50">+ $0.00(0.00%)</span></p>
                                     </div>
 
                                     <div>

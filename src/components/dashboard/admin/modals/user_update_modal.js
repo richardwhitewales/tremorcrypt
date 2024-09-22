@@ -409,10 +409,6 @@ export default function UserUpdateModal({ user }) {
                                     <button type="button" onClick={user.dashboard.isSuspended ? onUnSuspend : onSuspend} className="btn btn-warning mx-1">
                                         {isSuspending ? <Loader /> : user.dashboard.isSuspended ? "Unsuspend" : "Suspend"}
                                     </button>
-
-                                    <button type="button" onClick={runUpdateEvery24Hours} className="btn btn-info mx-1">
-                                        Every 24hrs
-                                    </button>
                                 </div>
 
                                 <button type="submit" className="btn btn-lg btn-success">

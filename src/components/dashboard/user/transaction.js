@@ -43,24 +43,24 @@ export default function DashboardTransaction({ user }) {
                 <div className="col-12">
                     <div className={`my-3 p-2 ${styles.card}`}>
                         <div className="d-flex py-3 justify-content-around">
-                            <div className="text-center">
+                            <div className="text-start">
                                 <small className="secondary">Total Balance</small>
-                                <h4>{toCurrency(user.dashboard.balance, 2, user.currency)}</h4>
+                                <h6>{toCurrency(user.dashboard.balance, 2, user.currency)}</h6>
                             </div>
 
-                            <div className="text-center">
+                            <div className="text-end">
                                 <small className="text-info">Total Invested</small>
-                                <h4>{toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0", 2, user.currency)}</h4>
+                                <h6>{toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0", 2, user.currency)}</h6>
                             </div>
                         </div>
                         <hr />
                         <div className="d-flex py-3 justify-content-around">
-                            <div className="text-center">
-                                <small className="secondary">Total Balance (BTC)</small>
+                            <div className="text-start">
+                                <small className="secondary">BTC</small>
                                 <h4>{parseFloat(user.dashboard.balance / btc.high).toFixed(6)}</h4>
                             </div>
 
-                            <div >
+                            <div className="text-end">
                                 <small>Status</small>
                                 <div
                                     className={`text-decoration-none ${user.accountStatus === "ACTIVE" ? "text-success" : user.accountStatus === "UPGRADE" ? "text-warning" : "text-danger"}`}
@@ -77,7 +77,7 @@ export default function DashboardTransaction({ user }) {
                         </div>
 
                         <div className={styles.profit_circle}>
-                            <h1 style={{ fontSize: "26px" }}>{getInvestmentPercentage()}</h1>
+                            <h1>{getInvestmentPercentage()}</h1>
                         </div>
                     </div>
                 </div>

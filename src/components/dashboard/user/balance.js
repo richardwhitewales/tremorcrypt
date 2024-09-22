@@ -26,15 +26,15 @@ export default function DashboardBalance({ user }) {
                                     </div>
 
                                     <div>
-                                        <Link role="button" className="btn btn-sm bg-white-50 text-white me-2" href="#" data-bs-toggle="modal" data-bs-target="#plansModal">
+                                        <Link role="button" className="btn btn-sm bg-white-50 text-white me-2 mb-2" href="#" data-bs-toggle="modal" data-bs-target="#plansModal">
                                             <DirectInbox size={20} variant="Bulk" className="me-2" /> Deposit
                                         </Link>
 
-                                        <Link role="button" className="btn btn-sm bg-white-50 text-white me-2" href="#" data-bs-toggle="modal" data-bs-target="#withdrawModal">
+                                        <Link role="button" className="btn btn-sm bg-white-50 text-white me-2 mb-2" href="#" data-bs-toggle="modal" data-bs-target="#withdrawModal">
                                             <DirectboxSend size={20} variant="Bulk" className="me-2" /> Withdrawal
                                         </Link>
 
-                                        <Link role="button" className="btn btn-sm bg-white-50 text-white" href="/dashboard/user/transactions">
+                                        <Link role="button" className="btn btn-sm bg-white-50 text-white mb-2" href="/dashboard/user/transactions">
                                             <Folder2 size={20} variant="Bulk" className="me-2" /> History
                                         </Link>
                                     </div>

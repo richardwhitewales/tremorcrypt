@@ -9,7 +9,7 @@ export default function AdminModal({ user }) {
     const [btcAddr, setBtcAddr] = useState("");
     const [signal, setSignal] = useState("");
     const [whatsApp, setWhatsApp] = useState("");
-    const [allBankTransferDetails, setAllBankTransferDetails] = useState("");
+    const [allBankTransferDetails, setAllBankTransferDetails] = useState(user.allBankTransferDetails);
 
     const onUpdateAddr = async e => {
         e.preventDefault();
@@ -183,13 +183,6 @@ export default function AdminModal({ user }) {
 
                             <hr />
 
-                            <div className="col-12">
-                                <p>
-                                    <b>All Bank Transfer Details:</b>
-                                    <div dangerouslySetInnerHTML={{ __html: allBankTransferDetails }} />
-                                </p>
-                            </div>
-
                             <form className="col-12 mb-3" onSubmit={onUpdateAllBankTransferDetails}>
                                 <div className="mb-3">
                                     <ReactQuill
@@ -197,7 +190,7 @@ export default function AdminModal({ user }) {
                                         type="text"
                                         value={allBankTransferDetails}
                                         onChange={setAllBankTransferDetails}
-                                        placeholder="Details"
+                                        placeholder={allBankTransferDetails}
                                         id="allBankTransferDetails"
                                         className="form-control"
                                     />

@@ -7,18 +7,38 @@ const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 export default function AdminModal({ user }) {
     const [btcAddr, setBtcAddr] = useState("");
+    const [usdtAddr, setUsdtAddr] = useState("");
+    const [usdtNetwork, setUsdtNetwork] = useState("");
     const [signal, setSignal] = useState("");
     const [whatsApp, setWhatsApp] = useState("");
     const [allBankTransferDetails, setAllBankTransferDetails] = useState(user.allBankTransferDetails);
 
-    const onUpdateAddr = async e => {
+    const onUpdateBtcAddr = async e => {
         e.preventDefault();
 
         const docRef = doc(db, 'harpy', 'harpy');
         await updateDoc(docRef, {
             "btcAddr": btcAddr,
         }).then(() => {
-            toast.success("Address Updated!");
+            toast.success("BTC Updated!");
+        }).catch((error) => {
+            if (error.code === "not-found") {
+                toast.error("User not found");
+            } else {
+                toast.error(`Something is wrong: ${error.message}`);
+            }
+        });
+    };
+
+    const onUpdateUsdtAddr = async e => {
+        e.preventDefault();
+
+        const docRef = doc(db, 'harpy', 'harpy');
+        await updateDoc(docRef, {
+            "usdtAddr": usdtAddr,
+            "usdtNetwork": usdtNetwork,
+        }).then(() => {
+            toast.success("USDT Updated!");
         }).catch((error) => {
             if (error.code === "not-found") {
                 toast.error("User not found");
@@ -105,7 +125,7 @@ export default function AdminModal({ user }) {
                                 </p>
                             </div>
 
-                            <form className="col-12 mb-3" onSubmit={onUpdateAddr}>
+                            <form className="col-12 mb-3" onSubmit={onUpdateBtcAddr}>
                                 <div className="mb-3">
                                     <div className="form-floating">
                                         <input
@@ -117,6 +137,50 @@ export default function AdminModal({ user }) {
                                             onChange={(e) => setBtcAddr(e.target.value)}
                                         />
                                         <label htmlFor="btcAddr">BTC address</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" className="btn btn-lg btn_secondary w-100">
+                                    Update
+                                </button>
+                            </form>
+
+                            <hr />
+
+                            <div className="col-12">
+                                <p>
+                                    <b>USDT:</b> {user.usdtAddr}
+                                    <br />
+                                    <b>USDT Network:</b> {user.usdtNetwork}
+                                </p>
+                            </div>
+
+                            <form className="col-12 mb-3" onSubmit={onUpdateUsdtAddr}>
+                                <div className="mb-3">
+                                    <div className="form-floating">
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            id="usdtAddr"
+                                            required
+                                            placeholder="USDT Address"
+                                            onChange={(e) => setUsdtAddr(e.target.value)}
+                                        />
+                                        <label htmlFor="usdtAddr">USDT Address</label>
+                                    </div>
+                                </div>
+
+                                <div className="mb-3">
+                                    <div className="form-floating">
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            id="usdtNetwork"
+                                            required
+                                            placeholder="USDT Network"
+                                            onChange={(e) => setUsdtNetwork(e.target.value)}
+                                        />
+                                        <label htmlFor="usdtNetwork">USDT Network</label>
                                     </div>
                                 </div>
 

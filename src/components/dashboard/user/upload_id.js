@@ -46,6 +46,8 @@ export default function UploadID() {
                 {isMobile ? (showMenu && <DashboardSidebar />) : <DashboardSidebar />}
 
                 <div className={isMobile ? (showMenu && "px-5") : "px-5"}>
+                    <h5 className="text-white mt-3">Welcome, <span className="primary mt-3">{user.firstName} {user.lastName}</span></h5>
+
                     {isMobile && (
                         <div>
                             {showMenu ?

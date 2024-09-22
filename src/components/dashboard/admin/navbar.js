@@ -7,9 +7,9 @@ export default function AdminDashboardNavbar() {
     const { logOut } = useAuth();
 
     return (
-        <nav className="navbar navbar-expand-md bg_black p-2">
+        <nav className="navbar navbar-expand-md navbar-dark py-0 px-4" style={{ background: "#222222" }}>
             <Link className="navbar-brand" href="/dashboard/admin">
-                <img src="/logo_trans.png" width={80} alt="logo" />
+                <img src="/logo_2_trans.png" width={80} alt="logo" />
             </Link>
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

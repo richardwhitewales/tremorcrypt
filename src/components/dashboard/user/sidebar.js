@@ -1,10 +1,12 @@
 import styles from '@/components/dashboard/Dashboard.module.css'
-import { DirectboxSend, DirectInbox, DollarSquare, Folder2, Home2, UserOctagon } from 'iconsax-react'
+import { useAuth } from '@/firebase/fire_auth_context';
+import { DirectboxSend, DirectInbox, DollarSquare, Folder2, Home2, Logout, UserOctagon } from 'iconsax-react'
 import Link from 'next/link'
 import { useRouter } from "next/router";
 
 export default function DashboardNavbar() {
     const router = useRouter();
+    const { logOut } = useAuth();
 
     return (
         <ul class={styles.sidebar}>
@@ -59,6 +61,15 @@ export default function DashboardNavbar() {
                     href="#" data-bs-toggle="modal" data-bs-target="#accountModal"
                 >
                     <UserOctagon className="me-2" variant="Bulk" size={18} /> Account
+                </Link>
+            </li>
+
+            <li className="mb-5">
+                <Link
+                    className={styles.sidebar_none_path}
+                    href="#" onClick={logOut}
+                >
+                    <Logout className="me-2 text-danger" variant="Bulk" size={18} /> Log Out
                 </Link>
             </li>
         </ul>

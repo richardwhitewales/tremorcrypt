@@ -95,6 +95,12 @@ export default function DashboardNavbar() {
                                 <DollarSquare size={20} variant="Bulk" className="me-2" /> Currency
                             </Link>
                         </li>
+
+                        <li className="m-0">
+                            <Link role="button" className="btn btn-sm btn-danger text-white" href="#" onClick={logOut}>
+                                <Logout className="me-2" variant="Bulk" size={18} /> Log Out
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </nav>

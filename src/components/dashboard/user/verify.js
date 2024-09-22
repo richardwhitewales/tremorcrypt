@@ -6,11 +6,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function DashboardBalance({ user }) {
+    const [btc, setBTC] = useState(null);
+
+    const urlBtc = 'https://bitcoinaverage-global-bitcoin-index-v1.p.rapidapi.com/indices/global/ticker/BTCUSD';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '388ed44c88msh4f3fcabbe8a0277p13efe0jsnb86a7bf6dab5',
+            'X-RapidAPI-Host': 'bitcoinaverage-global-bitcoin-index-v1.p.rapidapi.com'
+        }
+    };
+
+    useEffect(() => {
+        fetch(urlBtc, options).then(res => res.json()).then(json => setBTC(json))
+    }, []);
+    
     if (!user) return <Loader />
 
-
     function verificationBox() {
-
         if (user.accountStatus === "ACTIVE") {
             return (
                 <div className="col-md-6">

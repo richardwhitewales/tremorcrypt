@@ -1,5 +1,6 @@
 import { db } from '@/firebase/fire_config';
 import { doc, getDoc } from 'firebase/firestore';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 

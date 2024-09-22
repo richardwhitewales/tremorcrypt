@@ -104,7 +104,7 @@ export default function UserUpdateModal({ user }) {
         setDisableLoading(true);
         const docRef = doc(db, 'users', user.email);
 
-        await updateDoc(docRef, { "dashboard.isSuspended": false }).then(() => {
+        await updateDoc(docRef, { "disable": false }).then(() => {
             toast.success("User UnVerified!");
             router.reload();
             setDisableLoading(false);
@@ -115,7 +115,7 @@ export default function UserUpdateModal({ user }) {
         setIsSuspending(true);
         const docRef = doc(db, 'users', user.email);
 
-        await updateDoc(docRef, { "dashboard.isSuspended": true }).then(() => {
+        await updateDoc(docRef, { "disable": true }).then(() => {
             toast.success("User Verified!");
             router.reload();
             setIsSuspending(false);
@@ -406,8 +406,8 @@ export default function UserUpdateModal({ user }) {
                                         {isVerifying ? <Loader /> : user.dashboard.isVerified ? "Unverify User" : "Verify User"}
                                     </button>
 
-                                    <button type="button" onClick={user.dashboard.isSuspended ? onUnSuspend : onSuspend} className="btn btn-warning mx-1">
-                                        {isSuspending ? <Loader /> : user.dashboard.isSuspended ? "Unsuspend" : "Suspend"}
+                                    <button type="button" onClick={user.disable ? onUnSuspend : onSuspend} className="btn btn-warning mx-1">
+                                        {isSuspending ? <Loader /> : user.disable ? "Unsuspend" : "Suspend"}
                                     </button>
                                 </div>
 

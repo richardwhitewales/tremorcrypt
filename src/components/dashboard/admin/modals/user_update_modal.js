@@ -218,11 +218,11 @@ export default function UserUpdateModal({ user }) {
                                     </div>
                                     <div>
                                         <FontAwesomeIcon icon={faBank} /> <b>Profit</b>
-                                        <p>{toCurrency(user.dashboard.deposit.profit, 2, user.currency)}</p>
+                                        <p>{toCurrency(user.dashboard.deposit.profit)}</p>
                                     </div>
                                     <div>
                                         <FontAwesomeIcon icon={faBank} /> <b>Balance</b>
-                                        <p>{toCurrency(user.dashboard.balance, 2, user.currency)}</p>
+                                        <p>{toCurrency(user.dashboard.balance)}</p>
                                     </div>
                                 </div>
                                 {user.pinCode ?

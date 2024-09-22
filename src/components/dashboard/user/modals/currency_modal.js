@@ -45,7 +45,9 @@ export default function CurrencyModal({ user }) {
                     }
 
                     const data = await res.json();
-                    Cookies.set("HarpyRate", data["conversion_rates"]["USD"], { expires: 1 });
+                    Cookies.remove("HarpyRate");
+                    localStorage.setItem("HarpyRate", data["conversion_rates"]["USD"])
+
                     toast.success("Currency Updated.");
                     onClearModal()
                     setLoading(false);

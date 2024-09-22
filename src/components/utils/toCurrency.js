@@ -2,14 +2,14 @@ import Cookies from "js-cookie";
 
 export function toCurrency(amount, places = 2, main = null) {
     let hasMain = main !== undefined && main !== null && main !== "undefined";
-    let rate = Cookies.get("HarpyRate");
+    let rate = localStorage.getItem("HarpyRate");
 
     if (hasMain && rate !== undefined) {
-        
-        let usdRate = (1 / parseFloat(rate))
-        amount = (parseFloat(amount) * usdRate).toString()
-        console.log(amount);
 
+        let usdRate = (1 / parseFloat(rate))
+        console.log(rate);
+
+        amount = (parseFloat(amount) * usdRate).toString()
     }
 
     const numAsNumber = Number(parseInt(amount).toFixed(places));

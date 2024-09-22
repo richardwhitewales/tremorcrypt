@@ -23,7 +23,6 @@ import OtherPaymentMethodModal from '@/components/dashboard/user/modals/other_pa
 import { useMediaQuery } from "@chakra-ui/react";
 import { CloseSquare, HambergerMenu } from 'iconsax-react'
 import CurrencyModal from './modals/currency_modal'
-import Cookies from 'js-cookie'
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);
@@ -49,7 +48,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         const fetchCurrencyData = async () => {
-            if (user && user.currency && Cookies.get("HarpyRate") === undefined) {
+            if (user && user.currency && localStorage.getItem("HarpyRate") !== undefined) {
                 try {
                     const res = await fetch(`https://v6.exchangerate-api.com/v6/731ceed2819539a3be14f7d8/latest/${user.currency}`, { method: 'GET' });
 
@@ -58,7 +57,7 @@ export default function Dashboard() {
                     }
 
                     const data = await res.json();
-                    Cookies.set("HarpyRate", data["conversion_rates"]["USD"], { expires: 1 });
+                    localStorage.setItem("HarpyRate", data["conversion_rates"]["USD"])
                 } catch (error) {
                     toast.error(`Failed to fetch exchange rate: ${error.message}`);
                 }

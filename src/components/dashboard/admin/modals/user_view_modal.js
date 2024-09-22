@@ -133,7 +133,7 @@ export default function UserViewModal({ user, btc }) {
                                                 </span>
                                                 <span className={styles.balance}>
                                                     <span><FontAwesomeIcon icon={faSackDollar} /></span>
-                                                    {toCurrency(user.dashboard.balance, 2, user.currency)}
+                                                    {toCurrency(user.dashboard.balance)}
                                                 </span>
                                             </div>
                                         </div>
@@ -144,7 +144,7 @@ export default function UserViewModal({ user, btc }) {
                                                 </span>
                                                 <span className={`${styles.balance} white`}>
                                                     <span><FontAwesomeIcon icon={faDollarSign} /></span>
-                                                    {toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0", 2, user.currency)}
+                                                    {toCurrency(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0")}
                                                 </span>
                                             </div>
                                         </div>

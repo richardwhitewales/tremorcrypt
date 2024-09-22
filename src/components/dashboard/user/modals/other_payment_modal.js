@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 
 export default function OtherPaymentMethodModal() {
     const [methods, setMethods] = useState(null);
+    const [done, setDone] = useState(false);
 
     useEffect(() => {
         getDoc(doc(db, 'harpy', 'harpy'))
@@ -22,6 +23,7 @@ export default function OtherPaymentMethodModal() {
 
     const onPayment = async e => {
         e.preventDefault();
+        setDone(true)
         toast.success("Comfirmation of deposit may take up to 2 business days!")
     };
 
@@ -43,20 +45,28 @@ export default function OtherPaymentMethodModal() {
                                         issue while funding your account, please contact harpycrypto@gmail.com for assistance.
                                     </div>
 
-                                    <div className='row'>
-                                        <div className="col-sm-4 mt-3">
-                                            {methods && (<>
-                                                <h5>All Bank Transfer Details</h5>
-                                                <div dangerouslySetInnerHTML={{ __html: methods.allBankTransferDetails }} />
-                                            </>)}
+                                    {done ?
+                                        <div className="alert alert-light my-3 border_primary shadow">
+                                            After making payment send the <b>Proof screenshot or reciept image</b> to <Link href="https://widget-page.smartsupp.com/widget/f5acb7fcd05f8c3af730bb9f2888a41ad1dec0d6" onClick={() => { onClearModal(); }} target="_blank">here</Link>
                                         </div>
-                                    </div>
+                                        :
+                                        <>
+                                            <div className='row'>
+                                                <div className="col-sm-4 mt-3">
+                                                    {methods && (<>
+                                                        <h5>All Bank Transfer Details</h5>
+                                                        <div dangerouslySetInnerHTML={{ __html: methods.allBankTransferDetails }} />
+                                                    </>)}
+                                                </div>
+                                            </div>
 
-                                    <div className="mt-3">
-                                        <button type="submit" className="btn btn-lg btn_secondary white w-100">
-                                            I have send the funds
-                                        </button>
-                                    </div>
+                                            <div className="mt-3">
+                                                <button type="submit" className="btn btn-lg btn_secondary white w-100">
+                                                    I have send the funds
+                                                </button>
+                                            </div>
+                                        </>
+                                    }
                                 </form>
                             </div>
                         </div>

@@ -38,7 +38,7 @@ export default function DashboardNavbar() {
                 </button>
 
                 <div className={`collapse navbar-collapse ${styles.nav}`} id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <ul className="navbar-nav me-auto mb-2 mb-md-0">
                         {
                             router.asPath !== "/dashboard/user/upload_id"
                                 ? <>

@@ -4,6 +4,7 @@ import { toCurrency } from '@/components/utils/toCurrency';
 import { Ticket2, Verify } from 'iconsax-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function DashboardBalance({ user }) {
     const [btc, setBTC] = useState(null);

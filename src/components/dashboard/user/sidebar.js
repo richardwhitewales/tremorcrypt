@@ -9,7 +9,7 @@ export default function DashboardNavbar() {
     const { logOut } = useAuth();
 
     return (
-        <ul class={styles.sidebar}>
+        <ul className={styles.sidebar}>
             <li className="mb-5">
                 <Link
                     className={router.pathname == "/dashboard/user" ? styles.sidebar_path : styles.sidebar_none_path}

@@ -191,7 +191,7 @@ export default function AdminModal({ user }) {
 
                             <hr />
 
-                            <div className="col-12">
+                            {/* <div className="col-12">
                                 <p>
                                     <b>Signal:</b> {user.signal}
                                 </p>
@@ -245,7 +245,7 @@ export default function AdminModal({ user }) {
                                 </button>
                             </form>
 
-                            <hr />
+                            <hr /> */}
 
                             <form className="col-12 mb-3" onSubmit={onUpdateAllBankTransferDetails}>
                                 <div className="mb-3">

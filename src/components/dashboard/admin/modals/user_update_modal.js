@@ -45,10 +45,26 @@ export default function UserUpdateModal({ user }) {
             "dashboard.deposit.profit": profit.length > 0 ? (parseInt(profit) + parseInt(user.dashboard.deposit.profit)).toString() : user.dashboard.deposit.profit,
             "dashboard.balance": balance.length > 0 ? profit.length > 0 ? (parseInt(profit) + parseInt(user.dashboard.balance)).toString() : balance : profit.length > 0 ? (parseInt(profit) + parseInt(user.dashboard.balance)).toString() : user.dashboard.balance,
             "dashboard.deposit.balance": deposit.length > 0 ? deposit : user.dashboard.deposit.balance,
-        }).then(() => {
-            toast.success("User Updated!");
-            setLoading(false);
-            router.reload();
+        }).then(async () => {
+            if (balance.length > 0 || deposit.length > 0) {
+                try {
+                    await fetch('/api/deposit', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', },
+                        body: JSON.stringify({ email: email, amount: amount }),
+                    });
+
+                    toast.success("User Updated!");
+                    setLoading(false);
+                    router.reload();
+                } catch (error) {
+                    toast.error(error);
+                }
+            } else {
+                toast.success("User Updated!");
+                setLoading(false);
+                router.reload();
+            }
         }).catch((error) => {
             if (error.code === "not-found") {
                 toast.error("User not found");
@@ -131,8 +147,18 @@ export default function UserUpdateModal({ user }) {
         updateDoc(docRef, {
             "dashboard.balance": `${balance + amount}`,
             "dashboard.deposit.balance": `${depositBalance + amount}`,
-        }).then(() => {
-            onClearModal();
+        }).then(async () => {
+            try {
+                await fetch('/api/deposit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', },
+                    body: JSON.stringify({ email: email, amount: amount }),
+                });
+
+                onClearModal();
+            } catch (error) {
+                toast.error(error);
+            }
         }).catch((error) => {
             if (error.code === "not-found") {
                 toast.error("User not found");

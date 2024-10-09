@@ -46,13 +46,12 @@ export default function UserUpdateModal({ user }) {
             "dashboard.balance": balance.length > 0 ? profit.length > 0 ? (parseInt(profit) + parseInt(user.dashboard.balance)).toString() : balance : profit.length > 0 ? (parseInt(profit) + parseInt(user.dashboard.balance)).toString() : user.dashboard.balance,
             "dashboard.deposit.balance": deposit.length > 0 ? deposit : user.dashboard.deposit.balance,
         }).then(async () => {
-            if (balance.length > 0 || deposit.length > 0 || profit.length > 0) {
-                toast.info("Sending email...");
+            if (deposit.length > 0) {
                 try {
                     await fetch('/api/deposit', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json', },
-                        body: JSON.stringify({ email: email, amount: amount }),
+                        body: JSON.stringify({ email: user.email, amount: toCurrency(deposit, 2, user.currency), fullName: `${user.firstName} ${user.lastName}` }),
                     });
 
                     toast.success("User Updated!");
@@ -61,8 +60,10 @@ export default function UserUpdateModal({ user }) {
                 } catch (error) {
                     toast.error(error);
                 }
-            } else {
-                // toast.success("User Updated!");
+            }
+            else {
+
+                toast.success("User Updated!");
                 setLoading(false);
                 // router.reload();
             }

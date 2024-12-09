@@ -45,7 +45,10 @@ export default function AdminDashboardUsers() {
         fetch(urlBtc, options).then(res => res.json()).then(json => setBTC(json))
     }, []);
 
-    if (!users || !btc) return <Loader />
+    useEffect(() => {
+        const timer = setTimeout(() => { onSearch(); }, 500);
+        return () => { clearTimeout(timer); };
+    }, [searchTerm]);
 
     const onSearch = async () => {
         if (searchTerm.length > 0 && users) {
@@ -64,13 +67,15 @@ export default function AdminDashboardUsers() {
         }
     };
 
+    if (!users || !btc) return <Loader />
+
     return (
         <div className="container">
             <div className="row">
                 <div className="col-12 mb-5">
                     <div className={`my-3 p-2 ${styles.card}`}>
                         <div className="d-flex justify-content-between my-2">
-                            <div className="form-floating w-75">
+                            <div className="form-floating w-100">
                                 <input
                                     type="search"
                                     className="form-control bg_black_15 text-white border-dark"
@@ -78,14 +83,9 @@ export default function AdminDashboardUsers() {
                                     required
                                     placeholder="Search for username"
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    onKeyUp={(e) => e.key === "Enter" && onSearch}
                                 />
                                 <label htmlFor="search">Search for username</label>
-
                             </div>
-                            <button type="button" className="btn btn-lg btn_secondary w-25 mx-2" onClick={onSearch}>
-                                Search
-                            </button>
                         </div>
 
                         {searchResults.length > 0 && searchTerm.length > 0 &&

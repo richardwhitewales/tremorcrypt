@@ -60,8 +60,6 @@ export default function AdminDashboardUsers() {
                 const username = user.username;
                 const fullName = `${user.firstName} ${user.lastName}`;
 
-                console.log(user);
-                
                 if (username.toLowerCase().includes(search) || fullName.toLowerCase().includes(search)) {
                     results.push({ id: user.id, ...user });
                 }

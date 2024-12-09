@@ -58,7 +58,11 @@ export default function AdminDashboardUsers() {
 
             users.forEach((user) => {
                 const username = user.username;
-                if (username.toLowerCase().includes(search)) results.push({ id: user.id, ...user });
+                const fullName = user.fullName;
+
+                if (username.toLowerCase().includes(search) || fullName.toLowerCase().includes(search)) {
+                    results.push({ id: user.id, ...user });
+                }
             });
 
             setSearchResults(results);

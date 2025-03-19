@@ -2,7 +2,7 @@ export function toCurrency(amount, places = 2, main = null) {
     let hasMain = main !== undefined && main !== null && main !== "undefined";
     let rate = localStorage.getItem("HarpyRate");
 
-    if (hasMain && rate !== undefined) {
+    if (hasMain && rate !== undefined && rate !== null) {
         let usdRate = (1 / parseFloat(rate))
         amount = (parseFloat(amount) * usdRate).toString()
     }

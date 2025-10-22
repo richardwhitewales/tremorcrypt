@@ -60,7 +60,7 @@ export default function ForexChartPage() {
             container.innerHTML = `
                 <div class="tradingview-widget-container" style="width: 100%; height: 540px;">
                     <iframe allowtransparency="true" frameborder="0"
-                        src="https://www.tradingview-widget.com/embed-widget/screener/?locale=en#%7B%22width%22%3A%22100%25%22%2C%22height%22%3A540%2C%22defaultColumn%22%3A%22overview%22%2C%22defaultScreen%22%3A%22general%22%2C%22market%22%3A%22forex%22%2C%22showToolbar%22%3Afalse%2C%22colorTheme%22%3A%22dark%22%2C%22largeChartUrl%22%3A%22http%3A%2F%2Fwww.stockstrategicoptions.com%2Fwidget%22%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22stockstrategicoptions.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forexscreener%22%2C%22page-uri%22%3A%22stockstrategicoptions.com%2Fmarkets%3Fmarket%3Dforex%22%7D"
+                        src="https://www.tradingview-widget.com/embed-widget/screener/?locale=en#%7B%22width%22%3A%22100%25%22%2C%22height%22%3A540%2C%22defaultColumn%22%3A%22overview%22%2C%22defaultScreen%22%3A%22general%22%2C%22market%22%3A%22forex%22%2C%22showToolbar%22%3Afalse%2C%22colorTheme%22%3A%22dark%22%2C%22largeChartUrl%22%3A%22http%3A%2F%2Fwww.harpycryto.com%2Fwidget%22%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22harpycryto.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forexscreener%22%2C%22page-uri%22%3A%22harpycryto.com%2Fmarkets%3Fmarket%3Dforex%22%7D"
                         title="screener TradingView widget" lang="en"
                         style="user-select: none; box-sizing: border-box; display: block; height: 100%; width: 100%;">
                     </iframe>

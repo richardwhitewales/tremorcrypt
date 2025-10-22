@@ -4,6 +4,7 @@ import { ArrowRight2, Cloud, Coffee, Logout, MagicStar, Tree } from 'iconsax-rea
 import styles from '@/components/navigations/Navigations.module.css'
 import { useAuth } from '@/firebase/fire_auth_context';
 import { useEffect } from 'react';
+import Marquee from '../marquee';
 
 export default function Navbar() {
     const router = useRouter();
@@ -215,6 +216,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav >
+            <Marquee />
         </>
     )
 }

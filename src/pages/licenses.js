@@ -210,6 +210,188 @@ export default function LicensesPage() {
                                 <Link className='text-muted' href="https://disb.dc.gov" target="_blank">https://disb.dc.gov</Link>
                             </div>
                         </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/8.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Delaware</p>
+                                <h4 className='fw-bold mb-3'>Office of the State Bank Commissioner</h4>
+                                <h5 className='text-muted mb-3'>Lender License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>035538</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://banking.delaware.gov" target="_blank">https://banking.delaware.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/9.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Georgia</p>
+                                <h4 className='fw-bold mb-3'>Department of Banking and Finance</h4>
+                                <h5 className='text-muted mb-3'>Seller of Payment Instruments License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>1799753</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dbf.georgia.gov" target="_blank">https://dbf.georgia.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/10.svg" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Idaho</p>
+                                <h4 className='fw-bold mb-3'>Department of Finance</h4>
+                                <h5 className='text-muted mb-3'>Regulated Lender License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>RRL-11385</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.finance.idaho.gov" target="_blank">https://www.finance.idaho.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/11.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Illinois</p>
+                                <h4 className='fw-bold mb-3'>Department of Financial and Professional Regulation</h4>
+                                <h5 className='text-muted mb-3'>Consumer Installment Loan License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>CI.0014461-H</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://idfpr.com" target="_blank">https://idfpr.com</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/12.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Iowa</p>
+                                <h4 className='fw-bold mb-3'>Iowa Division of Banking</h4>
+                                <h5 className='text-muted mb-3'>Money Service License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>2022-0009</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="http://www.idob.state.ia.us" target="_blank">http://www.idob.state.ia.us</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/13.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Kansas</p>
+                                <h4 className='fw-bold mb-3'>Office of the State Bank Commissioner</h4>
+                                <h5 className='text-muted mb-3'>Supervised Loan License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>SL.0026405</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://osbckansas.org" target="_blank">https://osbckansas.org</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/14.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Maryland</p>
+                                <h4 className='fw-bold mb-3'>Commissioner of Financial Regulation</h4>
+                                <h5 className='text-muted mb-3'>Installment Loan License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>03-1898745</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.maryland.gov" target="_blank">https://www.maryland.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/14.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Maryland</p>
+                                <h4 className='fw-bold mb-3'>Commissioner of Financial Regulation</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>1898755</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.maryland.gov" target="_blank">https://www.maryland.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/15.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Minnesota</p>
+                                <h4 className='fw-bold mb-3'>Department of Commerce</h4>
+                                <h5 className='text-muted mb-3'>Regulated Loan Company License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>MN-RL-1996754</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://mn.gov/commerce/" target="_blank">https://mn.gov/commerce/</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/15.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Minnesota</p>
+                                <h4 className='fw-bold mb-3'>Department of Commerce</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>MN-MT-1848786</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://mn.gov/commerce/" target="_blank">https://mn.gov/commerce/</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/16.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Mississippi</p>
+                                <h4 className='fw-bold mb-3'>Department of Banking and Consumer Finance</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>1898643</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dbcf.ms.gov" target="_blank">https://dbcf.ms.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/17.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Montana</p>
+                                <h4 className='fw-bold mb-3'>Division of Finance</h4>
+                                <h5 className='text-muted mb-3'>Sale of Checks & Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>MO-23-8913</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://finance.mo.gov" target="_blank">https://finance.mo.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/18.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, District of Columbia</p>
+                                <h4 className='fw-bold mb-3'>Department of Insurance, Securities and Banking</h4>
+                                <h5 className='text-muted mb-3'>Consumer Loan License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>1877754</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://banking.mt.gov" target="_blank">https://banking.mt.gov</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Footer />

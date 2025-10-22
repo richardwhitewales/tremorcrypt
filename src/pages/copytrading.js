@@ -3,7 +3,6 @@ import { Roboto } from 'next/font/google'
 import { getWSSchema, getWPSchema, getLBSchema } from '@/components/schema';
 import Navbar from '@/components/navigations/navbar'
 import Footer from '@/components/navigations/footer'
-import BuyCrypto from '@/components/home/buy_crypto';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
@@ -139,12 +138,6 @@ export default function CopyTradingPage() {
                             <p className='my-5 text-muted'>
                                 When the expert exits a position, you too will exit it. Automatically. You can also change allocation at any time.
                                 In a need for transparency and to protect Traders, the broker acts as an escrow in receiving commission percentage
-                            </p>
-
-                            <p className='my-5 text-muted'>
-                            </p>
-
-                            <p className='my-5 text-muted'>
                             </p>
                         </div>
                     </div>

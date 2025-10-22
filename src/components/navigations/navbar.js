@@ -118,7 +118,7 @@ export default function Navbar() {
                             </li>
 
                             <li className="nav-item">
-                                <Link className={`nav-link mx-2 ${router.asPath == "/license" && "secondary"}`} href="/license">License</Link>
+                                <Link className={`nav-link mx-2 ${router.asPath == "/licenses" && "secondary"}`} href="/licenses">Licenses</Link>
                             </li>
 
                             <li className="nav-item dropdown">

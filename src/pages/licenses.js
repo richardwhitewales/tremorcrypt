@@ -1,0 +1,219 @@
+import Head from 'next/head'
+import { Roboto } from 'next/font/google'
+import { getWSSchema, getWPSchema, getLBSchema } from '@/components/schema';
+import Navbar from '@/components/navigations/navbar'
+import Footer from '@/components/navigations/footer'
+import { Document } from 'iconsax-react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
+
+export default function LicensesPage() {
+    // page default data
+    const pageName = "Harpy Crypto - Licenses";
+    const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
+    const baseURL = "https://harpycrypto.com/licenses";
+
+    // web site schema
+    const wSSchema = getWSSchema(baseURL);
+
+    // web page schema
+    const wPSchema = getWPSchema(
+        pageName,
+        pageDesc,
+        baseURL,
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Licenses",
+                "item": baseURL
+            }
+        ]
+    );
+
+    // local business schema
+    const lBSchema = getLBSchema(
+        pageName,
+        {
+            streetAddress: "George St, Chicago  60618, USA",
+            addressLocality: "George St",
+            addressRegion: "Chicago",
+            postalCode: " 60618",
+            addressCountry: "USA"
+        },
+        "+447733308730",
+        "info@harpycrypto.com",
+        baseURL,
+        `${baseURL}/logo.png`,
+        "Cash, Credit Card, Transfer",
+        "NGN, USD, EURO, BTC",
+        "Mo-Fr 09:00-17:00",
+        {
+            latitude: "41.8323026",
+            longitude: "-88.3062687"
+        }
+    );
+
+    return (
+        <>
+            <Head>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+                <meta name="description" content={pageDesc} />
+                <meta name="keywords" content="Harpy Crypto, harpycrypto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
+                <meta name="theme-color" content="#FFFFFF" />
+                <link rel="icon" type="image/png" href="/favicon.png?v=1" />
+                <meta name="author" content="Harpy Crypto" />
+                <title>{pageName}</title>
+
+                <meta property="og:title" content={pageName} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="/favicon.png?v=1" />
+                <meta property="og:image:width" content="1277" />
+                <meta property="og:image:height" content="473" />
+                <meta property="og:url" content={baseURL} />
+                <meta property="og:description" content={pageDesc} />
+                <meta property="og:site_name" content={pageName} />
+
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(wSSchema) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(wPSchema) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lBSchema) }} />
+            </Head>
+
+            <main className={roboto.className}>
+                <Navbar />
+                <div className="container my-5 ">
+                    <div className="row justify-content-center">
+                        <div className="col-sm-8 text-center">
+                            <h1 className="mb-5 fw-bold">
+                                <Document size={36} color="#12b772" /> Licenses & Registrations
+                            </h1>
+
+                            <h4>
+                                In order to ensure the provision of their portfolio of services in full compliance with all applicable global and local regulations and standards, the Stock Strategic Options companies hold licenses and registrations in numerous jurisdictions worldwide, and are constantly bringing their operations in line with newly adopted legislative changes.
+                            </h4>
+
+                            <p className='my-5'>Assets audited by</p>
+                        </div>
+                    </div>
+
+                    <div className="row justify-content-center">
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/1.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States</p>
+                                <h4 className='fw-bold mb-3'>U.S. Financial Crimes Enforcement Network</h4>
+                                <h5 className='text-muted mb-3'>Money Service Business Registration</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>31000201469839</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.fincen.gov" target="_blank">https://www.fincen.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/2.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Alabama</p>
+                                <h4 className='fw-bold mb-3'>State Banking Department</h4>
+                                <h5 className='text-muted mb-3'>Consumer Credit License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>MC 22385</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.banking.alabama.gov" target="_blank">https://www.banking.alabama.gov</Link> </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/3.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Alabama</p>
+                                <h4 className='fw-bold mb-3'>Alabama Securities Commission</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'># 769</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.asc.alabama.gov" target="_blank">https://www.asc.alabama.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/4.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Arizona</p>
+                                <h4 className='fw-bold mb-3'>Department of Insurance and Financial Institutions</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>MT-1034818</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://difi.az.gov" target="_blank">https://difi.az.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/4.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Arizona</p>
+                                <h4 className='fw-bold mb-3'>Department of Insurance and Financial Institutions</h4>
+                                <h5 className='text-muted mb-3'>Consumer Lender License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>CL-1017838</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://difi.az.gov" target="_blank">https://difi.az.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/5.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Arkansas</p>
+                                <h4 className='fw-bold mb-3'>Arkansas Securities Department</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>125678</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="http://securities.arkansas.gov" target="_blank">http://securities.arkansas.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/6.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, California</p>
+                                <h4 className='fw-bold mb-3'>Department of Financial Protection and Innovation</h4>
+                                <h5 className='text-muted mb-3'>Financing Law License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>60DBQ-119812</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dfpi.ca.gov" target="_blank">https://dfpi.ca.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/7.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, District of Columbia</p>
+                                <h4 className='fw-bold mb-3'>Department of Insurance, Securities and Banking</h4>
+                                <h5 className='text-muted mb-3'>Money Lender License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>ML 1898544</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://disb.dc.gov" target="_blank">https://disb.dc.gov</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <Footer />
+            </main>
+        </>
+    )
+}

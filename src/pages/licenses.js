@@ -392,6 +392,244 @@ export default function LicensesPage() {
                                 <Link className='text-muted' href="https://banking.mt.gov" target="_blank">https://banking.mt.gov</Link>
                             </div>
                         </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/19.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, New Hampshire</p>
+                                <h4 className='fw-bold mb-3'>Banking Department</h4>
+                                <h5 className='text-muted mb-3'>Small Loan Lender License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>23521-SM</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/19.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, New Hampshire</p>
+                                <h4 className='fw-bold mb-3'>Banking Department</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>24189-MT</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/20.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, North Dakota</p>
+                                <h4 className='fw-bold mb-3'>Department of Financial Institutions</h4>
+                                <h5 className='text-muted mb-3'>Money Broker License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>MB104829</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/20.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, North Dakota</p>
+                                <h4 className='fw-bold mb-3'>Department of Financial Institutions</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>MT104944</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/20.svg" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Oregon</p>
+                                <h4 className='fw-bold mb-3'>Division of Financial Regulation</h4>
+                                <h5 className='text-muted mb-3'>Consumer Finance License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>1998556</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dfr.oregon.gov" target="_blank">https://dfr.oregon.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/20.svg" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Oregon
+</p>
+                                <h4 className='fw-bold mb-3'>Division of Financial Regulation</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>1878845</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dfr.oregon.gov" target="_blank">https://dfr.oregon.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/21.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Pennsylvania</p>
+                                <h4 className='fw-bold mb-3'>Department of Banking and Securities</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>94060</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dobs.pa.gov" target="_blank">https://dobs.pa.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/22.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, South Dakota</p>
+                                <h4 className='fw-bold mb-3'>Division of Banking</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>1878745.MT</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dlr.sd.gov/banking/" target="_blank">https://dlr.sd.gov/banking/</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/23.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Utah</p>
+                                <h4 className='fw-bold mb-3'>Department of Financial Institutions</h4>
+                                <h5 className='text-muted mb-3'>Consumer Credit Notification</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'></p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dfi.utah.gov" target="_blank">https://dfi.utah.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/24.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, West Virginia</p>
+                                <h4 className='fw-bold mb-3'>West Virginia Division of Financial Institutions</h4>
+                                <h5 className='text-muted mb-3'>Money Transmitter License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>WVMT-1899654</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://dfi.wv.gov/consumers/complaints/Pages/default.aspx" target="_blank">https://dfi.wv.gov/consumers/complaints/Pages/default.aspx</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/25.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>United States, Wyoming</p>
+                                <h4 className='fw-bold mb-3'>Department of Audit</h4>
+                                <h5 className='text-muted mb-3'>Consumer Lender License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>CL-4229</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="http://audit.wyo.gov" target="_blank">http://audit.wyo.gov</Link>
+                            </div>
+                        </div>
+
+                        <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/26.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>Canada</p>
+                                <h4 className='fw-bold mb-3'>Financial Transactions and Reports Analysis Centre of Canada</h4>
+                                <h5 className='text-muted mb-3'>Money Service Business Registration</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>M20280268</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.fintrac-canafe.gc.ca" target="_blank">https://www.fintrac-canafe.gc.ca</Link>
+                            </div>
+                        </div>
+
+                         <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/26.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>Canada</p>
+                                <h4 className='fw-bold mb-3'>Financial Transactions and Reports Analysis Centre of Canada</h4>
+                                <h5 className='text-muted mb-3'>Money Service Business Registration</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>M21199887</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.fintrac-canafe.gc.ca" target="_blank">https://www.fintrac-canafe.gc.ca</Link>
+                            </div>
+                        </div>
+
+                         <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/27.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>Switzerland</p>
+                                <h4 className='fw-bold mb-3'>SO-FIT</h4>
+                                <h5 className='text-muted mb-3'>Affiliated Member of the Recognized Self-Regulatory Organization “SO-FIT” - Geneva</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'></p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://so-fit.ch" target="_blank">https://so-fit.ch</Link>
+                            </div>
+                        </div>
+
+                         <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/28.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>Australia</p>
+                                <h4 className='fw-bold mb-3'>Australian Securities and Investment Commission</h4>
+                                <h5 className='text-muted mb-3'>Registration as Foreign Company</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>647054530</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://asic.gov.au" target="_blank">https://asic.gov.au</Link>
+                            </div>
+                        </div>
+
+                         <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/29.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>Hong Kong</p>
+                                <h4 className='fw-bold mb-3'>Companies Registry</h4>
+                                <h5 className='text-muted mb-3'>Trust or Company Service Provider License</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'>M20280268</p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <Link className='text-muted' href="https://www.cr.gov.hk" target="_blank">https://www.cr.gov.hk</Link>
+                            </div>
+                        </div>
+
+                         <div className="col-sm-4">
+                            <div className="border p-3 mb-4">
+                                <img src="/30.png" className='mb-3 object-fit-cover' style={{ maxWidth: "100%" }} alt='logo' height={80} />
+                                <p className='text-muted text-uppercase mb-3'>Lithuania</p>
+                                <h4 className='fw-bold mb-3'>Financial Crime Investigation Service</h4>
+                                <h5 className='text-muted mb-3'>Registration as Virtual Currency Exchange Operator and Depository Virtual Currency Wallet Operator</h5>
+                                <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
+                                <p className='text-bold mb-3'></p>
+                                <p className='text-muted text-uppercase mb-3'>COMPANY</p>
+                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Footer />

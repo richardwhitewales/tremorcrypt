@@ -72,6 +72,57 @@ export default function Navbar() {
 
                             <li className="nav-item dropdown">
                                 <Link className="nav-link mx-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </Link>
+
+                                <div className={`dropdown-menu ${styles.dropdown_menu}`} style={{ width: "auto" }}>
+                                    <ul className="list-unstyled">
+                                        <li>
+                                            <Link className={styles.dropdown_item} href="/buycrypto">
+                                                Buy Crypto
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className={styles.dropdown_item} href="/copytrading">
+                                                Copy Trading
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li className="nav-item dropdown">
+                                <Link className="nav-link mx-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Trading Tools
+                                </Link>
+
+                                <div className={`dropdown-menu ${styles.dropdown_menu}`} style={{ width: "auto" }}>
+                                    <ul className="list-unstyled">
+                                        <li>
+                                            <Link className={styles.dropdown_item} href="/forexchart">
+                                                Forex Chart
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className={styles.dropdown_item} href="/indexchart">
+                                                Index Chart
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className={styles.dropdown_item} href="/cryptochart">
+                                                Crypto Chart
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link className={`nav-link mx-2 ${router.asPath == "/license" && "secondary"}`} href="/license">License</Link>
+                            </li>
+
+                            <li className="nav-item dropdown">
+                                <Link className="nav-link mx-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Investments
                                 </Link>
 
@@ -147,14 +198,6 @@ export default function Navbar() {
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link className={`nav-link mx-2 ${router.asPath == "/team" && "secondary"}`} href="/team">Our Team</Link>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link className={`nav-link mx-2 ${router.asPath == "/about" && "secondary"}`} href="/about">About Us</Link>
                             </li>
 
                             <li className="nav-item">

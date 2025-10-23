@@ -5,7 +5,6 @@ import Navbar from '@/components/navigations/navbar'
 import Footer from '@/components/navigations/footer'
 import { Document } from 'iconsax-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 

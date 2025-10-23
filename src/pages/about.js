@@ -82,7 +82,7 @@ export default function AboutPage() {
 
             <main className={roboto.className}>
                 <Navbar />
-                <div className="container my-5 ">
+                <div className="container my-5">
                     <div className="row justify-content-center">
                         <div className="col-sm-8">
                             <h1 className="mb-5">

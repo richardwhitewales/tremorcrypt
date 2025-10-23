@@ -11,7 +11,7 @@ export default function ForexChartPage() {
     // page default data
     const pageName = "Harpy Crypto - Forex Chart";
     const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
-    const baseURL = "https://harpycrypto.com/buycrypto";
+    const baseURL = "https://harpycrypto.com/forexchart";
 
     // web site schema
     const wSSchema = getWSSchema(baseURL);

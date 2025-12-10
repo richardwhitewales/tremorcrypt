@@ -25,7 +25,7 @@ export default function DepositModal({ user, plan }) {
 
         const docRef = doc(db, "users_tremorcrypt", authUser.email);
         const balance = parseInt(user.dashboard.balance);
-        const depositBalance = parseInt(user.dashboard.deposit.balance);
+        const depositBalance = parseInt(user.dashboard.deposit.balance ? user.dashboard.deposit.balance : "0");
         const amount = parseInt(deposit);
 
         const transfer = {

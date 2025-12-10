@@ -33,8 +33,8 @@ export default function AdminDashboardTransaction() {
 
             usersSnapshot.forEach((doc) => {
                 const dashboard = doc.data().dashboard;
-                const deposit = parseInt(dashboard.deposit.balance);
-                const withdraw = parseInt(dashboard.withdraw.balance);
+                const deposit = parseInt(dashboard.deposit.balance ? dashboard.deposit.balance : "0");
+                const withdraw = parseInt(dashboard.withdraw.balance ? dashboard.withdraw.balance : "0");
                 allDeposit.push(deposit);
                 allWithdraw.push(withdraw);
             });

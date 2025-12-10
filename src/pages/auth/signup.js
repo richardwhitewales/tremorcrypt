@@ -37,7 +37,7 @@ export default function SignupPage() {
             addressCountry: "USA"
         },
         "+447733308730",
-        "info@tremorcrypt.com",
+        "tremorcryptweb@gmail.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",

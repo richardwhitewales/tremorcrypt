@@ -43,7 +43,7 @@ export default function ContactPage() {
             addressCountry: "USA"
         },
         "+447733308730",
-        "info@tremorcrypt.com",
+        "tremorcryptweb@gmail.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
                                             <div className="d-flex flex-column mx-2">
                                                 <h5>EMAIL:</h5>
-                                                <p>info@tremorcrypt.com</p>
+                                                <p>tremorcryptweb@gmail.com</p>
                                             </div>
                                         </div>
                                     </div>

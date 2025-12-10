@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             addressCountry: "USA"
         },
         "+447733308730",
-        "info@tremorcrypt.com",
+        "tremorcryptweb@gmail.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",
@@ -185,7 +185,7 @@ export default function PrivacyPage() {
                             <p>
                                 <h5>Contact Us</h5>
                                 If you have any questions or concerns about this Privacy Policy or our privacy practices,
-                                please contact us at info@tremorcrypt.com
+                                please contact us at tremorcryptweb@gmail.com
                             </p>
                         </div>
                     </div>

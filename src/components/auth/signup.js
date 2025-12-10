@@ -74,7 +74,7 @@ export default function Signup() {
                                         .then(async (snap) => {
                                             if (snap.exists()) {
                                                 setLoading(false);
-                                                const isAdmin = data.user.email === "tremorcrypt@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
+                                                const isAdmin = data.user.email === "tremorcryptweb@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
 
                                                 if (isAdmin) {
                                                     Cookies.set("TremorcryptSignedIn", true, { expires: 365 });

@@ -6,14 +6,14 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'harpycryto@gmail.com',
+            user: 'tremorcryptweb@gmail.com',
             pass: 'nuwnibnaqbqzjhpb',
         },
     });
 
     const mailOptions = {
         from: email,
-        to: 'harpycryto@gmail.com',
+        to: 'tremorcryptweb@gmail.com',
         subject: 'New Register On Tremorcrypt!',
         text: `
         New Register On Tremorcrypt!
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     };
 
     const mailOptionsUser = {
-        from: 'harpycryto@gmail.com',
+        from: 'tremorcryptweb@gmail.com',
         to: email,
         subject: 'New Register On Tremorcrypt!',
         text: `

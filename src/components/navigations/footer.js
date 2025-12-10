@@ -75,7 +75,7 @@ export default function Footer() {
                                     <Location /> George St, Chicago  60618, USA
                                 </li>
                                 <li>
-                                    <DirectInbox /> info@tremorcrypt.com
+                                    <DirectInbox /> tremorcryptweb@gmail.com
                                 </li>
                                 <li>
                                     <Call /> +447733308730

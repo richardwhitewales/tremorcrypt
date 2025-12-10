@@ -29,7 +29,7 @@ export default function Navbar() {
     const dashboard = () => {
         if (!loading && authUser) {
             return <>
-                {authUser.email === "tremorcrypt@gmail.com" || authUser.email === "richardwhitewales@gmail.com" ?
+                {authUser.email === "tremorcryptweb@gmail.com" || authUser.email === "richardwhitewales@gmail.com" ?
                     <Link className="btn btn-sm btn_secondary mx-2" href="/dashboard/admin">
                         Account Dashboard <ArrowRight2 size={20} />
                     </Link>
@@ -193,7 +193,7 @@ export default function Navbar() {
                                         </div>
 
                                         <div className="col-12">
-                                            <Link className=" p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@tremorcrypt.com">
+                                            <Link className=" p-2 text-decoration-none text-muted" target="_blank" href="mailto:tremorcryptweb@gmail.com">
                                                 View more investments plans. <ArrowRight2 color="#12b772" size={20} />
                                             </Link>
                                         </div>

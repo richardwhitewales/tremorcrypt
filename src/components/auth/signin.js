@@ -31,7 +31,7 @@ export default function Signin() {
                         if (docSnapshot.exists()) {
                             const user = docSnapshot.data();
                             const isUserDisable = user.disable;
-                            const isAdmin = data.user.email === "tremorcrypt@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
+                            const isAdmin = data.user.email === "tremorcryptweb@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
 
                             if (isUserDisable) {
                                 toast.warning("User Has been disabled! contact Tremorcrypt");

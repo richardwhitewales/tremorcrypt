@@ -78,7 +78,7 @@ export default function AdminDashboardTransaction() {
                         </div>
 
                         <div className={styles.profit_circle}>
-                            <h1 style={{ fontSize: "20px" }}>Harpy</h1>
+                            <h1 style={{ fontSize: "20px" }}>Tremorcrypt</h1>
                         </div>
                     </div>
                 </div>

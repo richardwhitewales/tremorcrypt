@@ -80,7 +80,7 @@ export default function WithdrawModal({ user }) {
             "dashboard.withdraw.bankName": bankName,
             "dashboard.transfers": arrayUnion(transfer),
         }).then(() => {
-            toast.success("Withdrawal Pending. Harpy will confirm transtion in 2 working days");
+            toast.success("Withdrawal Pending. Tremorcrypt will confirm transtion in 2 working days");
             setLoading(false);
             onClearModal();
         }).catch((error) => {

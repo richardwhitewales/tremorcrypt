@@ -14,9 +14,9 @@ export default async function handler(req, res) {
     const mailOptions = {
         from: email,
         to: 'harpycryto@gmail.com',
-        subject: 'New Register On Harpy Cryto!',
+        subject: 'New Register On Tremorcrypt!',
         text: `
-        New Register On Harpy Cryto!
+        New Register On Tremorcrypt!
 
         Name: ${body.name}
         Name: ${body.email}
@@ -27,9 +27,9 @@ export default async function handler(req, res) {
     const mailOptionsUser = {
         from: 'harpycryto@gmail.com',
         to: email,
-        subject: 'New Register On Harpy Cryto!',
+        subject: 'New Register On Tremorcrypt!',
         text: `
-        New Register On Harpy Cryto!
+        New Register On Tremorcrypt!
 
         Name: ${body.name}
         Name: ${body.email}

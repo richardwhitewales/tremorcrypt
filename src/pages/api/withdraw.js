@@ -98,7 +98,7 @@ export default async function handler(req, res) {
                           margin-bottom: 30px;
                         "
                       >
-                        ${amount} Has been withdrew from your Harpy Cryto account.
+                        ${amount} Has been withdrew from your Tremorcrypt account.
                       </p>
     
                       <p>

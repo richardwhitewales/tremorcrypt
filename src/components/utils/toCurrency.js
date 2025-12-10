@@ -1,6 +1,6 @@
 export function toCurrency(amount, places = 2, main = null) {
     let hasMain = main !== undefined && main !== null && main !== "undefined";
-    let rate = localStorage.getItem("HarpyRate");
+    let rate = localStorage.getItem("TremorcryptRate");
 
     if (hasMain && rate !== undefined && rate !== null) {
         let usdRate = (1 / parseFloat(rate))

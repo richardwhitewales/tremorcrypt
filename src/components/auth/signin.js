@@ -34,14 +34,14 @@ export default function Signin() {
                             const isAdmin = data.user.email === "tremorcrypt@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
 
                             if (isUserDisable) {
-                                toast.warning("User Has been disabled! contact Harpy");
+                                toast.warning("User Has been disabled! contact Tremorcrypt");
                             } else if (isAdmin) {
-                                Cookies.set("HarpySignedIn", true, { expires: 365 });
+                                Cookies.set("TremorcryptSignedIn", true, { expires: 365 });
                                 router.push("/dashboard/admin");
                                 toast.success("Welcome Back Admin");
                             }
                             else {
-                                Cookies.set("HarpySignedIn", true, { expires: 365 });
+                                Cookies.set("TremorcryptSignedIn", true, { expires: 365 });
                                 router.push('/dashboard/user');
                                 toast.success("User signed in");
                             }
@@ -66,7 +66,7 @@ export default function Signin() {
             });
     };
 
-    if (authUser && Cookies.get("HarpySignedIn")) {
+    if (authUser && Cookies.get("TremorcryptSignedIn")) {
         return (
             <div className="container">
                 <div className="row my-5 justify-content-center">

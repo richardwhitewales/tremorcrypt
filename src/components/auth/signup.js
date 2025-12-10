@@ -77,12 +77,12 @@ export default function Signup() {
                                                 const isAdmin = data.user.email === "tremorcrypt@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
 
                                                 if (isAdmin) {
-                                                    Cookies.set("HarpySignedIn", true, { expires: 365 });
+                                                    Cookies.set("TremorcryptSignedIn", true, { expires: 365 });
                                                     router.push("/dashboard/admin");
                                                     toast.success("Welcome Back Admin");
                                                 }
                                                 else {
-                                                    Cookies.set("HarpySignedIn", true, { expires: 365 });
+                                                    Cookies.set("TremorcryptSignedIn", true, { expires: 365 });
                                                     router.push('/dashboard/user?verified=undone');
                                                     toast.success("User signed up");
 
@@ -137,7 +137,7 @@ export default function Signup() {
         if (formIndex > 0) setFormIndex(formIndex - 1);
     }
 
-    if (authUser && Cookies.get("HarpySignedIn")) {
+    if (authUser && Cookies.get("TremorcryptSignedIn")) {
         return (
             <div className="container">
                 <div className="row my-5 justify-content-center">

@@ -43,7 +43,7 @@ export default function DepositModal({ user, plan }) {
             "dashboard.deposit.hasdID": hasdID,
             "dashboard.transfers": arrayUnion(transfer),
         }).then(() => {
-            toast.success("Deposit Completed. Harpy will confirm transtion in 2 working days");
+            toast.success("Deposit Completed. Tremorcrypt will confirm transtion in 2 working days");
             setLoading(false);
             setDone(true)
         }).catch((error) => {

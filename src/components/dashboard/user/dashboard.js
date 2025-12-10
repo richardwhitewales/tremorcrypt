@@ -48,7 +48,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         const fetchCurrencyData = async () => {
-            if (user && user.currency && localStorage.getItem("HarpyRate") !== undefined) {
+            if (user && user.currency && localStorage.getItem("TremorcryptRate") !== undefined) {
                 try {
                     const res = await fetch(`https://v6.exchangerate-api.com/v6/731ceed2819539a3be14f7d8/latest/${user.currency}`, { method: 'GET' });
 
@@ -57,7 +57,7 @@ export default function Dashboard() {
                     }
 
                     const data = await res.json();
-                    localStorage.setItem("HarpyRate", data["conversion_rates"]["USD"])
+                    localStorage.setItem("TremorcryptRate", data["conversion_rates"]["USD"])
                 } catch (error) {
                     toast.error(`Failed to fetch exchange rate: ${error.message}`);
                 }

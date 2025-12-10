@@ -45,8 +45,8 @@ export default function CurrencyModal({ user }) {
                     }
 
                     const data = await res.json();
-                    Cookies.remove("HarpyRate");
-                    localStorage.setItem("HarpyRate", data["conversion_rates"]["USD"])
+                    Cookies.remove("TremorcryptRate");
+                    localStorage.setItem("TremorcryptRate", data["conversion_rates"]["USD"])
 
                     toast.success("Currency Updated.");
                     onClearModal()

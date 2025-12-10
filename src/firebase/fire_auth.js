@@ -38,7 +38,7 @@ export default function useFireAuth() {
     try {
       window.location.href = "/";
       await signOut(auth).then(clear);
-      Cookies.remove("HarpySignedIn");
+      Cookies.remove("TremorcryptSignedIn");
       toast.success("User logged out.");
     } catch (error) {
       toast.error(`Error loggouting out: ${error}`);

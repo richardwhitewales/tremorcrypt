@@ -33,7 +33,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         if (authUser) {
-            const userRef = doc(db, "users", authUser.email);
+            const userRef = doc(db, "users_tremorcrypt", authUser.email);
 
             const unsubscribe = onSnapshot(userRef, (snapshot) => {
                 if (snapshot.exists()) {

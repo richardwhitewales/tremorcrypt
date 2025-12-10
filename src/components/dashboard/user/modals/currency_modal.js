@@ -33,7 +33,7 @@ export default function CurrencyModal({ user }) {
             toast.error("Select Main Currency")
             onClearModal()
         } else {
-            const docRef = doc(db, "users", authUser.email);
+            const docRef = doc(db, "users_tremorcrypt", authUser.email);
             await updateDoc(docRef, {
                 "currency": currency,
             }).then(async () => {

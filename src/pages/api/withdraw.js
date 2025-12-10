@@ -29,7 +29,7 @@ export default async function handler(req, res) {
                 />
                 <link
                   rel="shortcut icon"
-                  href="https://harpycryto.com/logo.png"
+                  href="https://tremorcrypt.com/logo.png"
                   type="image/x-icon"
                 />
                 <title>Tremorcrypt</title>
@@ -67,7 +67,7 @@ export default async function handler(req, res) {
                   <tr>
                     <td align="center" style="padding: 30px 0">
                       <img
-                        src="https://harpycryto.com/logo.png"
+                        src="https://tremorcrypt.com/logo.png"
                         alt="logo"
                         width="141"
                         style="display: block"

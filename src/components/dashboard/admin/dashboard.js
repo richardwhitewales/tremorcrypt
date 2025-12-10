@@ -14,12 +14,12 @@ import { toast } from "react-toastify";
 
 export default function AdminDashboard() {
     const [user, setUser] = useState(null);
-    const [harpy, setHarpy] = useState(null);
+    const [tremorcrypt, setTremorcrypt] = useState(null);
     const { authUser } = useAuth();
 
     useEffect(() => {
         if (authUser) {
-            const userRef = doc(db, "users", authUser.email);
+            const userRef = doc(db, "users_tremorcrypt", authUser.email);
 
             const unsubscribe = onSnapshot(userRef, (snapshot) => {
                 if (snapshot.exists()) {
@@ -35,13 +35,13 @@ export default function AdminDashboard() {
 
     useEffect(() => {
         if (authUser) {
-            const userRef = doc(db, "harpy", "harpy");
+            const userRef = doc(db, "tremorcrypt", "tremorcrypt");
 
             const unsubscribe = onSnapshot(userRef, (snapshot) => {
                 if (snapshot.exists()) {
-                    setHarpy(snapshot.data());
+                    setTremorcrypt(snapshot.data());
                 } else {
-                    toast.error("harpy data not found");
+                    toast.error("tremorcrypt data not found");
                 }
             });
 
@@ -60,7 +60,7 @@ export default function AdminDashboard() {
             <AdminDashboardTransaction />
             <AdminDashboardUsers />
 
-            <AdminModal user={harpy} />
+            <AdminModal user={tremorcrypt} />
             <UploadedIDModal />
         </div>
     )

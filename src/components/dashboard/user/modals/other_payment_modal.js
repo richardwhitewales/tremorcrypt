@@ -9,7 +9,7 @@ export default function OtherPaymentMethodModal() {
     const [done, setDone] = useState(false);
 
     useEffect(() => {
-        getDoc(doc(db, 'harpy', 'harpy'))
+        getDoc(doc(db, 'tremorcrypt', 'tremorcrypt'))
             .then((docSnapshot) => {
                 if (docSnapshot.exists()) {
                     setMethods(docSnapshot.data());

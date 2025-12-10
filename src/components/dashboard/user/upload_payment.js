@@ -12,7 +12,7 @@ async function uploadPayment(email, proof) {
 
       const proofUrl = await getDownloadURL(proofRef);
 
-      const docRef = doc(db, 'users', email);
+      const docRef = doc(db, 'users_tremorcrypt', email);
 
       await updateDoc(docRef, { "dashboard.reciept": proofUrl });
 

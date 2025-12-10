@@ -15,7 +15,7 @@ async function uploadIDImage(email, frontImage, backImage) {
       const frontUrl = await getDownloadURL(frontRef);
       const backUrl = await getDownloadURL(backRef);
 
-      const docRef = doc(db, 'users', email);
+      const docRef = doc(db, 'users_tremorcrypt', email);
 
       await updateDoc(docRef, { "frontID": frontUrl, "backID": backUrl });
 

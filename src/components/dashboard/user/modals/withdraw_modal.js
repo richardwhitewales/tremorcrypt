@@ -60,7 +60,7 @@ export default function WithdrawModal({ user }) {
 
 
     const onTransfer = async () => {
-        const docRef = doc(db, "users", authUser.email);
+        const docRef = doc(db, "users_tremorcrypt", authUser.email);
         const balance = parseInt(user.dashboard.balance);
         const withdrawBalance = parseInt(user.dashboard.withdraw.balance);
         const amount = parseInt(withdraw);

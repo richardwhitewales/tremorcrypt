@@ -25,7 +25,7 @@ export default function AdminDashboardUsers() {
 
     useEffect(() => {
         const getUsersData = async () => {
-            const usersSnapshot = await getDocs(collection(db, 'users'));
+            const usersSnapshot = await getDocs(collection(db, 'users_tremorcrypt'));
             let innerUsers = [];
 
             usersSnapshot.forEach((doc) => {

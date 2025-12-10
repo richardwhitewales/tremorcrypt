@@ -35,7 +35,7 @@ export default function Signup() {
 
             await signUp(email, password)
                 .then(() => {
-                    const collRef = collection(db, "users");
+                    const collRef = collection(db, "users_tremorcrypt");
                     const userDoc = {
                         firstName: firstName,
                         lastName: lastName,
@@ -70,11 +70,11 @@ export default function Signup() {
                         .then(() => {
                             signIn(email, password)
                                 .then((data) => {
-                                    getDoc(doc(db, "users", data.user.email))
+                                    getDoc(doc(db, "users_tremorcrypt", data.user.email))
                                         .then(async (snap) => {
                                             if (snap.exists()) {
                                                 setLoading(false);
-                                                const isAdmin = data.user.email === "harpycryto@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
+                                                const isAdmin = data.user.email === "tremorcrypt@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
 
                                                 if (isAdmin) {
                                                     Cookies.set("HarpySignedIn", true, { expires: 365 });

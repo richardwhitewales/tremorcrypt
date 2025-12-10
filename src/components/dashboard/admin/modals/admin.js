@@ -16,7 +16,7 @@ export default function AdminModal({ user }) {
     const onUpdateBtcAddr = async e => {
         e.preventDefault();
 
-        const docRef = doc(db, 'harpy', 'harpy');
+        const docRef = doc(db, 'tremorcrypt', 'tremorcrypt');
         await updateDoc(docRef, {
             "btcAddr": btcAddr,
         }).then(() => {
@@ -33,7 +33,7 @@ export default function AdminModal({ user }) {
     const onUpdateUsdtAddr = async e => {
         e.preventDefault();
 
-        const docRef = doc(db, 'harpy', 'harpy');
+        const docRef = doc(db, 'tremorcrypt', 'tremorcrypt');
         await updateDoc(docRef, {
             "usdtAddr": usdtAddr,
             "usdtNetwork": usdtNetwork,
@@ -51,7 +51,7 @@ export default function AdminModal({ user }) {
     const onUpdateSignal = async e => {
         e.preventDefault();
 
-        const docRef = doc(db, 'harpy', 'harpy');
+        const docRef = doc(db, 'tremorcrypt', 'tremorcrypt');
         await updateDoc(docRef, {
             "signal": signal,
         }).then(() => {
@@ -68,7 +68,7 @@ export default function AdminModal({ user }) {
     const onUpdateWhatsApp = async e => {
         e.preventDefault();
 
-        const docRef = doc(db, 'harpy', 'harpy');
+        const docRef = doc(db, 'tremorcrypt', 'tremorcrypt');
         await updateDoc(docRef, {
             "whatsApp": whatsApp,
         }).then(() => {
@@ -85,7 +85,7 @@ export default function AdminModal({ user }) {
     const onUpdateAllBankTransferDetails = async e => {
         e.preventDefault();
 
-        const docRef = doc(db, 'harpy', 'harpy');
+        const docRef = doc(db, 'tremorcrypt', 'tremorcrypt');
         await updateDoc(docRef, {
             "allBankTransferDetails": allBankTransferDetails,
         }).then(() => {

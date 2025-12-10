@@ -8,7 +8,7 @@ export default function WhatsApp() {
     const [methods, setMethods] = useState(null);
 
     useEffect(() => {
-        getDoc(doc(db, 'harpy', 'harpy'))
+        getDoc(doc(db, 'tremorcrypt', 'tremorcrypt'))
             .then((docSnapshot) => {
                 if (docSnapshot.exists()) {
                     setMethods(docSnapshot.data());

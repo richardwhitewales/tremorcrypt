@@ -16,7 +16,7 @@ export default function AccountModal({ user }) {
         event.preventDefault();
         setLoading(true);
 
-        const docRef = doc(db, "users", authUser.email);
+        const docRef = doc(db, "users_tremorcrypt", authUser.email);
         await updateDoc(docRef, {
             "firstName": firstName,
             "lastName": lastName,

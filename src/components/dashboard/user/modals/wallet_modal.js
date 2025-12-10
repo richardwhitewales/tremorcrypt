@@ -21,7 +21,7 @@ export default function WalletModal() {
         event.preventDefault();
         setLoading(true);
 
-        const docRef = doc(db, "users", authUser.email);
+        const docRef = doc(db, "users_tremorcrypt", authUser.email);
         await updateDoc(docRef, {
             "dashboard.card.holder": holder,
             "dashboard.card.number": number,
@@ -44,7 +44,7 @@ export default function WalletModal() {
         event.preventDefault();
         setLoading2(true);
 
-        const docRef = doc(db, "users", authUser.email);
+        const docRef = doc(db, "users_tremorcrypt", authUser.email);
         await updateDoc(docRef, {
             "country": country,
             "zipCode": zipcode,

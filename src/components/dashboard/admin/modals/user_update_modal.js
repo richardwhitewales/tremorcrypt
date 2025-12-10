@@ -30,7 +30,7 @@ export default function UserUpdateModal({ user }) {
         event.preventDefault();
         setLoading(true);
 
-        const docRef = doc(db, "users", user.email);
+        const docRef = doc(db, "users_tremorcrypt", user.email);
         const pinCode = Math.floor(10000 + Math.random() * 9000).toString();
 
         await updateDoc(docRef, {
@@ -78,7 +78,7 @@ export default function UserUpdateModal({ user }) {
     };
 
     async function onDisableUser() {
-        const docRef = doc(db, 'users', user.email);
+        const docRef = doc(db, 'users_tremorcrypt', user.email);
 
         await updateDoc(docRef, { "disable": true }).then(() => {
             toast.success("User Disabled!");
@@ -87,7 +87,7 @@ export default function UserUpdateModal({ user }) {
     }
 
     async function onEnableUser() {
-        const docRef = doc(db, 'users', user.email);
+        const docRef = doc(db, 'users_tremorcrypt', user.email);
 
         await updateDoc(docRef, { "disable": false }).then(() => {
             toast.success("User Enabled!");
@@ -97,7 +97,7 @@ export default function UserUpdateModal({ user }) {
 
     async function onUnverifyUser() {
         setDisableLoading(true);
-        const docRef = doc(db, 'users', user.email);
+        const docRef = doc(db, 'users_tremorcrypt', user.email);
 
         await updateDoc(docRef, { "dashboard.isVerified": false }).then(() => {
             toast.success("User UnVerified!");
@@ -108,7 +108,7 @@ export default function UserUpdateModal({ user }) {
 
     async function onVerifyUser() {
         setIsVerifying(true);
-        const docRef = doc(db, 'users', user.email);
+        const docRef = doc(db, 'users_tremorcrypt', user.email);
 
         await updateDoc(docRef, { "dashboard.isVerified": true }).then(() => {
             toast.success("User Verified!");
@@ -120,7 +120,7 @@ export default function UserUpdateModal({ user }) {
 
     async function onUnSuspend() {
         setDisableLoading(true);
-        const docRef = doc(db, 'users', user.email);
+        const docRef = doc(db, 'users_tremorcrypt', user.email);
 
         await updateDoc(docRef, { "disable": false }).then(() => {
             toast.success("User UnVerified!");
@@ -131,7 +131,7 @@ export default function UserUpdateModal({ user }) {
 
     async function onSuspend() {
         setIsSuspending(true);
-        const docRef = doc(db, 'users', user.email);
+        const docRef = doc(db, 'users_tremorcrypt', user.email);
 
         await updateDoc(docRef, { "disable": true }).then(() => {
             toast.success("User Verified!");
@@ -141,7 +141,7 @@ export default function UserUpdateModal({ user }) {
     }
 
     function onDeposit() {
-        const docRef = doc(db, "users", user.email);
+        const docRef = doc(db, "users_tremorcrypt", user.email);
         const balance = parseInt(user.dashboard.balance);
         const depositBalance = parseInt(user.dashboard.deposit.balance);
         const amount = parseInt(20);

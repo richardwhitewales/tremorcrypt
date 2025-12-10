@@ -25,13 +25,13 @@ export default function Signin() {
             .then((data) => {
                 setLoading(false);
 
-                const profileRef = doc(db, "users", data.user.email);
+                const profileRef = doc(db, "users_tremorcrypt", data.user.email);
                 getDoc(profileRef)
                     .then((docSnapshot) => {
                         if (docSnapshot.exists()) {
                             const user = docSnapshot.data();
                             const isUserDisable = user.disable;
-                            const isAdmin = data.user.email === "harpycryto@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
+                            const isAdmin = data.user.email === "tremorcrypt@gmail.com" || data.user.email === "richardwhitewales@gmail.com";
 
                             if (isUserDisable) {
                                 toast.warning("User Has been disabled! contact Harpy");

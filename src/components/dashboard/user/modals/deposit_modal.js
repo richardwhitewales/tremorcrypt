@@ -23,7 +23,7 @@ export default function DepositModal({ user, plan }) {
         event.preventDefault();
         setLoading(true);
 
-        const docRef = doc(db, "users", authUser.email);
+        const docRef = doc(db, "users_tremorcrypt", authUser.email);
         const balance = parseInt(user.dashboard.balance);
         const depositBalance = parseInt(user.dashboard.deposit.balance);
         const amount = parseInt(deposit);
@@ -58,7 +58,7 @@ export default function DepositModal({ user, plan }) {
     };
 
     useEffect(() => {
-        getDoc(doc(db, 'harpy', 'harpy'))
+        getDoc(doc(db, 'tremorcrypt', 'tremorcrypt'))
             .then((docSnapshot) => {
                 if (docSnapshot.exists()) {
                     setAddr(docSnapshot.data());

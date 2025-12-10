@@ -25,7 +25,7 @@ export default function AdminDashboardTransaction() {
 
     useEffect(() => {
         const getUsersData = async () => {
-            const usersSnapshot = await getDocs(collection(db, 'users'));
+            const usersSnapshot = await getDocs(collection(db, 'users_tremorcrypt'));
             let allDeposit = [];
             let allWithdraw = [];
             let dTotal = 0;

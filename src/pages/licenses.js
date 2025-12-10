@@ -10,9 +10,9 @@ const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
 export default function LicensesPage() {
     // page default data
-    const pageName = "Harpy Crypto - Licenses";
-    const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
-    const baseURL = "https://harpycrypto.com/licenses";
+    const pageName = "Tremorcrypt - Licenses";
+    const pageDesc = "Tremorcrypt is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Tremorcrypt today and reap the rewards.";
+    const baseURL = "https://tremorcrypt.com/licenses";
 
     // web site schema
     const wSSchema = getWSSchema(baseURL);
@@ -43,7 +43,7 @@ export default function LicensesPage() {
             addressCountry: "USA"
         },
         "+447733308730",
-        "info@harpycrypto.com",
+        "info@tremorcrypt.com",
         baseURL,
         `${baseURL}/logo.png`,
         "Cash, Credit Card, Transfer",
@@ -61,10 +61,10 @@ export default function LicensesPage() {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content={pageDesc} />
-                <meta name="keywords" content="Harpy Crypto, harpycrypto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
+                <meta name="keywords" content="Tremorcrypt, tremorcrypt, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-                <meta name="author" content="Harpy Crypto" />
+                <meta name="author" content="Tremorcrypt" />
                 <title>{pageName}</title>
 
                 <meta property="og:title" content={pageName} />
@@ -108,7 +108,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>31000201469839</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.fincen.gov" target="_blank">https://www.fincen.gov</Link>
                             </div>
                         </div>
@@ -122,7 +122,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>MC 22385</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.banking.alabama.gov" target="_blank">https://www.banking.alabama.gov</Link> </div>
                         </div>
 
@@ -135,7 +135,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'># 769</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.asc.alabama.gov" target="_blank">https://www.asc.alabama.gov</Link>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>MT-1034818</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://difi.az.gov" target="_blank">https://difi.az.gov</Link>
                             </div>
                         </div>
@@ -163,7 +163,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>CL-1017838</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://difi.az.gov" target="_blank">https://difi.az.gov</Link>
                             </div>
                         </div>
@@ -177,7 +177,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>125678</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="http://securities.arkansas.gov" target="_blank">http://securities.arkansas.gov</Link>
                             </div>
                         </div>
@@ -191,7 +191,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>60DBQ-119812</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dfpi.ca.gov" target="_blank">https://dfpi.ca.gov</Link>
                             </div>
                         </div>
@@ -205,7 +205,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>ML 1898544</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://disb.dc.gov" target="_blank">https://disb.dc.gov</Link>
                             </div>
                         </div>
@@ -219,7 +219,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>035538</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://banking.delaware.gov" target="_blank">https://banking.delaware.gov</Link>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>1799753</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dbf.georgia.gov" target="_blank">https://dbf.georgia.gov</Link>
                             </div>
                         </div>
@@ -247,7 +247,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>RRL-11385</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.finance.idaho.gov" target="_blank">https://www.finance.idaho.gov</Link>
                             </div>
                         </div>
@@ -261,7 +261,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>CI.0014461-H</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://idfpr.com" target="_blank">https://idfpr.com</Link>
                             </div>
                         </div>
@@ -275,7 +275,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>2022-0009</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="http://www.idob.state.ia.us" target="_blank">http://www.idob.state.ia.us</Link>
                             </div>
                         </div>
@@ -289,7 +289,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>SL.0026405</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://osbckansas.org" target="_blank">https://osbckansas.org</Link>
                             </div>
                         </div>
@@ -303,7 +303,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>03-1898745</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.maryland.gov" target="_blank">https://www.maryland.gov</Link>
                             </div>
                         </div>
@@ -317,7 +317,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>1898755</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.maryland.gov" target="_blank">https://www.maryland.gov</Link>
                             </div>
                         </div>
@@ -331,7 +331,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>MN-RL-1996754</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://mn.gov/commerce/" target="_blank">https://mn.gov/commerce/</Link>
                             </div>
                         </div>
@@ -345,7 +345,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>MN-MT-1848786</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://mn.gov/commerce/" target="_blank">https://mn.gov/commerce/</Link>
                             </div>
                         </div>
@@ -359,7 +359,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>1898643</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dbcf.ms.gov" target="_blank">https://dbcf.ms.gov</Link>
                             </div>
                         </div>
@@ -373,7 +373,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>MO-23-8913</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://finance.mo.gov" target="_blank">https://finance.mo.gov</Link>
                             </div>
                         </div>
@@ -387,7 +387,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>1877754</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://banking.mt.gov" target="_blank">https://banking.mt.gov</Link>
                             </div>
                         </div>
@@ -401,7 +401,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>23521-SM</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
                             </div>
                         </div>
@@ -415,7 +415,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>24189-MT</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
                             </div>
                         </div>
@@ -429,7 +429,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>MB104829</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
                             </div>
                         </div>
@@ -443,7 +443,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>MT104944</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.nh.gov/banking" target="_blank">https://www.nh.gov/banking</Link>
                             </div>
                         </div>
@@ -457,7 +457,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>1998556</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dfr.oregon.gov" target="_blank">https://dfr.oregon.gov</Link>
                             </div>
                         </div>
@@ -472,7 +472,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>1878845</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dfr.oregon.gov" target="_blank">https://dfr.oregon.gov</Link>
                             </div>
                         </div>
@@ -486,7 +486,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>94060</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dobs.pa.gov" target="_blank">https://dobs.pa.gov</Link>
                             </div>
                         </div>
@@ -500,7 +500,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>1878745.MT</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dlr.sd.gov/banking/" target="_blank">https://dlr.sd.gov/banking/</Link>
                             </div>
                         </div>
@@ -514,7 +514,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'></p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dfi.utah.gov" target="_blank">https://dfi.utah.gov</Link>
                             </div>
                         </div>
@@ -528,7 +528,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>WVMT-1899654</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://dfi.wv.gov/consumers/complaints/Pages/default.aspx" target="_blank">https://dfi.wv.gov/consumers/complaints/Pages/default.aspx</Link>
                             </div>
                         </div>
@@ -542,7 +542,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>CL-4229</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="http://audit.wyo.gov" target="_blank">http://audit.wyo.gov</Link>
                             </div>
                         </div>
@@ -556,7 +556,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>M20280268</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.fintrac-canafe.gc.ca" target="_blank">https://www.fintrac-canafe.gc.ca</Link>
                             </div>
                         </div>
@@ -570,7 +570,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>M21199887</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.fintrac-canafe.gc.ca" target="_blank">https://www.fintrac-canafe.gc.ca</Link>
                             </div>
                         </div>
@@ -584,7 +584,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'></p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://so-fit.ch" target="_blank">https://so-fit.ch</Link>
                             </div>
                         </div>
@@ -598,7 +598,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>647054530</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://asic.gov.au" target="_blank">https://asic.gov.au</Link>
                             </div>
                         </div>
@@ -612,7 +612,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'>M20280268</p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                                 <Link className='text-muted' href="https://www.cr.gov.hk" target="_blank">https://www.cr.gov.hk</Link>
                             </div>
                         </div>
@@ -626,7 +626,7 @@ export default function LicensesPage() {
                                 <p className='text-muted text-uppercase mb-3'>REFERENCE NO.</p>
                                 <p className='text-bold mb-3'></p>
                                 <p className='text-muted text-uppercase mb-3'>COMPANY</p>
-                                <p className='text-bold mb-3'>Harpy Crypto LLC</p>
+                                <p className='text-bold mb-3'>Tremorcrypt LLC</p>
                             </div>
                         </div>
                     </div>

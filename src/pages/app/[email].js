@@ -8,9 +8,9 @@ const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 export default function AppUpdatePage() {
     const router = useRouter()
     // page default data
-    const pageName = "Harpy Crypto - Admin";
-    const pageDesc = "Harpy Crypto is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Harpy Crypto today and reap the rewards.";
-    const baseURL = "https://harpycrypto.com/app";
+    const pageName = "Tremorcrypt - Admin";
+    const pageDesc = "Tremorcrypt is a leading investment company specializing in crypto investments. Our investment plans offer attractive returns on Bitcoin investments with different options to choose from. Invest in Bitcoin with Tremorcrypt today and reap the rewards.";
+    const baseURL = "https://tremorcrypt.com/app";
     const email = router.query.email
 
     return (
@@ -19,10 +19,10 @@ export default function AppUpdatePage() {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content={pageDesc} />
-                <meta name="keywords" content="Harpy Crypto, harpycrypto, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
+                <meta name="keywords" content="Tremorcrypt, tremorcrypt, investment company, crypto investments, Bitcoin investments, investment plans, attractive returns, selected plan, cryptocurrency, digital currency, crypto finance" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-                <meta name="author" content="Harpy Crypto" />
+                <meta name="author" content="Tremorcrypt" />
                 <title>{pageName}</title>
 
                 <meta property="og:title" content={pageName} />

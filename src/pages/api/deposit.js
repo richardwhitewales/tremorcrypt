@@ -32,7 +32,7 @@ export default async function handler(req, res) {
                   href="https://harpycryto.com/logo.png"
                   type="image/x-icon"
                 />
-                <title>Harpy Crypto</title>
+                <title>Tremorcrypt</title>
                 <style>
                   h1,
                   h2,
@@ -98,12 +98,12 @@ export default async function handler(req, res) {
                           margin-bottom: 30px;
                         "
                       >
-                        ${amount} Has been deposited to your Harpy Crypto account.
+                        ${amount} Has been deposited to your Tremorcrypt account.
                       </p>
     
                       <p>
                         Best Regards, <br />
-                        Harpy Crypto Team
+                        Tremorcrypt Team
                       </p>
                     </td>
                   </tr>

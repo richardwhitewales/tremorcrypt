@@ -193,7 +193,7 @@ export default function Navbar() {
                                         </div>
 
                                         <div className="col-12">
-                                            <Link className=" p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@harpycrypto.com">
+                                            <Link className=" p-2 text-decoration-none text-muted" target="_blank" href="mailto:info@tremorcrypt.com">
                                                 View more investments plans. <ArrowRight2 color="#12b772" size={20} />
                                             </Link>
                                         </div>
